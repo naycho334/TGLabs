@@ -1,7 +1,7 @@
 #!/bin/bash
 
-sudo apt -y install nodejs
-sudo apt -y install npm
+sudo apt install nodejs
+sudo apt install npm
 
 npm install
 # cd /home/tglabs/app
