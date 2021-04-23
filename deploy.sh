@@ -1,8 +1,8 @@
 #!/bin/bash
 
-mkdir ./test
-mkdir ./test/samir
-mkdir ./test/samir/test
+mkdir ./ITWORKS
+mkdir ./ITWORKS2/samir
+mkdir ./ITWORKS3/samir/test
 # sudo apt -y install nodejs
 # sudo apt -y install npm
 
