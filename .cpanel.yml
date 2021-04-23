@@ -5,5 +5,5 @@ deployment:
     # - /bin/cp -R public $DEPLOYPATH
     # - /bin/cp -R src $DEPLOYPATH
     # - /bin/cp -R * $DEPLOYPATH
-    - /bin/rm -rf $DEPLOYPATH/*
+    - /bin/rm -rf $DEPLOYPATH
     # - /bin/bash /home/tglabs/deploy.sh 2>&1
