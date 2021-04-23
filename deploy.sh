@@ -1,11 +1,9 @@
 #!/bin/bash
 
-mkdir ./ITWORKS
-mkdir ./ITWORKS2/samir
-mkdir ./ITWORKS3/samir/test
-# sudo apt -y install nodejs
-# sudo apt -y install npm
+sudo apt -y install nodejs
+sudo apt -y install npm
 
+npm install
 # cd /home/tglabs/app
 # npm run build
 
