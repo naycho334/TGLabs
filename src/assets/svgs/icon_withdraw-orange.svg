@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="45.449" height="45.48" viewBox="0 0 45.449 45.48">
+  <g id="icon_withdraw-orange" transform="translate(1 1)">
+    <path id="Path_52" data-name="Path 52" d="M1235.3,2780.567h-2.081a5.816,5.816,0,0,1-5.816-5.816h0a5.816,5.816,0,0,1,5.816-5.816h31.817a5.816,5.816,0,0,1,5.816,5.816h0a5.816,5.816,0,0,1-5.816,5.816h-2.2" transform="translate(-1227.399 -2768.935)" fill="none" stroke="#ffb993" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="Path_53" data-name="Path 53" d="M1255.01,2798.513h4.188a5.669,5.669,0,0,0,5.556-6.8l-4.621-22.782h-22.018l-4.622,22.782a5.669,5.669,0,0,0,5.556,6.8h4.189" transform="translate(-1227.399 -2768.935)" fill="none" stroke="#ffb993" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <g id="Group_96" data-name="Group 96" transform="translate(-1227.399 -2768.935)">
+      <line id="Line_39" data-name="Line 39" y2="16.328" transform="translate(1249.124 2795.673)" fill="none" stroke="#ffb993" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <g id="Group_95" data-name="Group 95">
+        <line id="Line_40" data-name="Line 40" x2="5.897" y2="5.897" transform="translate(1243.196 2806.104)" fill="none" stroke="#ffb993" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <line id="Line_41" data-name="Line 41" x1="5.897" y2="5.897" transform="translate(1249.196 2806.104)" fill="none" stroke="#ffb993" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+    </g>
+    <ellipse id="Ellipse_58" data-name="Ellipse 58" cx="6.092" cy="4.789" rx="6.092" ry="4.789" transform="translate(15.796 10.352)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+</svg>

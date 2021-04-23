@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60.472" height="68.142" viewBox="0 0 60.472 68.142">
+  <g id="icon_ddos-protection" transform="translate(1 1)">
+    <g id="Group_72" data-name="Group 72" transform="translate(-758.484 -2499.822)">
+      <g id="Group_71" data-name="Group 71">
+        <g id="Group_62" data-name="Group 62">
+          <g id="Group_60" data-name="Group 60">
+            <circle id="Ellipse_41" data-name="Ellipse 41" cx="4.445" cy="4.445" r="4.445" transform="translate(783.275 2499.822)" fill="none" stroke="#f6bb99" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            <line id="Line_16" data-name="Line 16" y2="6.558" transform="translate(787.72 2508.779)" fill="none" stroke="#f6bb99" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Group_61" data-name="Group 61">
+            <circle id="Ellipse_42" data-name="Ellipse 42" cx="4.445" cy="4.445" r="4.445" transform="translate(783.275 2557.074)" fill="none" stroke="#f6bb99" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            <line id="Line_17" data-name="Line 17" y1="6.558" transform="translate(787.72 2550.449)" fill="none" stroke="#f6bb99" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+        </g>
+        <g id="Group_65" data-name="Group 65">
+          <g id="Group_63" data-name="Group 63">
+            <circle id="Ellipse_43" data-name="Ellipse 43" cx="4.445" cy="4.445" r="4.445" transform="translate(758.484 2514.135)" fill="none" stroke="#f6bb99" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            <line id="Line_18" data-name="Line 18" x2="5.679" y2="3.279" transform="translate(766.837 2520.836)" fill="none" stroke="#f6bb99" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Group_64" data-name="Group 64">
+            <circle id="Ellipse_44" data-name="Ellipse 44" cx="4.445" cy="4.445" r="4.445" transform="translate(808.067 2542.761)" fill="none" stroke="#f6bb99" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            <line id="Line_19" data-name="Line 19" x1="5.679" y1="3.279" transform="translate(802.924 2541.671)" fill="none" stroke="#f6bb99" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+        </g>
+        <g id="Group_68" data-name="Group 68">
+          <g id="Group_66" data-name="Group 66">
+            <circle id="Ellipse_45" data-name="Ellipse 45" cx="4.445" cy="4.445" r="4.445" transform="translate(808.067 2514.135)" fill="none" stroke="#f6bb99" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            <line id="Line_20" data-name="Line 20" x1="5.679" y2="3.279" transform="translate(802.924 2520.836)" fill="none" stroke="#f6bb99" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Group_67" data-name="Group 67">
+            <circle id="Ellipse_46" data-name="Ellipse 46" cx="4.445" cy="4.445" r="4.445" transform="translate(758.484 2542.761)" fill="none" stroke="#f6bb99" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            <line id="Line_21" data-name="Line 21" y1="3.279" x2="5.679" transform="translate(766.837 2541.671)" fill="none" stroke="#f6bb99" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+        </g>
+        <g id="Group_69" data-name="Group 69">
+          <line id="Line_22" data-name="Line 22" x1="17.196" y2="9.735" transform="translate(766.873 2506.801)" fill="none" stroke="#f6bb99" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          <line id="Line_23" data-name="Line 23" x2="17.196" y2="9.735" transform="translate(791.278 2506.801)" fill="none" stroke="#f6bb99" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <g id="Group_70" data-name="Group 70">
+          <line id="Line_24" data-name="Line 24" x1="17.196" y1="9.735" transform="translate(766.873 2549.273)" fill="none" stroke="#f6bb99" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          <line id="Line_25" data-name="Line 25" y1="9.735" x2="17.196" transform="translate(791.278 2549.273)" fill="none" stroke="#f6bb99" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <line id="Line_26" data-name="Line 26" y2="19.739" transform="translate(762.929 2523.021)" fill="none" stroke="#f6bb99" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <line id="Line_27" data-name="Line 27" y2="19.739" transform="translate(812.089 2523.021)" fill="none" stroke="#f6bb99" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+    </g>
+    <g id="Group_73" data-name="Group 73" transform="translate(-758.484 -2499.822)">
+      <rect id="Rectangle_43" data-name="Rectangle 43" width="16.231" height="11.562" rx="2.421" transform="translate(779.513 2531.749)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Rectangle_44" data-name="Rectangle 44" d="M4.064,0h1A4.064,4.064,0,0,1,9.129,4.064V8.128a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V4.064A4.064,4.064,0,0,1,4.064,0Z" transform="translate(783.064 2523.62)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

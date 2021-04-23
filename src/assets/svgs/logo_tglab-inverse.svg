@@ -1,0 +1,52 @@
+<svg id="logo_tglab-inverse" xmlns="http://www.w3.org/2000/svg" width="822.054" height="198.215" viewBox="0 0 822.054 198.215">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #138bbd;
+      }
+
+      .cls-2 {
+        fill: #feeca8;
+      }
+
+      .cls-3 {
+        fill: #2af6ff;
+      }
+
+      .cls-4 {
+        fill: #2e1c89;
+      }
+
+      .cls-5 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="Group_15" data-name="Group 15" transform="translate(0)">
+    <g id="Group_14" data-name="Group 14">
+      <path id="Rectangle_5" data-name="Rectangle 5" class="cls-1" d="M55.045,0h0a55.043,55.043,0,0,1,55.043,55.043v55.046a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V55.045A55.045,55.045,0,0,1,55.045,0Z" transform="translate(55.045)"/>
+      <path id="Path_4" data-name="Path 4" class="cls-2" d="M448.031-219.025,421.1-192.089a6.016,6.016,0,0,0,4.254,10.271h53.872a6.017,6.017,0,0,0,4.254-10.271l-26.936-26.936A6.015,6.015,0,0,0,448.031-219.025Z" transform="translate(-341.311 380.033)"/>
+      <path id="Path_5" data-name="Path 5" class="cls-3" d="M506.445-324.989H396.356a55.046,55.046,0,0,0-55.045,55.045h0A55.045,55.045,0,0,0,396.356-214.9h0a55.021,55.021,0,0,0,48.658-29.329,7.085,7.085,0,0,1,6.387-4.023,7.085,7.085,0,0,1,6.386,4.023A55.021,55.021,0,0,0,506.445-214.9a55.044,55.044,0,0,0,55.045-55.045h0A55.045,55.045,0,0,0,506.445-324.989Z" transform="translate(-341.311 380.033)"/>
+      <g id="Group_4" data-name="Group 4" transform="translate(-341.311 380.033)">
+        <g id="Group_2" data-name="Group 2">
+          <circle id="Ellipse_1" data-name="Ellipse 1" class="cls-4" cx="9.241" cy="9.241" r="9.241" transform="translate(496.913 -299.968)"/>
+          <circle id="Ellipse_2" data-name="Ellipse 2" class="cls-4" cx="9.241" cy="9.241" r="9.241" transform="translate(496.913 -261.073)"/>
+        </g>
+        <g id="Group_3" data-name="Group 3">
+          <circle id="Ellipse_3" data-name="Ellipse 3" class="cls-4" cx="9.241" cy="9.241" r="9.241" transform="translate(477.465 -280.52)"/>
+          <circle id="Ellipse_4" data-name="Ellipse 4" class="cls-4" cx="9.241" cy="9.241" r="9.241" transform="translate(516.36 -280.52)"/>
+        </g>
+        <rect id="Rectangle_6" data-name="Rectangle 6" class="cls-4" width="57.376" height="18.481" rx="9.241" transform="translate(367.599 -280.52)"/>
+        <rect id="Rectangle_7" data-name="Rectangle 7" class="cls-4" width="57.376" height="18.481" rx="9.241" transform="translate(387.047 -242.592) rotate(-90)"/>
+      </g>
+    </g>
+    <g id="Group_2054" data-name="Group 2054" transform="translate(-425.508 -470.414)">
+      <path id="Path_6869" data-name="Path 6869" class="cls-5" d="M1123.195,567.821h87.277a37.09,37.09,0,0,0,0-74.181h-87.277a10.846,10.846,0,0,0-10.834,10.835v52.511A10.846,10.846,0,0,0,1123.195,567.821Zm5.166-58.181h82.111a21.09,21.09,0,0,1,0,42.181h-82.111Z"/>
+      <path id="Path_6870" data-name="Path 6870" class="cls-5" d="M1210.472,577.64h-87.277a10.846,10.846,0,0,0-10.834,10.835v52.511a10.846,10.846,0,0,0,10.834,10.835h87.277a37.09,37.09,0,0,0,0-74.181Zm0,58.181h-82.111V593.64h82.111a21.09,21.09,0,0,1,0,42.181Z"/>
+      <path id="Path_6871" data-name="Path 6871" class="cls-5" d="M1077.428,597.238a8,8,0,0,0-14.741,6.221l13.655,32.362H963.962V501.64a8,8,0,0,0-16,0V643.821a8,8,0,0,0,8,8H1088.4a8,8,0,0,0,7.37-11.11Z"/>
+      <path id="Path_6872" data-name="Path 6872" class="cls-5" d="M982.558,617.7a7.979,7.979,0,0,0,3.222-.679l77.118-33.961a8,8,0,0,0,4.147-10.432l-31.266-74.1a8,8,0,0,0-7.363-4.889h-.008a8,8,0,0,0-7.364,4.875L975.192,606.577a8,8,0,0,0,7.366,11.125Zm45.83-95.533,20.854,49.425L997.8,594.245Z"/>
+      <path id="Path_6873" data-name="Path 6873" class="cls-5" d="M800.457,509.64a8,8,0,0,0,0-16H678.677a8,8,0,0,0,0,16h53.589V643.275a8,8,0,0,0,16,0V509.64Z"/>
+      <path id="Path_6874" data-name="Path 6874" class="cls-5" d="M920.338,577.64H880.221a8,8,0,0,0,0,16h32.117v19.9a17.342,17.342,0,0,1-9.062,15.345A63.381,63.381,0,1,1,915.069,525.32a8,8,0,0,0,10.537-12.041,79.363,79.363,0,1,0-14.755,129.7,33.321,33.321,0,0,0,17.487-29.439v-27.9A8,8,0,0,0,920.338,577.64Z"/>
+    </g>
+  </g>
+</svg>

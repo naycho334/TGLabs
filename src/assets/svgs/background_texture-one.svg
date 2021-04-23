@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="85.097" height="17.141" viewBox="0 0 85.097 17.141">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: 0.02;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-2 {
+        stroke-width: 2.066px;
+      }
+
+      .cls-3 {
+        stroke-width: 1.819px;
+      }
+
+      .cls-4 {
+        stroke-width: 1.931px;
+      }
+    </style>
+  </defs>
+  <g id="background_texture-one" transform="translate(1.033 0.91)">
+    <g id="Group_32" data-name="Group 32" class="cls-1" transform="translate(-304.603 -2087.842)">
+      <path id="Path_16" data-name="Path 16" class="cls-2" d="M334.021,2089.158l-7.624,12.689h15.247Z"/>
+      <rect id="Rectangle_23" data-name="Rectangle 23" class="cls-2" width="12.71" height="12.71" transform="translate(304.603 2089.148)"/>
+      <circle id="Ellipse_35" data-name="Ellipse 35" class="cls-3" cx="7.661" cy="7.661" r="7.661" transform="translate(350.729 2087.842)"/>
+      <g id="Group_31" data-name="Group 31">
+        <line id="Line_9" data-name="Line 9" class="cls-4" x2="12.167" y2="12.167" transform="translate(375.134 2089.419)"/>
+        <line id="Line_10" data-name="Line 10" class="cls-4" y1="12.167" x2="12.167" transform="translate(375.134 2089.419)"/>
+      </g>
+    </g>
+  </g>
+</svg>

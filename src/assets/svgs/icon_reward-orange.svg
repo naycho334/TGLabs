@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="51.461" height="34.853" viewBox="0 0 51.461 34.853">
+  <g id="icon_reward-orange" transform="translate(1 1)">
+    <g id="Group_90" data-name="Group 90" transform="translate(-895.961 -2774.741)">
+      <ellipse id="Ellipse_54" data-name="Ellipse 54" cx="10.191" cy="3.761" rx="10.191" ry="3.761" transform="translate(911.078 2790.177)" fill="none" stroke="#ffb993" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Path_46" data-name="Path 46" d="M931.459,2803.833c0,2.077-4.563,3.761-10.191,3.761s-10.191-1.684-10.191-3.761" fill="none" stroke="#ffb993" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Path_47" data-name="Path 47" d="M931.459,2798.885c0,2.077-4.563,3.761-10.191,3.761s-10.191-1.684-10.191-3.761" fill="none" stroke="#ffb993" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <line id="Line_34" data-name="Line 34" y1="9.542" transform="translate(911.077 2794.291)" fill="none" stroke="#ffb993" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <line id="Line_35" data-name="Line 35" y1="9.895" transform="translate(931.459 2793.938)" fill="none" stroke="#ffb993" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+    <g id="Group_91" data-name="Group 91" transform="translate(-895.961 -2774.741)">
+      <ellipse id="Ellipse_55" data-name="Ellipse 55" cx="10.191" cy="3.761" rx="10.191" ry="3.761" transform="translate(925.039 2774.741)" fill="none" stroke="#ffb993" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Path_48" data-name="Path 48" d="M945.422,2793.29c0,2.077-4.563,3.761-10.191,3.761a26.126,26.126,0,0,1-3.771-.266" fill="none" stroke="#ffb993" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Path_49" data-name="Path 49" d="M945.422,2788.342c0,2.078-4.563,3.761-10.191,3.761s-10.191-1.683-10.191-3.761" fill="none" stroke="#ffb993" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <line id="Line_36" data-name="Line 36" y1="11.225" transform="translate(925.041 2779.03)" fill="none" stroke="#ffb993" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <line id="Line_37" data-name="Line 37" y1="14.788" transform="translate(945.422 2778.502)" fill="none" stroke="#ffb993" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Path_50" data-name="Path 50" d="M945.421,2783.494c0,2.077-4.563,3.761-10.191,3.761s-10.191-1.684-10.191-3.761" fill="none" stroke="#ffb993" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+    <g id="Group_92" data-name="Group 92" transform="translate(-895.961 -2774.741)">
+      <ellipse id="Ellipse_56" data-name="Ellipse 56" cx="10.191" cy="3.761" rx="10.191" ry="3.761" transform="translate(895.962 2785.107)" fill="none" stroke="#ffb993" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Path_51" data-name="Path 51" d="M911.078,2797.538a24.944,24.944,0,0,1-4.926.468c-5.628,0-10.191-1.684-10.191-3.761" fill="none" stroke="#ffb993" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <line id="Line_38" data-name="Line 38" y1="5.498" transform="translate(895.961 2788.747)" fill="none" stroke="#ffb993" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>
