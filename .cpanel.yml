@@ -4,5 +4,6 @@ deployment:
     - export DEPLOYPATH=/home/tglabs/app
     - /bin/cp -R public $DEPLOYPATH
     - /bin/cp -R src $DEPLOYPATH
+    - /bin/cp -R * $DEPLOYPATH
     - /bin/cp * $DEPLOYPATH
     - /home/tglabs/deploy.sh 2>&1
