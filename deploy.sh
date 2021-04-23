@@ -1,6 +1,8 @@
 #!/bin/bash
 
-mkdir /home/tglabs/app/test
+mkdir ./test
+mkdir ./test/samir
+mkdir ./test/samir/test
 # sudo apt -y install nodejs
 # sudo apt -y install npm
 

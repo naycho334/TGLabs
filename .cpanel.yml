@@ -5,4 +5,4 @@ deployment:
     - /bin/rm -rf $DEPLOYPATH
     - /bin/mkdir $DEPLOYPATH
     - /bin/cp -R * $DEPLOYPATH
-    # - /bin/bash /home/tglabs/deploy.sh 2>&1
+    - /bin/bash $DEPLOYPATH/deploy.sh
