@@ -392,8 +392,8 @@ const useStyles = makeStyles((theme) => {
       "& .conditions": {
         listStyle: 'none',
         paddingLeft: 0,
-        
-        "& li":{
+
+        "& li": {
           fontSize: '.7rem',
         }
       },
@@ -440,9 +440,28 @@ const useStyles = makeStyles((theme) => {
     },
 
     // Tab table
-    tabTable:{
+    tabTable: {
       backgroundColor: theme.palette.common.white,
-      borderRadius: 15
+      borderRadius: 15,
+
+      "& .tabBar": {
+        backgroundColor: colors.grey[100],
+        marginBottom: -1,
+        display: 'flex',
+        paddingTop: 2,
+        
+        "& + div":{
+          borderTop: `1px solid ${colors.grey[300]}`,
+        }
+      },
+      
+      "& .tabIndicator":{
+        borderBottomColor: theme.palette.common.white,
+        border: `1px solid ${colors.grey[300]}`,
+        transition: 'background-color .3s',
+        backgroundColor: 'transparent',
+        height: '100%',
+      }
     }
   }
 })

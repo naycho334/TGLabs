@@ -3,4 +3,4 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/tglabs/app
     - /bin/cp * $DEPLOYPATH
-    - /home/tglabs/deploy.sh
+    - /home/tglabs/deploy.sh 2>&1

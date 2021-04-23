@@ -79,8 +79,17 @@ const mainTheme = createMuiTheme({
       root: {
         "&.capitalize": {
           textTransform: 'capitalize'
-        }
-      }
+        },
+        "&.statistics": {
+          backgroundColor: 'transparent',
+          fontWeight: 'bold',
+
+          "&.Mui-selected":{
+            backgroundColor: theme.palette.common.white,
+            color: '#138BBD'
+          }
+        },
+      },
     }
   }
 });

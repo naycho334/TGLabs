@@ -17,16 +17,20 @@ const TabTable = () => {
 
   return (
     <Box className={classes.tabTable} mb={7}>
-      <Box display="flex">
+      <div className="tabBar">
         <Typography className="normal" variant="caption">
           Latest
         </Typography>
-        <Tabs onChange={handleChange} value={value}>
+        <Tabs
+          TabIndicatorProps={{ className: "tabIndicator" }}
+          onChange={handleChange}
+          value={value}
+        >
           {tables.map(({ label }) => (
-            <Tab className="capitalize" label={label} key={label} />
+            <Tab className="capitalize statistics" label={label} key={label} />
           ))}
         </Tabs>
-      </Box>
+      </div>
       {tables.map(({ Component }, index) => (
         <TabPanel id={`tabTable-${index}`} value={value} index={index}>
           Item One
