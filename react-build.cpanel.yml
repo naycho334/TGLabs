@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export SOURCEPATH=/home/tglabs/app
+    - /bin/cp * $SOURCEPATH
+    - /home/tglabs/deploy.sh
