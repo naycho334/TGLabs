@@ -1,8 +1,10 @@
 import { Box, Grid, Typography } from "@material-ui/core";
 import { Link as RouterLink } from "react-router-dom";
+import { memo } from "react";
+import clsx from "clsx";
 
 import LightBlueGradientContainedButton from "../../components/Buttons/LightBlueGradientContainedButton";
-import LightBlueTitleTypography from "../../components/Typography/LightBlueTitleTypography";
+import LightBlueTypography from "../../components/Typography/LightBlueTypography";
 import LightBlueOutlinedButton from "../../components/Buttons/LightBlueOutlinedButton";
 import GoldenLink from "../../components/Links/GoldenLink";
 import useStyles from "./styles";
@@ -12,23 +14,22 @@ import { ReactComponent as EvSSLConnection } from "../../assets/svgs/icon_ev-ssl
 import { ReactComponent as DDOSProtection } from "../../assets/svgs/icon_ddos-protection.svg";
 
 import secondIllustration from "../../assets/pngs/second_illustration.png";
-import clsx from "clsx";
 
-const Overview = () => {
+const About = () => {
   const classes = useStyles();
 
   return (
-    <Box mb={8}>
+    <Box className={classes.about} mb={8}>
       <Grid container spacing={8}>
-        {/* Overview */}
-        <Grid item xs={12}>
-          <LightBlueTitleTypography
+        {/* About */}
+        <Grid item xs={12} id="about">
+          <LightBlueTypography
             className="underline underlineCenter"
             align="center"
             variant="h6"
           >
             What is TrueGaming Labs
-          </LightBlueTitleTypography>
+          </LightBlueTypography>
           <Typography variant="body1" className="white-text">
             We are a team of developers with extensive experience in gaming, and
             particularly Cryptocurrency gaming. Having seen many platforms whose
@@ -46,14 +47,13 @@ const Overview = () => {
         </Grid>
 
         {/* Image */}
-        <Grid item xs={6}>
-          <Grid container spacing={2}>
+        <Grid item xs={12} md={6}>
+          <Grid container spacing={2} className="centerOnSmall">
             <Grid item xs={12}>
-              <Box
-                className={classes.ourMissionImage}
+              <img
+                className="ourMissionImage"
                 src={secondIllustration}
-                component="img"
-                maxWidth="100%"
+                alt="our mission"
               />
             </Grid>
             <Grid item>
@@ -68,20 +68,20 @@ const Overview = () => {
         </Grid>
 
         {/* Our mission */}
-        <Grid item xs={6}>
+        <Grid item xs={12} md={6} id="mission">
           <Grid container spacing={3}>
             <Grid item xs={12}>
-              <LightBlueTitleTypography
+              <LightBlueTypography
+                className="normal underline smallCenter"
                 variant="h6"
-                className="normal underline"
               >
                 Our Mission
-              </LightBlueTitleTypography>
+              </LightBlueTypography>
               <Typography component="div" className="white-text">
                 <Typography
-                  component="p"
-                  variant="subtitle2"
                   className="mb-3 normal"
+                  variant="subtitle2"
+                  component="p"
                 >
                   True Gaming Labs aims to be the go-to solution for game
                   developers or clients for quality and provably fair
@@ -91,9 +91,9 @@ const Overview = () => {
                   fair and unmanipulated.
                 </Typography>
                 <Typography
-                  component="p"
-                  variant="subtitle2"
                   className="mb-3 normal"
+                  variant="subtitle2"
+                  component="p"
                 >
                   Many people also look to build a gaming platform but either
                   cannot afford the time, effort or funds required to build a
@@ -132,7 +132,7 @@ const Overview = () => {
                   { label: "EV SSL#Conntection", Icon: EvSSLConnection },
                   { label: "2FA#Authentication", Icon: TwoFaAuthentication },
                 ].map(({ label, Icon }, index) => (
-                  <Grid item key={label} className={classes.feature}>
+                  <Grid item key={label} className="feature">
                     <Grid container spacing={2} alignItems="center">
                       <Grid item>
                         <Icon />
@@ -161,4 +161,4 @@ const Overview = () => {
   );
 };
 
-export default Overview;
+export default memo(About);

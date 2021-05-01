@@ -1,4 +1,5 @@
 import { Box, Link, Typography } from "@material-ui/core";
+import { lazy } from "react";
 import { Link as RouterLink } from "react-router-dom";
 
 import LightBlueGradientContainedButton from "../../components/Buttons/LightBlueGradientContainedButton";
@@ -6,22 +7,19 @@ import LightBlueOutlinedButton from "../../components/Buttons/LightBlueOutlinedB
 import { endpoints } from "../../routes";
 import useStyles from "./styles";
 
-import main_illustration from "../../assets/pngs/main_illustration.png";
+const ThemeAnimation = lazy(() =>
+  import("../../components/Animations/ThemeAnimation")
+);
 
 const Header = () => {
   const classes = useStyles();
 
   return (
-    <div>
-      <Typography
-        className={classes.title}
-        component="h1"
-        align="center"
-        variant="h5"
-      >
+    <div className={classes.header}>
+      <Typography className="title" component="h1" align="center" variant="h5">
         A single Investment that generates profit from multiple sources.
       </Typography>
-      <Typography component="h2" align="center" className={classes.description}>
+      <Typography component="h2" align="center" className="description">
         Introducing TGLAB, the native token of True Gaming Labs. We develop and
         licence White Label Cryptocurrency Casino platforms for client. For
         every platform licenced, we retain a percentage of its profits that gets
@@ -37,7 +35,7 @@ const Header = () => {
           underline="none"
         >
           <LightBlueGradientContainedButton
-            className={classes.registerButton}
+            className="registerButton"
             size="large"
           >
             Register & Buy Token
@@ -56,20 +54,16 @@ const Header = () => {
         </Link>
       </Box>
 
-      <Typography variant="body2" align="center" className={classes.question}>
+      <Typography variant="body2" align="center" className="question">
         How it works?
       </Typography>
 
-      <Box
-        src={main_illustration}
-        alt="main illustration"
-        maxWidth="100%"
-        minHeight={300}
-        display="block"
-        component="img"
-        margin="auto"
-        mt={-5.5}
-      ></Box>
+      {/* Animation */}
+      <div className="animationContainer">
+        <div className="animation">
+          <ThemeAnimation />
+        </div>
+      </div>
     </div>
   );
 };

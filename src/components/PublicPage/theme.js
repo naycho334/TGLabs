@@ -4,7 +4,6 @@ let theme = createMuiTheme();
 
 const mainTheme = createMuiTheme({
   palette: {
-
     golden: {
       main: '#FFB993',
       light: '#FEECA8',
@@ -56,11 +55,20 @@ const mainTheme = createMuiTheme({
         "&.grey-text": {
           color: colors.grey[400]
         },
+        "&.purple-text": {
+          color: "#6B24D6"
+        },
+        "&.yellow-text": {
+          color: "#FEECA8"
+        },
         "&.normal": {
           fontWeight: 'normal'
         },
         "&.bold": {
           fontWeight: 'bold'
+        },
+        "&.uppercase": {
+          textTransform: 'uppercase'
         },
         "&.mb-3": {
           marginBottom: theme.spacing(3)
@@ -68,6 +76,13 @@ const mainTheme = createMuiTheme({
         "& .orange": {
           color: "#FFB993"
         },
+      }
+    },
+    MuiButton: {
+      root: {
+        "&.white-text": {
+          color: "#FFF"
+        }
       }
     },
     MuiListItemIcon: {
@@ -84,7 +99,7 @@ const mainTheme = createMuiTheme({
           backgroundColor: 'transparent',
           fontWeight: 'bold',
 
-          "&.Mui-selected":{
+          "&.Mui-selected": {
             backgroundColor: theme.palette.common.white,
             color: '#138BBD'
           }

@@ -58,7 +58,7 @@ const StageOne = () => {
       <img className="bluredLogo" src={bluredLogo} alt="logo" />
 
       {/* Title */}
-      <Typography className={classes.stageTitle} variant="h5" align="center">
+      <Typography className="stageTitle" variant="h5" align="center">
         ICO Stage 1 (Public ICO)
       </Typography>
 

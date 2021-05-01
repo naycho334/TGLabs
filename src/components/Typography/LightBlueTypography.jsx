@@ -1,6 +1,6 @@
 import { Typography, withStyles } from "@material-ui/core";
 
-const LightBlueTitleTypography = withStyles((theme) => {
+const LightBlueTypography = withStyles((theme) => {
   return {
     root: {
       color: theme.palette.lightBlue.main,
@@ -31,8 +31,18 @@ const LightBlueTitleTypography = withStyles((theme) => {
           left: "50%",
         },
       },
+
+      [theme.breakpoints.down("sm")]: {
+        "&.smallCenter": {
+          textAlign: "center",
+          "&:after": {
+            transform: "translate(-50%, 0)",
+            left: "50%",
+          },
+        },
+      },
     },
   };
 })(Typography);
 
-export default LightBlueTitleTypography;
+export default LightBlueTypography;

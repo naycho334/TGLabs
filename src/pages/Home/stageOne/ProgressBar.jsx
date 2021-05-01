@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Box, Typography } from "@material-ui/core";
 import propTypes from "prop-types";
-import useStyles from "../styles";
 import _ from "lodash";
 
 const ProgressBar = (props) => {
@@ -9,7 +8,6 @@ const ProgressBar = (props) => {
   const [barWidth, setBarWidth] = useState(0);
   const progressValueRef = useRef();
   const progressBarRef = useRef();
-  const classes = useStyles();
 
   const { maxValue, value, targets } = props;
   const PERCENTAGE = (value / maxValue) * 100;
@@ -34,17 +32,17 @@ const ProgressBar = (props) => {
   }, [changeBarWidth]);
 
   return (
-    <div className={classes.progressBarContainer}>
-      <div className={classes.progressBar}>
+    <div className="progressBarContainer">
+      <div className="progressBar">
         <div>
           <Box
             style={{ transform: `translateX(-${TRANSFORM}%)` }}
-            className={classes.progress}
+            className="progress"
             ref={progressBarRef}
           />
           <Typography
             style={{ marginLeft: `${VALUE_OFFSET}%` }}
-            className={classes.progressValue}
+            className="progressValue"
             ref={progressValueRef}
             variant="caption"
           >
@@ -55,9 +53,9 @@ const ProgressBar = (props) => {
         {/* Set targets */}
         {targets.map(({ label, value }) => (
           <span
-            className={classes.target}
-            key={label}
             style={{ left: `${(value / maxValue) * 100}%` }}
+            className="target"
+            key={label}
           >
             <span>{value.toLocaleString()} TGLAB</span>
             <span>{label}</span>

@@ -8,35 +8,50 @@ import {
   Grid,
   Box,
 } from "@material-ui/core";
-import { Link as RouterLink, NavLink, useLocation } from "react-router-dom";
-import { AccountCircleOutlined } from "@material-ui/icons";
-import { useRef } from "react";
+import { useLocation, Link as RouterLink } from "react-router-dom";
+import { HighlightOffRounded } from "@material-ui/icons";
+import { HashLink } from "react-router-hash-link";
+import { useRef, useState } from "react";
+import clsx from "clsx";
 import _ from "lodash";
 
-import GolderGradientContainedButton from "../Buttons/GolderGradientContainedButton";
+import GolderGradientButton from "../Buttons/GolderGradientButton";
 import GolderLink from "../Links/GoldenLink";
 import { endpoints } from "../../routes";
+import SideMenu from "./SideMenu";
 import useStyles from "./styles";
 
-import { ReactComponent as Logo } from "../../assets/svgs/logo_tglab-inverse.svg";
+import { ReactComponent as MenuIcon } from "../../assets/svgs/icon_hamburger-menu.svg";
+import { ReactComponent as LogoIcon } from "../../assets/svgs/logo_tglab-inverse.svg";
+import { ReactComponent as AccountIcon } from "../../assets/svgs/icon_myaccount.svg";
 
-const navbarLinks = [
-  { title: "About", path: endpoints.about.index },
-  { title: "Mission", path: endpoints.mission.index },
-  { title: "Takenomics", path: endpoints.takenomics.index },
-  { title: "Benefits", path: endpoints.benefits.index },
-  { title: "Timeline", path: endpoints.timeline.index },
-  { title: "Products", path: endpoints.products.index },
-  { title: "Statistics", path: endpoints.statistics.index },
-  { title: "FAQ", path: endpoints.faq.index },
-];
+const navbarLinks = {
+  mega: [
+    { title: "About", path: endpoints.home.index + "#about" },
+    { title: "Mission", path: endpoints.home.index + "#mission" },
+    { title: "Takenomics", path: endpoints.home.index + "#tokenomics" },
+    { title: "Benefits", path: endpoints.home.index + "#benefits" },
+    { title: "Statistics", path: endpoints.home.index + "#statistics" },
+    { title: "Timeline", path: endpoints.home.index + "#timeline" },
+    { title: "FAQ", path: endpoints.home.index + "#faq" },
+    { title: "Products", path: endpoints.products.index },
+  ],
+  user: [
+    { title: "Login", path: endpoints.login.index },
+    { title: "Sign Up", path: endpoints.signup.index },
+  ],
+};
 
 const MainNavbar = () => {
-  const { pathname } = useLocation();
+  const [activeMenu, setActiveMenu] = useState(null);
+  const { pathname, hash } = useLocation();
   const indicatorRef = useRef();
   const classes = useStyles();
+  const currentPage = pathname + hash;
 
-  const hasActiveNavbar = !!_.find(navbarLinks, (obj) => obj.path === pathname);
+  const hasActiveNavbar = !!_.find(navbarLinks.mega, (obj) =>
+    currentPage.includes(obj.path)
+  );
 
   /**
    * Set active nav link indicator
@@ -48,53 +63,71 @@ const MainNavbar = () => {
 
       if (isActive) {
         const { offsetLeft, offsetWidth } = parent;
+        console.log({ offsetLeft, offsetWidth });
         indicatorRef.current.style.cssText = `left: ${offsetLeft}px; width: ${offsetWidth}px`;
       }
     }
   };
 
+  /**
+   * Toggle side menu
+   */
+  const toggleSideMenu = (target) =>
+    setActiveMenu((state) => (state === target ? null : target));
+
   return (
     <AppBar position="fixed" elevation={0} color="transparent">
-      <Toolbar className={classes.navbar} disableGutters>
+      <Toolbar
+        className={clsx(classes.navbar, !_.isNull(activeMenu) && "sidemenu")}
+        disableGutters
+      >
         <Container maxWidth="lg">
           <Grid container spacing={4} alignItems="center">
             {/* Logo */}
             <Grid item xs>
-              <Link component={RouterLink} to={endpoints.home.index}>
-                <Logo className={classes.logo} />
+              <Link
+                onClick={() => toggleSideMenu(null)}
+                to={endpoints.home.index}
+                component={RouterLink}
+              >
+                <LogoIcon className={classes.logo} />
               </Link>
             </Grid>
 
             {/* Pages */}
-            <Grid item>
+            <Grid item className={classes.hideOnSmallScreens}>
               <Grid className={classes.links} container spacing={3}>
-                {hasActiveNavbar && (
-                  <div className={classes.indicator} ref={indicatorRef}></div>
-                )}
-                {navbarLinks.map(({ title, path }) => (
+                <div
+                  className={clsx(
+                    hasActiveNavbar && "active",
+                    classes.indicator
+                  )}
+                  ref={indicatorRef}
+                ></div>
+                {navbarLinks.mega.map(({ title, path }) => (
                   <Grid item key={path}>
-                    <NavLink
-                      className={classes.link}
-                      activeClassName="active"
+                    <HashLink
+                      className={clsx(
+                        currentPage.includes(path) && "active",
+                        classes.link
+                      )}
                       ref={setActiveNavLink}
                       to={path}
-                      strict
-                      exact
                     >
                       <Typography variant="body2">{title}</Typography>
-                    </NavLink>
+                    </HashLink>
                   </Grid>
                 ))}
               </Grid>
             </Grid>
 
             {/* Porfile */}
-            <Grid item>
+            <Grid item className={classes.hideOnSmallScreens}>
               <Grid container spacing={1} alignItems="center">
                 {/* Acount */}
                 <Grid item>
                   <IconButton className={classes.profile}>
-                    <AccountCircleOutlined />
+                    <AccountIcon />
                   </IconButton>
                 </Grid>
 
@@ -105,12 +138,9 @@ const MainNavbar = () => {
                     component={RouterLink}
                     underline="none"
                   >
-                    <GolderGradientContainedButton
-                      variant="contained"
-                      disableElevation
-                    >
+                    <GolderGradientButton variant="contained" disableElevation>
                       Login
-                    </GolderGradientContainedButton>
+                    </GolderGradientButton>
                   </Link>
                 </Grid>
 
@@ -118,6 +148,7 @@ const MainNavbar = () => {
                 <Grid item>
                   <Box ml={1.25}>
                     <GolderLink
+                      onClick={() => toggleSideMenu(null)}
                       to={endpoints.signup.index}
                       component={RouterLink}
                       underline="none"
@@ -128,6 +159,37 @@ const MainNavbar = () => {
                 </Grid>
               </Grid>
             </Grid>
+
+            {/* Menu */}
+            <Grid item className={classes.showOnSmallScreens}>
+              <Grid container spacing={2} alignItems="center">
+                {[
+                  { type: "user", Icon: AccountIcon },
+                  { type: "mega", Icon: MenuIcon },
+                ].map(({ type, Icon }) => (
+                  <Grid item key={type}>
+                    <IconButton
+                      onClick={toggleSideMenu.bind(null, type)}
+                      className="navButton"
+                    >
+                      {activeMenu === type ? (
+                        <HighlightOffRounded className="close" />
+                      ) : (
+                        <Icon />
+                      )}
+                    </IconButton>
+                  </Grid>
+                ))}
+              </Grid>
+            </Grid>
+
+            {/* Side Menu */}
+            <SideMenu
+              title={activeMenu === "user" ? "User Menu" : "Main Menu"}
+              links={_.get(navbarLinks, activeMenu, [])}
+              onClose={() => toggleSideMenu(null)}
+              open={activeMenu !== null}
+            />
           </Grid>
         </Container>
       </Toolbar>

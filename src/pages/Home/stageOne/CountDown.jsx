@@ -4,21 +4,13 @@ import propTypes from "prop-types";
 import { memo } from "react";
 import clsx from "clsx";
 
-import useStyles from "../styles";
-
 const CountDown = (props) => {
   const { time } = props;
-  const classes = useStyles();
 
   return (
-    <div className={classes.countdownContainer}>
-      <Grid
-        className={classes.countdown}
-        alignItems="center"
-        spacing={2}
-        container
-      >
-        <Grid item className={classes.countEnds}>
+    <div className="countdownContainer">
+      <Grid className="countdown" alignItems="center" spacing={2} container>
+        <Grid item className="countEnds" xs={12} md="auto">
           <Typography variant="h6">ENDS IN</Typography>
         </Grid>
         <Countdown
@@ -31,7 +23,7 @@ const CountDown = (props) => {
               { time: time.seconds, label: "Seconds" },
             ].map(({ time, label }, index, { length }) => (
               <Grid item key={label}>
-                <div className={classes.timeBox}>
+                <div className="timeBox">
                   <Typography
                     className={clsx("value", index + 1 === length && "seconds")}
                     component="span"

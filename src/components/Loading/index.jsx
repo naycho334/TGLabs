@@ -1,4 +1,7 @@
-import { CircularProgress, Typography } from "@material-ui/core";
+import { CircularProgress } from "@material-ui/core";
+
+import { ReactComponent as Logo } from "../../assets/svgs/logo_tglab-inverse.svg";
+
 import useStyles from "./styles";
 
 const Loading = () => {
@@ -7,11 +10,9 @@ const Loading = () => {
   return (
     <div className={classes.container}>
       <div>
-        <Typography variant="h6" component="span">
-          LOADING...
-        </Typography>
+        <Logo className="logo" />
         <div className={classes.loader}>
-          <CircularProgress size={24} />
+          <CircularProgress size={24} style={{ color: "#FFF" }} />
         </div>
       </div>
     </div>

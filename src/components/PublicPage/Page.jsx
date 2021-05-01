@@ -12,7 +12,9 @@ const Page = (props) => {
       <HelmetExport>
         <title>{title}</title>
       </HelmetExport>
-      <Box pt={hasNavbar ? `${paddingTop}px` : 0}>{children}</Box>
+      <Box pt={hasNavbar ? `${paddingTop}px` : 0} overflow="hidden">
+        {children}
+      </Box>
     </>
   );
 };
@@ -20,7 +22,7 @@ const Page = (props) => {
 Page.propTypes = {
   hasNavbar: propTypes.bool.isRequired,
   title: propTypes.string.isRequired,
-  children: propTypes.object,
+  children: propTypes.any,
 };
 
 Page.defaultProps = {

@@ -1,21 +1,31 @@
 import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
+import PerfectScrollbar from "react-perfect-scrollbar";
 import { CssBaseline } from "@material-ui/core";
 import { lazy, Suspense } from "react";
 
 import CustomCSSBaseline from "./styles/CustomCSSBaseline";
+import useViewPort from "./hooks/useViewPort";
 import Loading from "./components/Loading";
+import HelmetExport from "react-helmet";
 import { endpoints } from "./routes";
+
+import 'react-perfect-scrollbar/dist/css/styles.css';
 
 const PageNotFound = lazy(() => import("./pages/Errors/PageNotFound"));
 const PublicPage = lazy(() => import("./components/PublicPage"));
 const HomePage = lazy(() => import("./pages/Home"));
 
 const App = () => {
+  const viewPort = useViewPort({ xs: 0.75, sm: 0.85, md: .95, lg: 1 });
+
   return (
-    <>
+    <PerfectScrollbar className="globalScrollbar">
       {/* Custom style */}
       <CssBaseline />
       <CustomCSSBaseline />
+
+      {/* Customize view port */}
+      <HelmetExport>{viewPort}</HelmetExport>
 
       {/* Lazy load */}
       <Suspense fallback={<Loading />}>
@@ -44,7 +54,7 @@ const App = () => {
           </Switch>
         </BrowserRouter>
       </Suspense>
-    </>
+    </PerfectScrollbar>
   );
 };
 

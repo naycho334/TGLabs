@@ -1,12 +1,17 @@
 import { Container } from "@material-ui/core";
+import { memo } from "react";
 
+import ExpressionOfInterest from "./ExpressionOfInterest";
 import Page from "../../components/PublicPage/Page";
 import Tokenomics from "./Tokenomics";
 import HowITWorks from "./HowITWorks";
+import Statistics from "./Statistics";
 import StageOne from "./StageOne";
-import Overview from "./Overview";
-import TabTable from "./TabTable";
+import About from "./About";
+import TimeLine from "./TimeLine";
 import Header from "./Header";
+import Footer from "./Footer";
+import FAQ from "./FAQ";
 
 const Home = () => {
   return (
@@ -14,13 +19,19 @@ const Home = () => {
       <Container maxWidth="lg">
         <Header />
         <StageOne />
-        <Overview />
+        <About />
         <HowITWorks />
         <Tokenomics />
-        <TabTable />
       </Container>
+      <Statistics />
+      <TimeLine />
+      <Container maxWidth="lg">
+        <FAQ />
+        <ExpressionOfInterest />
+      </Container>
+      <Footer />
     </Page>
   );
 };
 
-export default Home;
+export default memo(Home);

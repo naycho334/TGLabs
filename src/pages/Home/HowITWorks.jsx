@@ -1,9 +1,9 @@
-import { Box, Grid, Typography } from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 import { ArrowForward } from "@material-ui/icons";
 import { Fragment } from "react";
 import clsx from "clsx";
 
-import LightBlueTitleTypography from "../../components/Typography/LightBlueTitleTypography";
+import LightBlueTypography from "../../components/Typography/LightBlueTypography";
 import useStyles from "./styles";
 
 import { ReactComponent as CreateAcountOrange } from "../../assets/svgs/icon_create-account-orange.svg";
@@ -16,14 +16,14 @@ const HowITWorks = () => {
   const classes = useStyles();
 
   return (
-    <Box pt={3} pb={5} px={4} className={classes.howItWorks} mb={6}>
-      <LightBlueTitleTypography
+    <div className={classes.howItWorks}>
+      <LightBlueTypography
         className="underline underlineCenter normal"
         variant="h6"
         align="center"
       >
         How it works
-      </LightBlueTitleTypography>
+      </LightBlueTypography>
       <Grid container spacing={4} alignItems="center">
         {[
           { label: "Create an Account", Icon: CreateAcountOrange },
@@ -32,7 +32,7 @@ const HowITWorks = () => {
           { label: "Withdraw", Icon: WithdrawOrange },
         ].map(({ label, Icon }, i, { length }) => (
           <Fragment key={i}>
-            <Grid item className={classes.step}>
+            <Grid item className="step" xs={12} lg="auto">
               <Grid container spacing={2} alignItems="center">
                 <Grid item>
                   <div className="number">
@@ -63,14 +63,14 @@ const HowITWorks = () => {
               </Grid>
             </Grid>
             {i + 1 < length && (
-              <Grid item className={classes.nextStep}>
+              <Grid item className="nextStep" xs={12} lg="auto">
                 <ArrowForward />
               </Grid>
             )}
           </Fragment>
         ))}
       </Grid>
-    </Box>
+    </div>
   );
 };
 

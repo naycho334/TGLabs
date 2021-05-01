@@ -1,24 +1,25 @@
 import { Box, Typography } from "@material-ui/core";
 import propTypes from "prop-types";
-import useStyles from "../styles";
-import _ from "lodash";
+// import _ from "lodash";
 
 const Discounts = (props) => {
   const { discounts } = props;
-  const classes = useStyles();
 
   return (
-    <div className={classes.discountsContainer}>
-      <div className={classes.discounts}>
-        <div className={classes.line}></div>
+    <div className="discountsContainer">
+      <div className="discounts">
+        <div className="line"></div>
         {discounts.map(({ discount, label }, index, { length }) => (
           <Box
             left={`${(index / length) * 100}%`}
-            className={classes.discount}
+            top={`${(index / length) * 100}%`}
+            className="discount"
             key={label}
           >
             <Typography variant="caption" component="span">
-              {label}
+              {label.split(/(?=\()/).map((str) => (
+                <span key={str}>{str}</span>
+              ))}
             </Typography>
             <Typography variant="body2" component="span">
               Discount: {discount}%

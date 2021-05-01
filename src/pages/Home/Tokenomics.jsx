@@ -1,34 +1,71 @@
 import { Box, Grid, Typography } from "@material-ui/core";
+import { memo } from "react";
 
 import LightBlueGradientContainedButton from "../../components/Buttons/LightBlueGradientContainedButton";
-import LightBlueTitleTypography from "../../components/Typography/LightBlueTitleTypography";
-import BenefitsForInvestors from "./tokenomics/BenefitsForInvestors";
-import BenefitsForClients from "./tokenomics/BenefitsForClients";
+import LightBlueTypography from "../../components/Typography/LightBlueTypography";
 import TokenSupply from "./tokenomics/TokenSupply";
+import Benefits from "./tokenomics/Benefits";
 import useStyles from "./styles";
 
-import { ReactComponent as ProfitDistribution } from "../../assets/svgs/profit_distribution.svg";
+import { ReactComponent as ProfitDistributionHor } from "../../assets/svgs/profit_distribution_hor.svg";
+import { ReactComponent as ProfitDistributionVer } from "../../assets/svgs/profit_distribution_ver.svg";
 import { ReactComponent as Logo } from "../../assets/svgs/logo_symbol_tglab-inverse.svg";
 
 import BenefitsIllustration from "../../assets/pngs/benefits_illustration.png";
 import DiceBluered from "../../assets/pngs/dice.png";
 
+const data = {
+  benefits: {
+    investors: [
+      "Receive income from multiple platforms",
+      "Earn profits in 12+ of the top cryptocurrencies *",
+      "Easy to manage Investor dashboard to track your investment from day 1",
+      "Have wider access to a range of cryptocurrency gaming platforms",
+      "The opportunity to licence your own platform for FREE! **",
+      "Discounted set up fees on additional features",
+    ],
+    clients: [
+      "White label solution for quick roll out to users and fast user base onboarding.",
+      "Over 200,000 cryptocurrencies to add",
+      "No set up fees*",
+      "No fixed monthly fees**",
+      "Multiple features and games to choose from",
+      "On going maintenance",
+      "24/7 Support",
+      "Free updates for 12 months***",
+    ],
+  },
+  conditions: {
+    investors: [
+      "* Based on the number of currency types each platform offers",
+      "** No initial set up fees for VIP investors only. See pricing for more details",
+    ],
+    clients: [
+      "* No initial set up fees for VIP investors only. See pricing for more details.",
+      "** A percentage of platform profits, rather than a fixed monthly fee.",
+      "*** Updates will be charged for at a minimal value after the first 12 months.",
+    ],
+  },
+};
+
 const Tokenomics = () => {
   const classes = useStyles();
 
   return (
-    <Box pt={3} pb={5} px={4} className={classes.tokenomics} mb={7}>
+    <div className={classes.tokenomics}>
       <img className="bluredDice" src={DiceBluered} alt="blured dice" />
-      <LightBlueTitleTypography
-        className="underline underlineCenter normal"
-        align="center"
-        variant="h6"
-      >
-        Tokenomics
-      </LightBlueTitleTypography>
       <Grid container spacing={7}>
-        <Grid item xs={12}>
+        <Grid item xs={12} id="tokenomics">
           <Grid container>
+            <Grid item xs>
+              <LightBlueTypography
+                className="underline underlineCenter normal"
+                align="center"
+                variant="h6"
+              >
+                Tokenomics
+              </LightBlueTypography>
+            </Grid>
             {/* Tokens */}
             <Grid item xs={12}>
               <Typography
@@ -39,16 +76,12 @@ const Tokenomics = () => {
               >
                 Token supply:
               </Typography>
-              <LightBlueTitleTypography
-                component="div"
-                align="center"
-                variant="h5"
-              >
+              <LightBlueTypography component="div" align="center" variant="h5">
                 {Number(2000000).toLocaleString()}
                 <Box ml={2} display="inline">
                   <Logo style={{ transform: "translateY(4px) scale(.9)" }} />
                 </Box>
-              </LightBlueTitleTypography>
+              </LightBlueTypography>
 
               <TokenSupply />
             </Grid>
@@ -56,7 +89,7 @@ const Tokenomics = () => {
             {/* Profit */}
             <Grid item xs={12}>
               <Grid container spacing={10}>
-                <Grid item xs={6}>
+                <Grid item xs={12} md={6} className="profitGain">
                   <Typography
                     className="white-text normal"
                     variant="caption"
@@ -79,7 +112,7 @@ const Tokenomics = () => {
                     ICO Token Distribution
                   </LightBlueGradientContainedButton>
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={12} md={6}>
                   <Typography
                     className="white-text normal"
                     variant="caption"
@@ -89,9 +122,10 @@ const Tokenomics = () => {
                     Profit Distribution:
                   </Typography>
 
-                  <Box mt={4}>
-                    <ProfitDistribution style={{ width: "100%" }} />
-                  </Box>
+                  <div className="profitDistribution" mt={4}>
+                    <ProfitDistributionVer />
+                    <ProfitDistributionHor />
+                  </div>
                 </Grid>
               </Grid>
             </Grid>
@@ -99,27 +133,36 @@ const Tokenomics = () => {
         </Grid>
 
         {/* Benefits */}
-        <Grid item xs={12}>
-          <Grid container>
-            <Grid item xs={4}>
-              <BenefitsForInvestors />
+        <Grid item xs={12} id="benefits">
+          <Grid container className="benefitsOrder">
+            <Grid item xs={12} md={4}>
+              <Benefits
+                title="for Investors"
+                benefits={data.benefits.investors}
+                conditions={data.conditions.investors}
+              />
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={12} md={4}>
               <Box
                 src={BenefitsIllustration}
                 component="img"
                 maxWidth="100%"
+                mb={-6}
                 mt={-7}
               />
             </Grid>
-            <Grid item xs={4}>
-              <BenefitsForClients />
+            <Grid item xs={12} md={4}>
+              <Benefits
+                title="for Clients"
+                benefits={data.benefits.clients}
+                conditions={data.conditions.clients}
+              />
             </Grid>
           </Grid>
         </Grid>
       </Grid>
-    </Box>
+    </div>
   );
 };
 
-export default Tokenomics;
+export default memo(Tokenomics);

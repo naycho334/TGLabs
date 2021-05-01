@@ -2,10 +2,10 @@ import { withStyles } from "@material-ui/core/styles";
 
 const styles = theme => ({
   "@global": {
-    // "html, body, #root": {
-    //   overflow: 'hidden',
-    //   height: '100vh',
-    // }
+    "html, body, #root": {
+      overflow: 'hidden',
+      height: '100vh',
+    }
   }
 });
 

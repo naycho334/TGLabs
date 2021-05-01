@@ -1,4 +1,4 @@
-import { Box, Typography } from "@material-ui/core";
+import { Box } from "@material-ui/core";
 import { memo } from "react";
 
 const TabPanel = (props) => {
@@ -7,8 +7,8 @@ const TabPanel = (props) => {
   return (
     <div hidden={value !== index} role="tabpanel" {...other}>
       {value === index && (
-        <Box p={3}>
-          <Typography>{children}</Typography>
+        <Box p={3} pt={2}>
+          {children}
         </Box>
       )}
     </div>

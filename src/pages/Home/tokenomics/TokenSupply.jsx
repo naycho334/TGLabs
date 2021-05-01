@@ -2,18 +2,14 @@ import { Box, Grid, Typography } from "@material-ui/core";
 import clsx from "clsx";
 import _ from "lodash";
 
-import useStyles from "../styles";
-
 const data = [
   { label: "Held by Team", value: 20 },
   { label: "Public Purchase", value: 80 },
 ];
 
 const TokenSupply = () => {
-  const classes = useStyles();
-
   return (
-    <div className={classes.percentageLine}>
+    <div className="percentageLine">
       <Box display="flex" className="bar">
         {data.map(({ value }) => (
           <div style={{ width: `${value}%` }} key={value}></div>

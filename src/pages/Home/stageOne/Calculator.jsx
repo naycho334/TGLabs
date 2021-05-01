@@ -5,13 +5,13 @@ import {
   MenuItem,
   Grid,
   Link,
+  Box,
 } from "@material-ui/core";
 import { DragHandleRounded, ExpandMore } from "@material-ui/icons";
 import { Link as RouterLink } from "react-router-dom";
 import propTypes from "prop-types";
-import useStyles from "../styles";
 import { memo } from "react";
-import _ from "lodash";
+// import _ from "lodash";
 
 import LightBlueGradientContainedButton from "../../../components/Buttons/LightBlueGradientContainedButton";
 import NoFieldsetSelect from "../../../components/Selects/NoFieldsetSelect";
@@ -31,18 +31,19 @@ const Calculator = (props) => {
   } = props;
   const [container1, handleInputFocus1] = useInputStyles();
   const [container2, handleInputFocus2] = useInputStyles();
-  const classes = useStyles();
 
   return (
-    <div className={classes.calculatorContainer}>
+    <div className="calculatorContainer">
       <Grid container alignItems="center" spacing={2} justify="center">
-        <Grid item>
-          <Typography variant="overline">Calculator</Typography>
+        <Grid item md="auto">
+          <Typography variant="overline" align="center">
+            Calculator
+          </Typography>
         </Grid>
 
         {/* Amount and currency */}
-        <Grid item>
-          <div className={classes.outlinedInput} ref={container1}>
+        <Grid item xs={12} md="auto">
+          <div className="outlinedInput" ref={container1}>
             <InputBase
               onFocus={handleInputFocus1.bind(null, "focus")}
               onBlur={handleInputFocus1.bind(null, "blur")}
@@ -76,8 +77,8 @@ const Calculator = (props) => {
         </Grid>
 
         {/* Discount */}
-        <Grid item>
-          <div className={classes.outlinedInput} ref={container2}>
+        <Grid item xs={12} md="auto">
+          <div className="outlinedInput" ref={container2}>
             <NoFieldsetSelect
               onFocus={handleInputFocus2.bind(null, "focus")}
               onBlur={handleInputFocus2.bind(null, "blur")}
@@ -103,16 +104,21 @@ const Calculator = (props) => {
         </Grid>
 
         {/* Register */}
-        <Grid item>
-          <Link
-            to={endpoints.signup.index}
-            component={RouterLink}
-            underline="none"
-          >
-            <LightBlueGradientContainedButton className="reverse" size="large">
-              Register & Buy Token
-            </LightBlueGradientContainedButton>
-          </Link>
+        <Grid item xs={12} md="auto">
+          <Box display="flex" justifyContent="center">
+            <Link
+              to={endpoints.signup.index}
+              component={RouterLink}
+              underline="none"
+            >
+              <LightBlueGradientContainedButton
+                className="reverse"
+                size="large"
+              >
+                Register & Buy Token
+              </LightBlueGradientContainedButton>
+            </Link>
+          </Box>
         </Grid>
       </Grid>
     </div>
