@@ -26,16 +26,16 @@ import TgLabBlurred from "../../assets/pngs/thlab2.png";
 
 const links = {
   list1: [
-    { title: "About", path: endpoints.about.index },
-    { title: "Mission", path: endpoints.mission.index },
-    { title: "Tokenomics", path: endpoints.takenomics.index },
-    { title: "Benefits", path: endpoints.benefits.index },
+    { title: "About", path: endpoints.home.index + "#about" },
+    { title: "Mission", path: endpoints.home.index + "#mission" },
+    { title: "Tokenomics", path: endpoints.home.index + "#tokenomics" },
+    { title: "Benefits", path: endpoints.home.index + "#benefits" },
   ],
   list2: [
-    { title: "Timeline", path: endpoints.timeline.index },
+    { title: "Timeline", path: endpoints.home.index + "#timeline" },
     { title: "Products", path: endpoints.products.index },
-    { title: "Statistics", path: endpoints.statistics.index },
-    { title: "FAQ", path: endpoints.faq.index },
+    { title: "Statistics", path: endpoints.home.index + "#statistics" },
+    { title: "FAQ", path: endpoints.home.index + "#faq" },
   ],
   list3: [
     { title: "Login", path: endpoints.login.index },
@@ -113,12 +113,7 @@ const Footer = () => {
           </Grid>
         </Box>
 
-        <Grid
-          alignItems="center"
-          className="bottom"
-          spacing={2}
-          container
-        >
+        <Grid alignItems="center" className="bottom" spacing={2} container>
           <Grid item>
             <Typography variant="caption" className="white-text">
               © Copyright True Gaming Labs All rights reserved.

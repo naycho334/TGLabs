@@ -9,14 +9,14 @@ import Loading from "./components/Loading";
 import HelmetExport from "react-helmet";
 import { endpoints } from "./routes";
 
-import 'react-perfect-scrollbar/dist/css/styles.css';
+import "react-perfect-scrollbar/dist/css/styles.css";
 
 const PageNotFound = lazy(() => import("./pages/Errors/PageNotFound"));
-const PublicPage = lazy(() => import("./components/PublicPage"));
+const LoginPage = lazy(() => import("./pages/Login"));
 const HomePage = lazy(() => import("./pages/Home"));
 
 const App = () => {
-  const viewPort = useViewPort({ xs: 0.75, sm: 0.85, md: .95, lg: 1 });
+  const viewPort = useViewPort({ xs: 0.75, sm: 0.85, md: 0.95, lg: 1 });
 
   return (
     <PerfectScrollbar className="globalScrollbar">
@@ -32,15 +32,21 @@ const App = () => {
         {/* Routes */}
         <BrowserRouter>
           <Switch>
-            <PublicPage>
-              {/* Home page */}
-              <Route
-                path={endpoints.home.index}
-                component={HomePage}
-                strict
-                exact
-              />
-            </PublicPage>
+            {/* Home page */}
+            <Route
+              path={endpoints.home.index}
+              component={HomePage}
+              strict
+              exact
+            />
+
+            {/* Login page */}
+            <Route
+              path={endpoints.login.index}
+              component={LoginPage}
+              strict
+              exact
+            />
 
             {/* 404 page */}
             <Route

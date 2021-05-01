@@ -2,7 +2,7 @@ import { Container } from "@material-ui/core";
 import { memo } from "react";
 
 import ExpressionOfInterest from "./ExpressionOfInterest";
-import Page from "../../components/PublicPage/Page";
+import Page from "../../components/PublicPage";
 import Tokenomics from "./Tokenomics";
 import HowITWorks from "./HowITWorks";
 import Statistics from "./Statistics";

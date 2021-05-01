@@ -8,33 +8,14 @@ export const endpoints = {
   signup: {
     index: '/signup'
   },
-  about: {
-    index: '/about'
-  },
-  mission: {
-    index: '/mission'
-  },
-  takenomics: {
-    index: '/takenomics'
-  },
-  benefits: {
-    index: '/benefits'
-  },
-  timeline: {
-    index: '/timeline'
-  },
   products: {
     index: '/products'
-  },
-  statistics: {
-    index: '/statistics'
-  },
-  faq: {
-    index: '/faq'
   },
   error: {
     404: '/404'
   }
 }
 
-export const api = {}
+export const api = {
+  ws: 'https://api.tglabs.io'
+}
