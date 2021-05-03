@@ -1,3 +1,4 @@
+import PerfectScrollbar from "react-perfect-scrollbar";
 import { Container } from "@material-ui/core";
 import { memo } from "react";
 
@@ -15,22 +16,24 @@ import FAQ from "./FAQ";
 
 const Home = () => {
   return (
-    <Page hasNavbar title="Home - TGLabs">
-      <Container maxWidth="lg">
-        <Header />
-        <StageOne />
-        <About />
-        <HowITWorks />
-        <Tokenomics />
-      </Container>
-      <Statistics />
-      <TimeLine />
-      <Container maxWidth="lg">
-        <FAQ />
-        <ExpressionOfInterest />
-      </Container>
-      <Footer />
-    </Page>
+    <PerfectScrollbar className="globalScrollbar">
+      <Page hasNavbar title="Home - TGLabs">
+        <Container maxWidth="lg">
+          <Header />
+          <StageOne />
+          <About />
+          <HowITWorks />
+          <Tokenomics />
+        </Container>
+        <Statistics />
+        <TimeLine />
+        <Container maxWidth="lg">
+          <FAQ />
+          <ExpressionOfInterest />
+        </Container>
+        <Footer />
+      </Page>
+    </PerfectScrollbar>
   );
 };
 

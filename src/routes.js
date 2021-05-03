@@ -11,6 +11,9 @@ export const endpoints = {
   products: {
     index: '/products'
   },
+  ico_info: {
+    index: '/ico-information'
+  },
   error: {
     404: '/404'
   }

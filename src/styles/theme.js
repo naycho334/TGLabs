@@ -3,7 +3,9 @@ import { colors, createMuiTheme } from "@material-ui/core";
 let theme = createMuiTheme();
 
 const mainTheme = createMuiTheme({
+
   palette: {
+
     golden: {
       main: '#FFB993',
       light: '#FEECA8',
@@ -12,6 +14,7 @@ const mainTheme = createMuiTheme({
       main: "#2E1C89",
       light: "#6B24D6",
       light1: "#6D51F3",
+      light2: '#6758EA'
     },
     lightBlue: {
       main: '#2AF6FF',
@@ -28,9 +31,9 @@ const mainTheme = createMuiTheme({
       light: "#FEECA8",
       light1: "#FFFAEB",
     },
-    background: {
-      default: "#222222"
-    },
+    // background: {
+    //   default: "#222222"
+    // },
   },
   overrides: {
     MuiLink: {

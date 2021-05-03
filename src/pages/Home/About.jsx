@@ -3,7 +3,7 @@ import { Link as RouterLink } from "react-router-dom";
 import { memo } from "react";
 import clsx from "clsx";
 
-import LightBlueGradientContainedButton from "../../components/Buttons/LightBlueGradientContainedButton";
+import LightBlueGradientButton from "../../components/Buttons/LightBlueGradientButton";
 import LightBlueTypography from "../../components/Typography/LightBlueTypography";
 import LightBlueOutlinedButton from "../../components/Buttons/LightBlueOutlinedButton";
 import GoldenLink from "../../components/Links/GoldenLink";
@@ -57,9 +57,13 @@ const About = () => {
               />
             </Grid>
             <Grid item>
-              <LightBlueGradientContainedButton className="reverse">
+              <LightBlueGradientButton
+                disableElevation
+                className="reverse"
+                variant="contained"
+              >
                 Our Products & Packages
-              </LightBlueGradientContainedButton>
+              </LightBlueGradientButton>
             </Grid>
             <Grid item>
               <LightBlueOutlinedButton>Whitepaper</LightBlueOutlinedButton>

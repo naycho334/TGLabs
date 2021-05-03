@@ -11,7 +11,7 @@ import useStyles from "./styles";
 import LightBlueTypography from "../../components/Typography/LightBlueTypography";
 import { Add, Remove } from "@material-ui/icons";
 import { useState } from "react";
-import RoundedFilledTextField from "../../components/TextFields/RoundedFilledTextField";
+import RoundedTextField from "../../components/TextFields/RoundedTextField";
 import YellowContainedButton from "../../components/Buttons/YellowContainedButton";
 
 const data = [
@@ -61,8 +61,8 @@ const FAQ = () => {
 
       {/* Search bar */}
       <Box mx="auto" maxWidth={400} mb={6} display="flex" mt={8}>
-        <RoundedFilledTextField
-          className="noBorderRight"
+        <RoundedTextField
+          className="noBorderRight whiteText"
           placeholder="Keyword"
           fullWidth
         />

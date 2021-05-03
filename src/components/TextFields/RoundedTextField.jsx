@@ -1,17 +1,22 @@
 import { fade, TextField, withStyles } from "@material-ui/core";
 
-const RoundedFilledTextField = withStyles((theme) => {
+const RoundedTextField = withStyles((theme) => {
   return {
     root: {
       backgroundColor: fade(theme.palette.common.white, 0.1),
       borderRadius: 25,
+
+      "&.whiteText": {
+        "& input, & textarea": {
+          color: theme.palette.common.white,
+        },
+      },
 
       "& > :after, & > :before": {
         visibility: "hidden",
       },
 
       "& input, & textarea": {
-        color: theme.palette.common.white,
         padding: theme.spacing(1.5, 2),
         fontSize: ".95rem",
       },
@@ -25,4 +30,4 @@ const RoundedFilledTextField = withStyles((theme) => {
   };
 })(TextField);
 
-export default RoundedFilledTextField;
+export default RoundedTextField;

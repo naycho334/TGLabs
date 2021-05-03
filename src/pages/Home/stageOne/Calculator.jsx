@@ -13,7 +13,7 @@ import propTypes from "prop-types";
 import { memo } from "react";
 // import _ from "lodash";
 
-import LightBlueGradientContainedButton from "../../../components/Buttons/LightBlueGradientContainedButton";
+import LightBlueGradientButton from "../../../components/Buttons/LightBlueGradientButton";
 import NoFieldsetSelect from "../../../components/Selects/NoFieldsetSelect";
 import { useInputStyles } from "../../../hooks/useInputStyles";
 import { endpoints } from "../../../routes";
@@ -111,12 +111,14 @@ const Calculator = (props) => {
               component={RouterLink}
               underline="none"
             >
-              <LightBlueGradientContainedButton
+              <LightBlueGradientButton
                 className="reverse"
+                variant="contained"
+                disableElevation
                 size="large"
               >
                 Register & Buy Token
-              </LightBlueGradientContainedButton>
+              </LightBlueGradientButton>
             </Link>
           </Box>
         </Grid>

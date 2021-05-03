@@ -1,10 +1,9 @@
-import { Box, useTheme, MuiThemeProvider } from "@material-ui/core";
+import { Box, useTheme } from "@material-ui/core";
 import HelmetExport from "react-helmet";
 import propTypes from "prop-types";
 
 import CustomCSSBaseline from "./CustomCSSBaseline";
 import MainNavbar from "../MainNavbar";
-import theme from "./theme";
 
 const PublicPage = (props) => {
   const { title, children, hasNavbar } = props;
@@ -12,7 +11,7 @@ const PublicPage = (props) => {
   const paddingTop = 80 + theme_.spacing(3);
 
   return (
-    <MuiThemeProvider theme={theme}>
+    <>
       <CustomCSSBaseline />
       <MainNavbar />
       <div>
@@ -23,7 +22,7 @@ const PublicPage = (props) => {
           {children}
         </Box>
       </div>
-    </MuiThemeProvider>
+    </>
   );
 };
 

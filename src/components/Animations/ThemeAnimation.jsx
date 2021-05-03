@@ -5,7 +5,7 @@ const ThemeAnimation = ()=>{
   useEffect(() => {
     // Create script element
     const animationScript = document.createElement("script");
-    animationScript.src = "/assets/js/animation.js";
+    animationScript.src = "/assets/js/home-animation.js";
 
     document.body.append(animationScript);
 

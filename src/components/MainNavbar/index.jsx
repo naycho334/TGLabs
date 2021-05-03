@@ -58,8 +58,9 @@ const MainNavbar = () => {
    */
   const setActiveNavLink = (element) => {
     if (element) {
-      const parent = element.parentElement;
       const isActive = element.classList.contains("active");
+      const parent = element.parentElement;
+      // console.log(parent)
 
       if (isActive) {
         const { offsetLeft, offsetWidth } = parent;
@@ -103,7 +104,7 @@ const MainNavbar = () => {
                     classes.indicator
                   )}
                   ref={indicatorRef}
-                ></div>
+                />
                 {navbarLinks.mega.map(({ title, path }) => (
                   <Grid item key={path}>
                     <HashLink

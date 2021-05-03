@@ -1,8 +1,9 @@
 import { Button, withStyles } from "@material-ui/core";
 
-const LightBlueGradientContainedButton = withStyles((theme) => {
+const LightBlueGradientButton = withStyles((theme) => {
   return {
-    root: {
+    root: {},
+    contained: {
       background: `linear-gradient(90deg, ${theme.palette.lightBlue.main}, ${theme.palette.lightBlue.dark})`,
       color: theme.palette.purple.main,
       padding: theme.spacing(1, 2.5),
@@ -20,4 +21,4 @@ const LightBlueGradientContainedButton = withStyles((theme) => {
   };
 })(Button);
 
-export default LightBlueGradientContainedButton;
+export default LightBlueGradientButton;

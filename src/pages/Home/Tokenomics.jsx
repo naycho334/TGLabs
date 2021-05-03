@@ -1,7 +1,8 @@
-import { Box, Grid, Typography } from "@material-ui/core";
+import { Box, Link, Grid, Typography } from "@material-ui/core";
+import { Link as RouterLink } from "react-router-dom";
 import { memo } from "react";
 
-import LightBlueGradientContainedButton from "../../components/Buttons/LightBlueGradientContainedButton";
+import LightBlueGradientButton from "../../components/Buttons/LightBlueGradientButton";
 import LightBlueTypography from "../../components/Typography/LightBlueTypography";
 import TokenSupply from "./tokenomics/TokenSupply";
 import Benefits from "./tokenomics/Benefits";
@@ -13,6 +14,7 @@ import { ReactComponent as Logo } from "../../assets/svgs/logo_symbol_tglab-inve
 
 import BenefitsIllustration from "../../assets/pngs/benefits_illustration.png";
 import DiceBluered from "../../assets/pngs/dice.png";
+import { endpoints } from "../../routes";
 
 const data = {
   benefits: {
@@ -108,9 +110,19 @@ const Tokenomics = () => {
                     </Typography>
                   </Box>
 
-                  <LightBlueGradientContainedButton className="reverse">
-                    ICO Token Distribution
-                  </LightBlueGradientContainedButton>
+                  <Link
+                    to={endpoints.ico_info.index}
+                    component={RouterLink}
+                    underline="none"
+                  >
+                    <LightBlueGradientButton
+                      variant="contained"
+                      className="reverse"
+                      disableElevation
+                    >
+                      ICO Token Distribution
+                    </LightBlueGradientButton>
+                  </Link>
                 </Grid>
                 <Grid item xs={12} md={6}>
                   <Typography

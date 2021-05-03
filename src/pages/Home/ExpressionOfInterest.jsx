@@ -1,7 +1,7 @@
 import { Grid, Box, Typography, Button } from "@material-ui/core";
 
 import LightBlueTypography from "../../components/Typography/LightBlueTypography";
-import RoundedFilledTextField from "../../components/TextFields/RoundedFilledTextField";
+import RoundedTextField from "../../components/TextFields/RoundedTextField";
 import useStyles from "./styles";
 
 const ExpressionOfInterest = () => {
@@ -30,18 +30,27 @@ const ExpressionOfInterest = () => {
         <Grid item xs={12} md={5}>
           <Grid container spacing={2}>
             <Grid item xs={12}>
-              <RoundedFilledTextField placeholder="Name" fullWidth />
+              <RoundedTextField
+                className="whiteText"
+                placeholder="Name"
+                fullWidth
+              />
             </Grid>
             <Grid item xs={12}>
-              <RoundedFilledTextField placeholder="Name" fullWidth />
+              <RoundedTextField
+                className="whiteText"
+                placeholder="Name"
+                fullWidth
+              />
             </Grid>
           </Grid>
         </Grid>
         <Grid item xs={12} md={7}>
           <div className="message">
-            <RoundedFilledTextField
+            <RoundedTextField
               style={{ height: "100%" }}
               placeholder="Message..."
+              className="whiteText"
               fullWidth
               multiline
               rows={3}

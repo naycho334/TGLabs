@@ -2,7 +2,7 @@ import { Box, Link, Typography } from "@material-ui/core";
 import { lazy } from "react";
 import { Link as RouterLink } from "react-router-dom";
 
-import LightBlueGradientContainedButton from "../../components/Buttons/LightBlueGradientContainedButton";
+import LightBlueGradientButton from "../../components/Buttons/LightBlueGradientButton";
 import LightBlueOutlinedButton from "../../components/Buttons/LightBlueOutlinedButton";
 import { endpoints } from "../../routes";
 import useStyles from "./styles";
@@ -34,12 +34,14 @@ const Header = () => {
           component={RouterLink}
           underline="none"
         >
-          <LightBlueGradientContainedButton
+          <LightBlueGradientButton
             className="registerButton"
+            variant="contained"
+            disableElevation
             size="large"
           >
             Register & Buy Token
-          </LightBlueGradientContainedButton>
+          </LightBlueGradientButton>
         </Link>
 
         {/* Login button */}
