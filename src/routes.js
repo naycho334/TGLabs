@@ -12,7 +12,7 @@ export const endpoints = {
     index: '/products'
   },
   ico_info: {
-    index: '/ico-information'
+    index: '/ico-informations'
   },
   error: {
     404: '/404'

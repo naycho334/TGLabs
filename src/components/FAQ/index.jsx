@@ -5,14 +5,13 @@ import {
   Accordion,
   Box,
 } from "@material-ui/core";
-
-import useStyles from "./styles";
-
 import LightBlueTypography from "../../components/Typography/LightBlueTypography";
 import { Add, Remove } from "@material-ui/icons";
 import { useState } from "react";
-import RoundedTextField from "../../components/TextFields/RoundedTextField";
+
 import YellowContainedButton from "../../components/Buttons/YellowContainedButton";
+import RoundedTextField from "../../components/TextFields/RoundedTextField";
+import useStyles from "./styles";
 
 const data = [
   {

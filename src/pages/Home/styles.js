@@ -32,32 +32,22 @@ const useStyles = makeStyles((theme) => {
       "& .animationContainer": {
         position: 'relative',
         height: 750,
-        
-        "& .animation":{
-          margin: theme.spacing(-9,0, 0, 0),
+
+        "& .animation": {
+          margin: theme.spacing(-9, 0, 0, 0),
           position: 'absolute',
           height: '100%',
           width: '100%',
           left: 0,
           top: 0,
-          
-          "& svg":{
+
+          "& svg": {
             transform: 'translate(-50%, 0)',
             position: 'absolute',
             left: '50%',
             top: 0,
           },
         },
-        
-        // [theme.breakpoints.down("xs")]:{
-        //   paddingTop: '180%',
-        //   "& .animation":{
-
-        //     "& svg":{
-        //       // maxWidth: '90%'
-        //     },
-        //   },
-        // }
       },
     },
 
@@ -77,12 +67,12 @@ const useStyles = makeStyles((theme) => {
         height: 220,
         top: 0,
 
-        [theme.breakpoints.down("md")]:{
+        [theme.breakpoints.down("md")]: {
           transform: 'translateY(-50%)',
           right: '10%',
         },
 
-        [theme.breakpoints.down("sm")]:{
+        [theme.breakpoints.down("sm")]: {
           transform: 'translateY(-50%) scale(.6)',
           right: '-150px',
         },
@@ -92,8 +82,8 @@ const useStyles = makeStyles((theme) => {
         height: 150,
         left: '16%',
         top: '6%',
-        
-        [theme.breakpoints.down("sm")]:{
+
+        [theme.breakpoints.down("sm")]: {
           display: 'none'
         }
       },
@@ -109,8 +99,8 @@ const useStyles = makeStyles((theme) => {
       "& .countdown": {
         position: 'relative',
         width: 'unset',
-        
-        [theme.breakpoints.down("sm")]:{
+
+        [theme.breakpoints.down("sm")]: {
           justifyContent: 'center'
         }
       },
@@ -142,97 +132,11 @@ const useStyles = makeStyles((theme) => {
       "& .countEnds": {
         color: theme.palette.orange.main,
         textAlign: 'center',
-        
-        [theme.breakpoints.up("md")]:{
+
+        [theme.breakpoints.up("md")]: {
           transform: 'translateX(-100%)',
           position: 'absolute',
           left: 0
-        }
-      },
-
-      "& .progressBarContainer": {
-        padding: theme.spacing(6, 8, 4, 6),
-        marginBottom: theme.spacing(3),
-      },
-      "& .progressBar": {
-        backgroundColor: colors.grey[200],
-        position: 'relative',
-        borderRadius: 30,
-        width: "100%",
-        padding: 6,
-        height: 40,
-
-        "& > div": {
-          color: colors.common.white,
-          alignItems: 'center',
-          position: 'relative',
-          overflow: 'hidden',
-          borderRadius: 30,
-          display: 'flex',
-          height: '100%',
-          width: '100%',
-        },
-
-        "&:before, &:after": {
-          color: colors.grey[400],
-          position: 'absolute',
-          content: '""',
-          top: -25,
-        },
-
-        "&:before": {
-          content: '"0%"',
-          left: 5,
-        },
-
-        "&:after": {
-          content: '"100%"',
-          right: 5,
-        },
-      },
-      "& .progress": {
-        background: `linear-gradient(90deg, ${theme.palette.purple.light1}, ${theme.palette.purple.light})`,
-        justifyContent: 'center',
-        alignItems: 'center',
-        position: 'absolute',
-        borderRadius: 30,
-        display: 'flex',
-        width: '100%',
-        bottom: 0,
-        left: 0,
-        top: 0,
-      },
-      "& .progressValue": {
-        transform: 'translateX(-50%)',
-        position: "relative",
-      },
-      "& .target": {
-        justifyContent: 'space-between',
-        transform: 'translateX(-50%)',
-        height: theme.spacing(13),
-        flexDirection: 'column',
-        top: theme.spacing(-4),
-        position: 'absolute',
-        textAlign: 'center',
-        display: 'flex',
-
-        "& span:first-child": {
-          color: theme.palette.purple.main
-        },
-
-        "& span:last-child": {
-          color: colors.grey[500]
-        },
-
-        "&:after": {
-          backgroundColor: theme.palette.grey.border,
-          transform: 'translateX(-50%)',
-          height: theme.spacing(7),
-          top: theme.spacing(3),
-          position: 'absolute',
-          content: '""',
-          left: '50%',
-          width: 3,
         }
       },
 
@@ -246,8 +150,8 @@ const useStyles = makeStyles((theme) => {
         margin: 'auto',
         height: 450,
         width: 15,
-        
-        [theme.breakpoints.up("md")]:{
+
+        [theme.breakpoints.up("md")]: {
           background: `linear-gradient(-90deg, ${theme.palette.lightBlue.main}, ${theme.palette.yellow.light})`,
           margin: 'unset',
           width: '100%',
@@ -260,7 +164,7 @@ const useStyles = makeStyles((theme) => {
       "& .discount": {
         position: 'absolute',
         display: 'flex',
-  
+
         "& > span:last-child": {
           color: theme.palette.purple.light
         },
@@ -274,19 +178,19 @@ const useStyles = makeStyles((theme) => {
           width: 30,
         },
 
-        [theme.breakpoints.down("sm")]:{
+        [theme.breakpoints.down("sm")]: {
           transform: 'translateY(-15px)',
           justifyContent: 'center',
           flexDirection: 'row',
           alignItems: 'center',
           width: '100%',
           left: 0,
-          
+
           "& > span": {
             transform: 'translateY(30px)',
             width: 100,
-            
-            "&:nth-child(1)":{
+
+            "&:nth-child(1)": {
               marginRight: theme.spacing(4) + 15,
               flexDirection: 'column',
               textAlign: 'right',
@@ -298,35 +202,35 @@ const useStyles = makeStyles((theme) => {
             transform: 'translateX(-50%)',
             left: '50%',
           },
-          
+
           "&:nth-child(2)": {
             "&:before": {
               visibility: 'hidden'
             },
           },
         },
-        
-        [theme.breakpoints.up("md")]:{
+
+        [theme.breakpoints.up("md")]: {
           justifyContent: 'space-between',
           height: theme.spacing(8),
           flexDirection: 'column',
           top: theme.spacing(-3),
-  
+
           "& > span": {
             marginLeft: 30
           },
-  
+
           "&:before": {
             transform: 'translateY(-50%)',
             top: '50%',
             left: 0,
           },
-  
+
           "&:nth-child(2)": {
             "& span": {
               marginLeft: 0
             },
-  
+
             "&:before": {
               visibility: 'hidden'
             },
@@ -358,7 +262,7 @@ const useStyles = makeStyles((theme) => {
         display: 'flex',
         borderRadius: 4,
 
-        "& > div":{
+        "& > div": {
           width: '100%'
         },
 
@@ -421,8 +325,8 @@ const useStyles = makeStyles((theme) => {
         }
       },
 
-      "& .centerOnSmall":{
-        [theme.breakpoints.down("sm")]:{
+      "& .centerOnSmall": {
+        [theme.breakpoints.down("sm")]: {
           flexDirection: 'column',
           alignItems: 'center'
         }
@@ -466,7 +370,7 @@ const useStyles = makeStyles((theme) => {
         },
       },
 
-      [theme.breakpoints.down("md")]:{
+      [theme.breakpoints.down("md")]: {
         "& .step": {
           maxWidth: 300,
           margin: 'auto',
@@ -476,7 +380,7 @@ const useStyles = makeStyles((theme) => {
           justifyContent: 'center',
           display: 'flex',
 
-          "& svg":{
+          "& svg": {
             transform: 'rotate(90deg)',
           }
         },
@@ -494,33 +398,33 @@ const useStyles = makeStyles((theme) => {
         top: -16,
       },
 
-      "& .profitGain":{
-        [theme.breakpoints.down('sm')]:{
-          "& > div":{
+      "& .profitGain": {
+        [theme.breakpoints.down('sm')]: {
+          "& > div": {
             marginBottom: 0
           },
 
-          "& button":{
+          "& button": {
             display: 'none'
           },
         },
       },
 
-      "& .profitDistribution":{
+      "& .profitDistribution": {
         paddingBottom: theme.spacing(3),
         paddingTop: theme.spacing(5),
 
         "& svg": {
           display: 'none',
-          
-          [theme.breakpoints.down('sm')]:{
-            "&:nth-child(1)":{
+
+          [theme.breakpoints.down('sm')]: {
+            "&:nth-child(1)": {
               display: 'block'
             },
           },
-  
-          [theme.breakpoints.up('md')]:{
-            "&:nth-child(2)":{
+
+          [theme.breakpoints.up('md')]: {
+            "&:nth-child(2)": {
               display: 'block',
               width: '100%',
             },
@@ -528,23 +432,23 @@ const useStyles = makeStyles((theme) => {
         }
       },
 
-      [theme.breakpoints.down("sm")]:{
-        "& .benefitsOrder":{
-          "& > div":{
-            "&:nth-child(1)":{
+      [theme.breakpoints.down("sm")]: {
+        "& .benefitsOrder": {
+          "& > div": {
+            "&:nth-child(1)": {
               marginBottom: theme.spacing(4),
               order: 2,
             },
-            
-            "&:nth-child(2)":{
+
+            "&:nth-child(2)": {
               order: 1,
-              "& img":{
+              "& img": {
                 margin: theme.spacing(-12, 'auto'),
                 display: 'block'
               }
             },
-            
-            "&:nth-child(3)":{
+
+            "&:nth-child(3)": {
               marginBottom: theme.spacing(4),
               order: 3
             },
@@ -782,7 +686,7 @@ const useStyles = makeStyles((theme) => {
         zIndex: 5
       },
 
-      "& .loadMore":{
+      "& .loadMore": {
         color: colors.grey[600],
         display: 'block',
         margin: 'auto',
@@ -816,25 +720,25 @@ const useStyles = makeStyles((theme) => {
 
       "& .card": {
         borderBottom: `1px solid ${theme.palette.purple.light}`,
-        
-        "&:last-child":{
+
+        "&:last-child": {
           borderBottom: 0,
         },
 
-        [theme.breakpoints.down("sm")]:{
-          "&:first-child":{
+        [theme.breakpoints.down("sm")]: {
+          "&:first-child": {
             paddingBottom: theme.spacing(1.75),
           },
-          "&:not(:first-child)":{
+          "&:not(:first-child)": {
             paddingBottom: theme.spacing(1.75),
             paddingTop: theme.spacing(1.75),
           },
-          "&:last-child":{
+          "&:last-child": {
             paddingBottom: 0,
           },
         },
 
-        [theme.breakpoints.up("md")]:{
+        [theme.breakpoints.up("md")]: {
           borderBottom: 0
         },
 
@@ -1047,137 +951,6 @@ const useStyles = makeStyles((theme) => {
         },
       },
     },
-
-    // FAQ
-    faq: {
-      margin: theme.spacing(0, 'auto'),
-      maxWidth: 900,
-
-      "& .accordion": {
-        backgroundColor: fade(lighten(theme.palette.purple.main, .2), .1),
-        padding: theme.spacing(1, 2),
-        margin: `0 !important`,
-
-        "& .expand": {
-          color: theme.palette.purple.light1,
-        },
-
-        "& .collapse": {
-          color: theme.palette.orange.main,
-        },
-
-        "&:before": {
-          backgroundColor: theme.palette.purple.light1,
-          width: `calc(100% - ${theme.spacing(6)}px)`,
-          transform: 'translateX(-50%)',
-          left: '50%',
-        },
-
-        "&.Mui-expanded": {
-          backgroundColor: fade(lighten(theme.palette.purple.main, .5), .1),
-        },
-      },
-    },
-
-    // Expression
-    expression: {
-      marginRight: 'auto',
-      marginLeft: 'auto',
-      maxWidth: 900,
-
-      "& .message": {
-        position: 'relative',
-        height: '100%',
-
-        "& button": {
-          bottom: theme.spacing(1),
-          right: theme.spacing(1),
-          position: 'absolute',
-        }
-      }
-    },
-
-    // Footer
-    footer: {
-
-      "& .bottom": {
-        borderTop: `1px solid ${fade(theme.palette.common.white, .2)}`,
-        padding: theme.spacing(3, 0),
-        
-        [theme.breakpoints.down("sm")]:{
-          flexDirection: 'column',
-          borderTop: 0,
-          
-          "& > div":{
-            justifyContent: 'center',
-            display: 'flex',
-            width: '100%',
-            
-            "&:nth-child(1)":{  
-              borderTop: `1px solid ${fade(theme.palette.common.white, .2)}`,
-              paddingTop: theme.spacing(3),
-              order: 2,
-            },
-            "&:nth-child(2)":{  
-              paddingBottom: theme.spacing(3),
-              order: 1
-            },
-            "&:nth-child(3)":{  
-              order: 3
-            },
-          }
-        }
-      },
-
-      "& .buyToken": {
-        marginTop: theme.spacing(4),
-        justifyContent: "flex-end",
-        position: 'relative',
-        display: "flex",
-
-        "& img": {
-          position: 'absolute',
-          top: '-370%',
-          right: '10%',
-          zIndex: -1,
-
-          [theme.breakpoints.down("sm")]:{
-            right: "-50%",
-            top: "-500%",
-          }
-        },
-      },
-
-      "& .bottomLinks": {
-        justifyContent: 'center',
-        display: "flex",
-
-        "& a:first-child": {
-          marginRight: theme.spacing(3),
-          position: 'relative',
-
-          "&:after": {
-            backgroundColor: theme.palette.common.white,
-            transform: 'translateY(-50%)',
-            right: theme.spacing(-1.5),
-            position: 'absolute',
-            height: '75%',
-            content: '""',
-            top: '50%',
-            width: 1,
-          },
-        },
-      },
-
-      "& .credits": {
-        alignItems: 'center',
-        display: 'flex',
-
-        "& svg": {
-          marginLeft: theme.spacing(1.5)
-        },
-      },
-    }
   }
 })
 

@@ -3,13 +3,11 @@ import { Container } from "@material-ui/core";
 import { lazy, memo } from "react";
 
 import PublicPage from "../../components/PublicPage";
-import Tokenomics from "./Tokenomics";
-import HowITWorks from "./HowITWorks";
-import Statistics from "./Statistics";
-import StageOne from "./StageOne";
-import TimeLine from "./TimeLine";
+import TokenDistribution from "./TokenDistribution";
+import FundAllocation from "./FundAllocation";
+import TokenSupply from "./TokenSupply";
+import Referrals from "./Referrals";
 import Header from "./Header";
-import About from "./About";
 
 const ExpressionOfInterest = lazy(() =>
   import("../../components/ExpressionOfInterest")
@@ -17,20 +15,16 @@ const ExpressionOfInterest = lazy(() =>
 const Footer = lazy(() => import("../../components/Footer"));
 const FAQ = lazy(() => import("../../components/FAQ"));
 
-const Home = () => {
+const ICOInformations = () => {
   return (
     <PerfectScrollbar className="globalScrollbar">
-      <PublicPage hasNavbar title="Home - TGLabs">
+      <PublicPage hasNavbar title="ICO Informations - TGLabs">
         <Container maxWidth="lg">
           <Header />
-          <StageOne />
-          <About />
-          <HowITWorks />
-          <Tokenomics />
-        </Container>
-        <Statistics />
-        <TimeLine />
-        <Container maxWidth="lg">
+          <TokenSupply />
+          <TokenDistribution />
+          <Referrals />
+          <FundAllocation />
           <FAQ />
           <ExpressionOfInterest />
         </Container>
@@ -40,4 +34,4 @@ const Home = () => {
   );
 };
 
-export default memo(Home);
+export default memo(ICOInformations);

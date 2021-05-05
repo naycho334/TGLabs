@@ -11,11 +11,12 @@ import { endpoints } from "./routes";
 
 import "react-perfect-scrollbar/dist/css/styles.css";
 
+const ICOInformationsPage = lazy(() => import("./pages/ICOInformations"));
 const PageNotFound = lazy(() => import("./pages/Errors/PageNotFound"));
-const RegisterPage = lazy(() => import("./pages/Register"));
-const ICOInfoPage = lazy(() => import("./pages/ICOInfo"));
+const ProductsPage = lazy(() => import("./pages/Products"));
 const LoginPage = lazy(() => import("./pages/Login"));
 const HomePage = lazy(() => import("./pages/Home"));
+// const RegisterPage = lazy(() => import("./pages/Register"));
 
 const App = () => {
   const viewPort = useViewPort({ xs: 0.75, sm: 0.85, md: 0.95, lg: 1 });
@@ -50,18 +51,26 @@ const App = () => {
               exact
             />
 
-            {/* Register page */}
+            {/* Login page */}
             <Route
-              path={endpoints.signup.index}
-              component={RegisterPage}
+              path={endpoints.login.index}
+              component={LoginPage}
               strict
               exact
             />
 
-            {/* ICOInfo page */}
+            {/* Products page */}
+            <Route
+              path={endpoints.products.index}
+              component={ProductsPage}
+              strict
+              exact
+            />
+
+            {/* ICOInformations page */}
             <Route
               path={endpoints.ico_info.index}
-              component={ICOInfoPage}
+              component={ICOInformationsPage}
               strict
               exact
             />

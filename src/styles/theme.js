@@ -23,6 +23,7 @@ const mainTheme = createMuiTheme({
     },
     orange: {
       main: '#F48A5B',
+      light: '#FFB993',
     },
     grey: {
       border: "#BDC3D0",

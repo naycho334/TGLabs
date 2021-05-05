@@ -1,4 +1,4 @@
-import { Grid, Box, Typography, Button } from "@material-ui/core";
+import { Grid, Typography, Button } from "@material-ui/core";
 
 import LightBlueTypography from "../../components/Typography/LightBlueTypography";
 import RoundedTextField from "../../components/TextFields/RoundedTextField";
@@ -8,7 +8,7 @@ const ExpressionOfInterest = () => {
   const classes = useStyles();
 
   return (
-    <Box className={classes.expression} pt={5} mb={10}>
+    <div className={classes.expression}>
       <LightBlueTypography
         className="underline underlineCenter normal"
         align="center"
@@ -61,7 +61,7 @@ const ExpressionOfInterest = () => {
           </div>
         </Grid>
       </Grid>
-    </Box>
+    </div>
   );
 };
 
