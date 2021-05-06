@@ -25,7 +25,7 @@ const TGLogo = ({ className, ...props }) => {
     document.body.append(animationScript);
 
     // unmount scripts elements
-    return animationScript.remove;
+    return ()=> animationScript.remove();
   }, []);
 
   return (

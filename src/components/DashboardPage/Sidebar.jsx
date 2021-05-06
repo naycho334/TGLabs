@@ -17,6 +17,7 @@ import propTypes from "prop-types";
 import clsx from "clsx";
 import _ from "lodash";
 
+import SidebarFooter from "./SidebarFooter";
 import TGLogo from "../Animations/TGLogo";
 import { endpoints } from "../../routes";
 import useStyles from "./styles";
@@ -166,7 +167,7 @@ const links = {
 };
 
 const Sidebar = (props) => {
-  const { isAdmin } = props;
+  const { isAdmin, variant, open, onClose } = props;
   const classes = useStyles();
   const { pathname } = useLocation();
 
@@ -182,7 +183,12 @@ const Sidebar = (props) => {
       .some((result) => _.get(result, "isExact", false) === true);
 
   return (
-    <Drawer className={classes.sidebar} open variant="permanent">
+    <Drawer
+      open={open || variant === "permanent"}
+      className={classes.sidebar}
+      variant={variant}
+      onClose={onClose}
+    >
       <AppBar
         color="transparent"
         className="appBar"
@@ -236,8 +242,9 @@ const Sidebar = (props) => {
                       <Fragment key={key}>
                         {link ? (
                           <Link
-                            underline="none"
                             component={RouterLink}
+                            onClick={onClose}
+                            underline="none"
                             to={link}
                           >
                             {Button}
@@ -256,17 +263,26 @@ const Sidebar = (props) => {
             {key === 0 && !isAdmin && <ReferFriend />}
           </Fragment>
         ))}
+
+        {/* footer */}
+        <SidebarFooter />
       </PerfectScrollbar>
     </Drawer>
   );
 };
 
 Sidebar.propTypes = {
+  variant: propTypes.oneOf(["temporary", "permanent"]).isRequired,
   isAdmin: propTypes.bool.isRequired,
+  onClose: propTypes.func.isRequired,
+  open: propTypes.bool.isRequired,
 };
 
 Sidebar.defaultProps = {
+  variant: "permanent",
+  onClose: () => {},
   isAdmin: false,
+  open: false,
 };
 
 export default memo(Sidebar);

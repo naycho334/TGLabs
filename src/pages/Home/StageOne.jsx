@@ -7,9 +7,9 @@ import CountDown from "./stageOne/CountDown";
 import Discounts from "./stageOne/Discounts";
 import useStyles from "./styles";
 
-import { ReactComponent as ChainLinkIcon } from "../../assets/svgs/logo_chainlink-color.svg";
-import { ReactComponent as BitcoinIcon } from "../../assets/svgs/logo_bitcoin-color.svg";
-import { ReactComponent as TetherIcon } from "../../assets/svgs/logo_tether-color.svg";
+import { ReactComponent as ChainLinkIcon } from "../../assets/svgs/crypto-color/logo_chainlink-color.svg";
+import { ReactComponent as BitcoinIcon } from "../../assets/svgs/crypto-color/logo_bitcoin-color.svg";
+import { ReactComponent as TetherIcon } from "../../assets/svgs/crypto-color/logo_tether-color.svg";
 
 import bluredLogo from "../../assets/pngs/Group 59.png";
 import bluredChip from "../../assets/pngs/chip2.png";

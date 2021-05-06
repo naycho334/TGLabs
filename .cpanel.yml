@@ -1,8 +1,0 @@
----
-deployment:
-  tasks:
-    - export DEPLOYPATH=/home/tglabs/app
-    - /bin/rm -rf $DEPLOYPATH
-    - /bin/mkdir $DEPLOYPATH
-    - /bin/cp -R * $DEPLOYPATH
-    - /bin/bash $DEPLOYPATH/deploy.sh

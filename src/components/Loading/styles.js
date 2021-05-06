@@ -6,6 +6,7 @@ const useStyles = makeStyles((theme) => {
   return {
     container: {
       backgroundImage: `url(${Texture})`,
+      zIndex: theme.zIndex.modal + 1,
       backgroundSize: '102px 19px',
       backgroundColor: '#2E1C89',
       justifyContent: 'center',
@@ -17,7 +18,7 @@ const useStyles = makeStyles((theme) => {
       left: 0,
       top: 0,
 
-      "& .logo":{
+      "& .logo": {
         height: 30
       }
     },

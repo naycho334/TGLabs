@@ -1,12 +1,14 @@
-import { Box, Container, useTheme } from "@material-ui/core";
+import { Box, Container, Hidden, useTheme } from "@material-ui/core";
 import PerfectScrollbars from "react-perfect-scrollbar";
 import propTypes from "prop-types";
+import { useState } from "react";
 
 import useStyles from "./styles";
 import Sidebar from "./Sidebar";
 import Navbar from "./Navbar";
 
 const DashboardPage = (props) => {
+  const [open, setOpen] = useState(true);
   const { isAdmin, children } = props;
   const classes = useStyles();
   const theme = useTheme();
@@ -14,12 +16,22 @@ const DashboardPage = (props) => {
   return (
     <Box display="flex">
       {/* Sidebar */}
-      <Sidebar isAdmin={isAdmin} />
+      <Hidden smDown>
+        <Sidebar isAdmin={isAdmin} />
+      </Hidden>
+      <Hidden mdUp>
+        <Sidebar
+          onClose={() => setOpen(false)}
+          variant="temporary"
+          isAdmin={isAdmin}
+          open={open}
+        />
+      </Hidden>
 
       {/* Body */}
       <Box flex={1}>
         {/* Navbar */}
-        <Navbar isAdmin={isAdmin} />
+        <Navbar openSidebar={setOpen} isAdmin={isAdmin} open={open} />
 
         {/* Body */}
         <Box height={`calc(100vh - ${theme.spacing(9)}px)`}>
