@@ -1,16 +1,20 @@
 import { Grid } from "@material-ui/core";
-import { memo } from "react";
+import { lazy, memo } from "react";
 
 import useStyles from "./styles";
 
-const RewardsInformation = () => {
+const Page = lazy(() => import("../../../components/DashboardPage/Page"));
+
+const Withdraw = () => {
   const classes = useStyles();
 
   return (
-    <Grid container>
-      <Grid item>Rewards Information Page</Grid>
-    </Grid>
+    <Page title="Rewards Information">
+      <Grid item xs={12}>
+        CONTENT HERE
+      </Grid>
+    </Page>
   );
 };
 
-export default memo(RewardsInformation);
+export default memo(Withdraw);

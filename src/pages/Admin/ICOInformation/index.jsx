@@ -1,15 +1,19 @@
 import { Grid } from "@material-ui/core";
-import { memo } from "react";
+import { lazy, memo } from "react";
 
 import useStyles from "./styles";
+
+const Page = lazy(() => import("../../../components/DashboardPage/Page"));
 
 const ICOInformation = () => {
   const classes = useStyles();
 
   return (
-    <Grid container>
-      <Grid item>ICOInformation Page</Grid>
-    </Grid>
+    <Page title="ICO Information">
+      <Grid item xs={12}>
+        CONTENT HERE
+      </Grid>
+    </Page>
   );
 };
 

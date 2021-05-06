@@ -1,16 +1,14 @@
-import { Box, Container, Hidden, useTheme } from "@material-ui/core";
+import { Box, Hidden, useTheme } from "@material-ui/core";
 import PerfectScrollbars from "react-perfect-scrollbar";
+import { memo, useState } from "react";
 import propTypes from "prop-types";
-import { useState } from "react";
 
-import useStyles from "./styles";
 import Sidebar from "./Sidebar";
 import Navbar from "./Navbar";
 
 const DashboardPage = (props) => {
   const [open, setOpen] = useState(true);
   const { isAdmin, children } = props;
-  const classes = useStyles();
   const theme = useTheme();
 
   return (
@@ -35,11 +33,7 @@ const DashboardPage = (props) => {
 
         {/* Body */}
         <Box height={`calc(100vh - ${theme.spacing(9)}px)`}>
-          <PerfectScrollbars>
-            <Container maxWidth={false} className={classes.content}>
-              {children}
-            </Container>
-          </PerfectScrollbars>
+          <PerfectScrollbars>{children}</PerfectScrollbars>
         </Box>
       </Box>
     </Box>
@@ -55,4 +49,4 @@ DashboardPage.defaultProps = {
   isAdmin: false,
 };
 
-export default DashboardPage;
+export default memo(DashboardPage);

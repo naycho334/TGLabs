@@ -40,7 +40,6 @@ const useStyles = makeStyles(theme => {
       },
     },
     sidebar: {
-      zIndex: theme.zIndex.appBar,
       width: SIDEBAR_WIDTH,
       flexShrink: 0,
 
@@ -105,7 +104,6 @@ const useStyles = makeStyles(theme => {
         },
 
         "& .MuiDrawer-paper": {
-          // boxShadow: 'none',
           width: '100%',
         },
 
@@ -117,7 +115,11 @@ const useStyles = makeStyles(theme => {
     },
     content: {
       paddingBottom: theme.spacing(4),
-      paddingTop: theme.spacing(4),
+      paddingTop: theme.spacing(3),
+
+      "& .pageTitle": {
+        color: colors.grey[600]
+      }
     },
     list: {
       "& .subheader": {
