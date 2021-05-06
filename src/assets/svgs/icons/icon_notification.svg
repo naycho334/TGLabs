@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22.492" height="24.259" viewBox="0 0 22.492 24.259">
+  <g id="icon_notification" transform="translate(0.75 0.75)">
+    <g id="Group_1645" data-name="Group 1645" transform="translate(-813.454 -371.656)">
+      <path id="Rectangle_3336" data-name="Rectangle 3336" d="M8.366,0h0a8.366,8.366,0,0,1,8.366,8.366V14.3a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V8.366A8.366,8.366,0,0,1,8.366,0Z" transform="translate(815.381 375.757)" fill="none" stroke="#8f96a5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <line id="Line_95" data-name="Line 95" x1="20.992" transform="translate(813.454 390.057)" fill="none" stroke="#8f96a5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="Rectangle_3337" data-name="Rectangle 3337" d="M0,0H5.031a0,0,0,0,1,0,0V1.842A2.516,2.516,0,0,1,2.516,4.357h0A2.516,2.516,0,0,1,0,1.842V0A0,0,0,0,1,0,0Z" transform="translate(821.26 390.057)" fill="none" stroke="#8f96a5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <circle id="Ellipse_174" data-name="Ellipse 174" cx="2.05" cy="2.05" r="2.05" transform="translate(821.696 371.656)" fill="none" stroke="#8f96a5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    </g>
+  </g>
+</svg>

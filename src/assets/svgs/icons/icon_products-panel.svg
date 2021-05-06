@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25.009" height="34.279" viewBox="0 0 25.009 34.279">
+  <g id="icon_products-panel" transform="translate(0.75 0.75)">
+    <rect id="Rectangle_3774" data-name="Rectangle 3774" width="5.862" height="2.401" rx="1.201" transform="translate(4.648 14.591)" fill="none" stroke="#8f96a5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="Rectangle_3775" data-name="Rectangle 3775" d="M0,0H3.461a1.2,1.2,0,0,1,1.2,1.2v0a1.2,1.2,0,0,1-1.2,1.2H0a0,0,0,0,1,0,0V0A0,0,0,0,1,0,0Z" transform="translate(15.201 11.446)" fill="none" stroke="#8f96a5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <line id="Line_323" data-name="Line 323" x2="6.47" transform="translate(4.369 7.76)" fill="none" stroke="#8f96a5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <line id="Line_324" data-name="Line 324" x1="9.47" y1="0.031" transform="translate(2.824 4.255)" fill="none" stroke="#8f96a5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <line id="Line_325" data-name="Line 325" y1="0.03" x2="6.47" transform="translate(4.369 10.502)" fill="none" stroke="#8f96a5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <line id="Line_326" data-name="Line 326" y1="0.02" x2="4.344" transform="translate(15.738 8.378)" fill="none" stroke="#8f96a5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="Path_7061" data-name="Path 7061" d="M705.714,397.881l.175-3.71a1.272,1.272,0,0,0-1.275-1.269,1.242,1.242,0,0,0-.617.161,7.5,7.5,0,0,1-3.144-2.042,1.261,1.261,0,0,0-.605.154v-1.666a1.272,1.272,0,0,0-2.545,0v6.4l-2.2-1.6a1.489,1.489,0,0,0-1.937.137,1,1,0,0,0,0,1.411L698,400.29a3.628,3.628,0,0,0,2.585,1.071h1.479a3.652,3.652,0,0,0,3.648-3.48Z" transform="translate(-692.69 -368.582)" fill="none" stroke="#8f96a5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="Rectangle_3776" data-name="Rectangle 3776" d="M1,0H8.309a0,0,0,0,1,0,0V12.574a0,0,0,0,1,0,0H1.282A1.282,1.282,0,0,1,0,11.291V1A1,1,0,0,1,1,0Z" transform="translate(23.509 16.782) rotate(180)" fill="none" stroke="#8f96a5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="Path_7062" data-name="Path 7062" d="M703.656,389.573h1.993a2.241,2.241,0,0,0,2.241-2.241V370.823a2.241,2.241,0,0,0-2.241-2.241H694.931a2.241,2.241,0,0,0-2.241,2.241v16.509a2.241,2.241,0,0,0,2.241,2.241h.168" transform="translate(-692.69 -368.582)" fill="none" stroke="#8f96a5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  </g>
+</svg>

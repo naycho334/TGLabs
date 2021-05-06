@@ -55,7 +55,7 @@ const Referrals = () => {
       </Link>
 
       {/* Blurred image */}
-      <img src={EarnIllustrationBlurred} alt="blurred image" />
+      <img src={EarnIllustrationBlurred} alt="blurred earn illustration" />
     </div>
   );
 };
