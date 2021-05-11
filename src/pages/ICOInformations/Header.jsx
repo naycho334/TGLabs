@@ -5,7 +5,7 @@ import clsx from "clsx";
 import useStyles from "./styles";
 
 const HeaderSection = lazy(() =>
-  import("../../components/PublicPage/HeaderSection")
+  import("components/PublicPage/HeaderSection")
 );
 
 const Header = () => {

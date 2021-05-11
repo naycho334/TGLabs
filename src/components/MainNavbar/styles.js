@@ -1,6 +1,6 @@
 import { colors, fade, makeStyles } from "@material-ui/core";
 
-import Texture from "../../assets/svgs/background_texture-one.svg";
+import Texture from "assets/svgs/background_texture-one.svg";
 
 const useStyles = makeStyles(theme => {
   return {

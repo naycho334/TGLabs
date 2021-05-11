@@ -14,12 +14,12 @@ import propTypes from "prop-types";
 import LightBlueGradientButton from "../Buttons/LightBlueGradientButton";
 import useStyles from "./styles";
 
-import { ReactComponent as NotificationIcon } from "../../assets/svgs/icons/icon_notification.svg";
-import { ReactComponent as HamburgerIcon } from "../../assets/svgs/icons/icon_hamburger-menu.svg";
-import { ReactComponent as CloseIcon } from "../../assets/svgs/icons/icon_close-menu.svg";
-import { ReactComponent as AccountIcon } from "../../assets/svgs/icons/icon_account.svg";
-import { ReactComponent as TGLogoSmIcon } from "../../assets/svgs/icons/tg-logo-sm.svg";
-import { ReactComponent as SupportIcon } from "../../assets/svgs/icon_support.svg";
+import { ReactComponent as NotificationIcon } from "assets/svgs/icons/icon_notification.svg";
+import { ReactComponent as HamburgerIcon } from "assets/svgs/icons/icon_hamburger-menu.svg";
+import { ReactComponent as CloseIcon } from "assets/svgs/icons/icon_close-menu.svg";
+import { ReactComponent as AccountIcon } from "assets/svgs/icons/icon_account.svg";
+import { ReactComponent as TGLogoSmIcon } from "assets/svgs/icons/tg-logo-sm.svg";
+import { ReactComponent as SupportIcon } from "assets/svgs/icon_support.svg";
 
 const Navbar = (props) => {
   const { open, isAdmin, openSidebar } = props;
@@ -47,16 +47,14 @@ const Navbar = (props) => {
               )}
             </Hidden>
             <Hidden mdUp>
-              {!isAdmin && (
-                <Box display="flex" alignItems="center">
-                  <TGLogoSmIcon style={{ marginRight: 12 }} />
+              <Box display="flex" alignItems="center">
+                <TGLogoSmIcon style={{ marginRight: 12 }} />
 
-                  {/* Menu button */}
-                  <IconButton onClick={() => openSidebar(!open)}>
-                    {open ? <CloseIcon /> : <HamburgerIcon />}
-                  </IconButton>
-                </Box>
-              )}
+                {/* Menu button */}
+                <IconButton onClick={() => openSidebar(!open)}>
+                  {open ? <CloseIcon /> : <HamburgerIcon />}
+                </IconButton>
+              </Box>
             </Hidden>
           </Grid>
 

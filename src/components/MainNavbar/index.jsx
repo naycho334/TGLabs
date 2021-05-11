@@ -17,13 +17,13 @@ import _ from "lodash";
 
 import GolderGradientButton from "../Buttons/GolderGradientButton";
 import GolderLink from "../Links/GoldenLink";
-import { endpoints } from "../../routes";
+import { endpoints } from "routes";
 import SideMenu from "./SideMenu";
 import useStyles from "./styles";
 
-import { ReactComponent as MenuIcon } from "../../assets/svgs/icon_hamburger-menu.svg";
-import { ReactComponent as LogoIcon } from "../../assets/svgs/logo_tglab-inverse.svg";
-import { ReactComponent as AccountIcon } from "../../assets/svgs/icon_myaccount.svg";
+import { ReactComponent as MenuIcon } from "assets/svgs/icon_hamburger-menu.svg";
+import { ReactComponent as LogoIcon } from "assets/svgs/logo_tglab-inverse.svg";
+import { ReactComponent as AccountIcon } from "assets/svgs/icon_myaccount.svg";
 
 const navbarLinks = {
   mega: [

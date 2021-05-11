@@ -7,6 +7,7 @@ import {
   Divider,
   AppBar,
   Drawer,
+  Hidden,
   List,
   Link,
 } from "@material-ui/core";
@@ -19,22 +20,22 @@ import _ from "lodash";
 
 import SidebarFooter from "./SidebarFooter";
 import TGLogo from "../Animations/TGLogo";
-import { endpoints } from "../../routes";
+import { endpoints } from "routes";
 import useStyles from "./styles";
 
-import { ReactComponent as RewardsInformationIcon } from "../../assets/svgs/icons/icon_rewards_information-panel.svg";
-import { ReactComponent as ICOInformationIcon } from "../../assets/svgs/icons/icon_ico_information-panel.svg";
-import { ReactComponent as ICODashboardIcon } from "../../assets/svgs/icons/icon_ico_dashboard-panel.svg";
-import { ReactComponent as TransactionsIcon } from "../../assets/svgs/icons/icon_transactions-panel.svg";
-import { ReactComponent as ReferralsIcon } from "../../assets/svgs/icons/icon_referrals-panel.svg";
-import { ReactComponent as WithdrawIcon } from "../../assets/svgs/icons/icon_withdraw-panel.svg";
-import { ReactComponent as ProductsIcon } from "../../assets/svgs/icons/icon_products-panel.svg";
-import { ReactComponent as SettingsIcon } from "../../assets/svgs/icons/icon_settings-panel.svg";
-import { ReactComponent as RewardsIcon } from "../../assets/svgs/icons/icon_rewards-panel.svg";
-import { ReactComponent as LogoutIcon } from "../../assets/svgs/icons/icon_logout-panel.svg";
-import { ReactComponent as UserIcon } from "../../assets/svgs/icons/icon_users-panel.svg";
-import { ReactComponent as SupportIcon } from "../../assets/svgs/icons/icon_support.svg";
-import { ReactComponent as FAQIcon } from "../../assets/svgs/icons/icon_faq-panel.svg";
+import { ReactComponent as RewardsInformationIcon } from "assets/svgs/icons/icon_rewards_information-panel.svg";
+import { ReactComponent as ICOInformationIcon } from "assets/svgs/icons/icon_ico_information-panel.svg";
+import { ReactComponent as ICODashboardIcon } from "assets/svgs/icons/icon_ico_dashboard-panel.svg";
+import { ReactComponent as TransactionsIcon } from "assets/svgs/icons/icon_transactions-panel.svg";
+import { ReactComponent as ReferralsIcon } from "assets/svgs/icons/icon_referrals-panel.svg";
+import { ReactComponent as WithdrawIcon } from "assets/svgs/icons/icon_withdraw-panel.svg";
+import { ReactComponent as ProductsIcon } from "assets/svgs/icons/icon_products-panel.svg";
+import { ReactComponent as SettingsIcon } from "assets/svgs/icons/icon_settings-panel.svg";
+import { ReactComponent as RewardsIcon } from "assets/svgs/icons/icon_rewards-panel.svg";
+import { ReactComponent as LogoutIcon } from "assets/svgs/icons/icon_logout-panel.svg";
+import { ReactComponent as UserIcon } from "assets/svgs/icons/icon_users-panel.svg";
+import { ReactComponent as SupportIcon } from "assets/svgs/icons/icon_support.svg";
+import { ReactComponent as FAQIcon } from "assets/svgs/icons/icon_faq-panel.svg";
 
 const ReferFriend = lazy(() => import("./ReferFriend"));
 
@@ -46,7 +47,10 @@ const links = {
       Icon: ICOInformationIcon,
       forAdmin: true,
       link: endpoints.dashboard.admin.ico_information.index,
-      matches: [endpoints.dashboard.admin.ico_information.index],
+      matches: [
+        endpoints.dashboard.admin.ico_information.index,
+        endpoints.dashboard.admin.home.index,
+      ],
     },
     {
       title: "Rewards Information",
@@ -90,7 +94,10 @@ const links = {
       Icon: ICODashboardIcon,
       forAdmin: false,
       link: endpoints.dashboard.user.ico_dashboard.index,
-      matches: [endpoints.dashboard.user.ico_dashboard.index],
+      matches: [
+        endpoints.dashboard.user.ico_dashboard.index,
+        endpoints.dashboard.user.home.index,
+      ],
     },
     {
       title: "ICO Information",
@@ -265,7 +272,9 @@ const Sidebar = (props) => {
         ))}
 
         {/* footer */}
-        <SidebarFooter />
+        <Hidden smDown>
+          <SidebarFooter />
+        </Hidden>
       </PerfectScrollbar>
     </Drawer>
   );

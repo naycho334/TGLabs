@@ -60,6 +60,11 @@ const useStyles = makeStyles((theme) => {
       paddingTop: theme.spacing(4),
       position: 'relative',
 
+      "& .progress": {
+        paddingRight: theme.spacing(6),
+        paddingLeft: theme.spacing(6),
+      },
+
       "& .pinkBluredChip": {
         transform: 'translateY(-50%)',
         position: 'absolute',

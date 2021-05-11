@@ -2,12 +2,12 @@ import { Link as RouterLink } from "react-router-dom";
 import { Link, Typography } from "@material-ui/core";
 import { memo } from "react";
 
-import LightBlueGradientButton from "../../components/Buttons/LightBlueGradientButton";
-import LightBlueTypography from "../../components/Typography/LightBlueTypography";
-import { endpoints } from "../../routes";
+import LightBlueGradientButton from "components/Buttons/LightBlueGradientButton";
+import LightBlueTypography from "components/Typography/LightBlueTypography";
+import { endpoints } from "routes";
 import useStyles from "./styles";
 
-import EarnIllustrationBlurred from "../../assets/pngs/earn_illustration.png";
+import EarnIllustrationBlurred from "assets/pngs/earn_illustration.png";
 
 const Referrals = () => {
   const classes = useStyles();

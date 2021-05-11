@@ -1,11 +1,11 @@
 import { Grid } from "@material-ui/core";
 import { memo } from "react";
 
-import { ReactComponent as TokenDistChartInfo } from "../../assets/svgs/token-dist-pricing-chart-info.svg";
-import { ReactComponent as TokenDistChartVert } from "../../assets/svgs/token-dist-pricing-chart-vert.svg";
-import { ReactComponent as TokenDistChartHor } from "../../assets/svgs/token-dist-pricing-chart-hor.svg";
+import { ReactComponent as TokenDistChartInfo } from "assets/svgs/token-dist-pricing-chart-info.svg";
+import { ReactComponent as TokenDistChartVert } from "assets/svgs/token-dist-pricing-chart-vert.svg";
+import { ReactComponent as TokenDistChartHor } from "assets/svgs/token-dist-pricing-chart-hor.svg";
 
-import Chip1Blurred from "../../assets/pngs/chip1.png";
+import Chip1Blurred from "assets/pngs/chip1.png";
 
 import useStyles from "./styles";
 

@@ -2,7 +2,7 @@ import PerfectScrollbar from "react-perfect-scrollbar";
 import { Container } from "@material-ui/core";
 import { lazy, memo } from "react";
 
-import PublicPage from "../../components/PublicPage";
+import PublicPage from "components/PublicPage";
 import Tokenomics from "./Tokenomics";
 import HowITWorks from "./HowITWorks";
 import Statistics from "./Statistics";
@@ -12,10 +12,10 @@ import Header from "./Header";
 import About from "./About";
 
 const ExpressionOfInterest = lazy(() =>
-  import("../../components/ExpressionOfInterest")
+  import("components/ExpressionOfInterest")
 );
-const Footer = lazy(() => import("../../components/Footer"));
-const FAQ = lazy(() => import("../../components/FAQ"));
+const Footer = lazy(() => import("components/Footer"));
+const FAQ = lazy(() => import("components/FAQ"));
 
 const Home = () => {
   return (

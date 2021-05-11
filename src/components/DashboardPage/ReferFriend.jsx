@@ -4,7 +4,7 @@ import { memo } from "react";
 import LightBlueTypography from "../Typography/LightBlueTypography";
 import useStyles from "./styles";
 
-import EarnIllustrationBlurred from "../../assets/pngs/earn_illustration.png";
+import EarnIllustrationBlurred from "assets/pngs/earn_illustration.png";
 
 const ReferFriend = () => {
   const classes = useStyles();

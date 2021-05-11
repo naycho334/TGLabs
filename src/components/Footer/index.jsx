@@ -8,21 +8,21 @@ import {
 import { Fragment } from "react";
 import _ from "lodash";
 
-import LightBlueTypography from "../../components/Typography/LightBlueTypography";
-import GolderGradientButton from "../../components/Buttons/GolderGradientButton";
-import WhiteLink from "../../components/Links/WhiteLink";
-import { endpoints } from "../../routes";
+import LightBlueTypography from "components/Typography/LightBlueTypography";
+import GolderGradientButton from "components/Buttons/GolderGradientButton";
+import WhiteLink from "components/Links/WhiteLink";
+import { endpoints } from "routes";
 import useStyles from "./styles";
 
-import { ReactComponent as InstagramIcon } from "../../assets/svgs/social/instagram-icon.svg";
-import { ReactComponent as LinkedInIcon } from "../../assets/svgs/social/linked-in-icon.svg";
-import { ReactComponent as FacebookIcon } from "../../assets/svgs/social/facebook-icon.svg";
-import { ReactComponent as TwitterIcon } from "../../assets/svgs/social/twitter-icon.svg";
+import { ReactComponent as InstagramIcon } from "assets/svgs/social/instagram-icon.svg";
+import { ReactComponent as LinkedInIcon } from "assets/svgs/social/linked-in-icon.svg";
+import { ReactComponent as FacebookIcon } from "assets/svgs/social/facebook-icon.svg";
+import { ReactComponent as TwitterIcon } from "assets/svgs/social/twitter-icon.svg";
 
-import { ReactComponent as TGLabsLogo } from "../../assets/svgs/logo_tglabs-inverse.svg";
-import { ReactComponent as BeioLogo } from "../../assets/svgs/logo_beio-inverse.svg";
+import { ReactComponent as TGLabsLogo } from "assets/svgs/logo_tglabs-inverse.svg";
+import { ReactComponent as BeioLogo } from "assets/svgs/logo_beio-inverse.svg";
 
-import TgLabBlurred from "../../assets/pngs/thlab2.png";
+import TgLabBlurred from "assets/pngs/thlab2.png";
 
 const links = {
   list1: [

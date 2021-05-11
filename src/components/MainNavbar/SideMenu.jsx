@@ -17,8 +17,8 @@ import useStyles from "./styles";
 import LightBlueTypography from "../Typography/LightBlueTypography";
 import GolderGradientButton from "../Buttons/GolderGradientButton";
 
-import Texture from "../../assets/svgs/background_texture-one.svg";
-import TGLab2BlurredLogo from "../../assets/pngs/thlab2.png";
+import Texture from "assets/svgs/background_texture-one.svg";
+import TGLab2BlurredLogo from "assets/pngs/thlab2.png";
 
 const CustomDrawer = withStyles((theme) => {
   return {

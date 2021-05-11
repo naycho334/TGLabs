@@ -4,7 +4,7 @@ import propTypes from "prop-types";
 import clsx from "clsx";
 import _ from "lodash";
 
-import LightBlueTypography from "../../../components/Typography/LightBlueTypography";
+import LightBlueTypography from "components/Typography/LightBlueTypography";
 import List from "./List";
 
 const Stepper = (props) => {

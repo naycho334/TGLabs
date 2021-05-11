@@ -8,8 +8,8 @@ import PerfectScrollbar from "react-perfect-scrollbar";
 import { Fragment, memo } from "react";
 import clsx from "clsx";
 
-import { ReactComponent as BitcoinIcon } from "../../../assets/svgs/crypto-color/logo_bitcoin-color.svg";
-import { ReactComponent as Logo } from "../../../assets/svgs/logo_symbol_tglab-inverse.svg";
+import { ReactComponent as BitcoinIcon } from "assets/svgs/crypto-color/logo_bitcoin-color.svg";
+import { ReactComponent as Logo } from "assets/svgs/logo_symbol_tglab-inverse.svg";
 
 const DataCard = () => {
   return (

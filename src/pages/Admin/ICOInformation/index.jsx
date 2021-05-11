@@ -1,18 +1,25 @@
-import { Grid } from "@material-ui/core";
 import { lazy, memo } from "react";
 
-import useStyles from "./styles";
+import AwaitingApproval from "./AwaitingApproval";
+import CurrentICOStage from "./CurrentICOStage";
+import TopContributors from "./TopContributors";
+import ICOPurchases from "./ICOPurchases";
+import Totals from "./Totals";
 
-const Page = lazy(() => import("../../../components/DashboardPage/Page"));
+const Page = lazy(() => import("components/DashboardPage/Page"));
 
 const ICOInformation = () => {
-  const classes = useStyles();
-
   return (
     <Page title="ICO Information">
-      <Grid item xs={12}>
-        CONTENT HERE
-      </Grid>
+      <CurrentICOStage />
+
+      <Totals />
+
+      <ICOPurchases />
+
+      <TopContributors />
+
+      <AwaitingApproval />
     </Page>
   );
 };

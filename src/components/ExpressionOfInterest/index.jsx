@@ -1,7 +1,7 @@
 import { Grid, Typography, Button } from "@material-ui/core";
 
-import LightBlueTypography from "../../components/Typography/LightBlueTypography";
-import RoundedTextField from "../../components/TextFields/RoundedTextField";
+import LightBlueTypography from "components/Typography/LightBlueTypography";
+import RoundedTextField from "components/TextFields/RoundedTextField";
 import useStyles from "./styles";
 
 const ExpressionOfInterest = () => {

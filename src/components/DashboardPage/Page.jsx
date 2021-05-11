@@ -16,8 +16,8 @@ const Page = (props) => {
       </HelmetExport>
       <Container component="main" maxWidth={false} className={classes.content}>
         <Grid container spacing={2}>
-          <Grid item xs>
-            <Typography className="bold pageTitle" component="h1" variant="h5">
+          <Grid item xs={12}>
+            <Typography className="bold pageTitle" component="h1" variant="h6">
               {title}
             </Typography>
           </Grid>

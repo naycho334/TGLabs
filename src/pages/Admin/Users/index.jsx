@@ -3,7 +3,7 @@ import { lazy, memo } from "react";
 
 import useStyles from "./styles";
 
-const Page = lazy(() => import("../../../components/DashboardPage/Page"));
+const Page = lazy(() => import("components/DashboardPage/Page"));
 
 const Users = () => {
   const classes = useStyles();

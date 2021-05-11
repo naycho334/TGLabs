@@ -1,6 +1,6 @@
 import { darken, fade, withStyles } from "@material-ui/core/styles";
 
-import Texture from "../../assets/svgs/background_texture-one.svg";
+import Texture from "assets/svgs/background_texture-one.svg";
 
 const styles = theme => {
 

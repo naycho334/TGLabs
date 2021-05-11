@@ -2,19 +2,19 @@ import { Box, Link, Grid, Typography } from "@material-ui/core";
 import { Link as RouterLink } from "react-router-dom";
 import { memo } from "react";
 
-import LightBlueGradientButton from "../../components/Buttons/LightBlueGradientButton";
-import LightBlueTypography from "../../components/Typography/LightBlueTypography";
+import LightBlueGradientButton from "components/Buttons/LightBlueGradientButton";
+import LightBlueTypography from "components/Typography/LightBlueTypography";
 import TokenSupply from "./tokenomics/TokenSupply";
 import Benefits from "./tokenomics/Benefits";
 import useStyles from "./styles";
 
-import { ReactComponent as ProfitDistributionHor } from "../../assets/svgs/profit_distribution_hor.svg";
-import { ReactComponent as ProfitDistributionVer } from "../../assets/svgs/profit_distribution_ver.svg";
-import { ReactComponent as Logo } from "../../assets/svgs/logo_symbol_tglab-inverse.svg";
+import { ReactComponent as ProfitDistributionHor } from "assets/svgs/profit_distribution_hor.svg";
+import { ReactComponent as ProfitDistributionVer } from "assets/svgs/profit_distribution_ver.svg";
+import { ReactComponent as Logo } from "assets/svgs/logo_symbol_tglab-inverse.svg";
 
-import BenefitsIllustration from "../../assets/pngs/benefits_illustration.png";
-import DiceBluered from "../../assets/pngs/dice.png";
-import { endpoints } from "../../routes";
+import BenefitsIllustration from "assets/pngs/benefits_illustration.png";
+import DiceBluered from "assets/pngs/dice.png";
+import { endpoints } from "routes";
 
 const data = {
   benefits: {

@@ -2,7 +2,7 @@ import { RadioButtonUncheckedOutlined } from "@material-ui/icons";
 import { Typography } from "@material-ui/core";
 import propTypes from "prop-types";
 
-import LightBlueTypography from "../../../components/Typography/LightBlueTypography";
+import LightBlueTypography from "components/Typography/LightBlueTypography";
 
 const Benefits = (props) => {
   const { title, benefits, conditions } = props;

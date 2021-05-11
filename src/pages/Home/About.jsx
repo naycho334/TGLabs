@@ -3,17 +3,17 @@ import { Link as RouterLink } from "react-router-dom";
 import { memo } from "react";
 import clsx from "clsx";
 
-import LightBlueGradientButton from "../../components/Buttons/LightBlueGradientButton";
-import LightBlueTypography from "../../components/Typography/LightBlueTypography";
-import LightBlueOutlinedButton from "../../components/Buttons/LightBlueOutlinedButton";
-import GoldenLink from "../../components/Links/GoldenLink";
+import LightBlueGradientButton from "components/Buttons/LightBlueGradientButton";
+import LightBlueTypography from "components/Typography/LightBlueTypography";
+import LightBlueOutlinedButton from "components/Buttons/LightBlueOutlinedButton";
+import GoldenLink from "components/Links/GoldenLink";
 import useStyles from "./styles";
 
-import { ReactComponent as TwoFaAuthentication } from "../../assets/svgs/icon_2fa-authentification.svg";
-import { ReactComponent as EvSSLConnection } from "../../assets/svgs/icon_ev-ssl-connection.svg";
-import { ReactComponent as DDOSProtection } from "../../assets/svgs/icon_ddos-protection.svg";
+import { ReactComponent as TwoFaAuthentication } from "assets/svgs/icon_2fa-authentification.svg";
+import { ReactComponent as EvSSLConnection } from "assets/svgs/icon_ev-ssl-connection.svg";
+import { ReactComponent as DDOSProtection } from "assets/svgs/icon_ddos-protection.svg";
 
-import secondIllustration from "../../assets/pngs/second_illustration.png";
+import secondIllustration from "assets/pngs/second_illustration.png";
 
 const About = () => {
   const classes = useStyles();

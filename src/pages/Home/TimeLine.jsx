@@ -1,13 +1,13 @@
 import { Container, Tab, Tabs } from "@material-ui/core";
 
-import LightBlueTypography from "../../components/Typography/LightBlueTypography";
-import { timelineProgress } from "../../lib/helpers";
+import LightBlueTypography from "components/Typography/LightBlueTypography";
+import { timelineProgress } from "lib/helpers";
 import Stepper from "./timeline/Stepper";
 import useStyles from "./styles";
 
-import { ReactComponent as MapWorldDotted } from "../../assets/svgs/map_world-dotted.svg";
+import { ReactComponent as MapWorldDotted } from "assets/svgs/map_world-dotted.svg";
 
-import CoinBlurred from "../../assets/pngs/coin.png";
+import CoinBlurred from "assets/pngs/coin.png";
 
 const steps = [
   {

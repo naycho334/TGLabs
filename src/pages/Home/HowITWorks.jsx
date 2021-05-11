@@ -3,14 +3,14 @@ import { ArrowForward } from "@material-ui/icons";
 import { Fragment } from "react";
 import clsx from "clsx";
 
-import LightBlueTypography from "../../components/Typography/LightBlueTypography";
+import LightBlueTypography from "components/Typography/LightBlueTypography";
 import useStyles from "./styles";
 
-import { ReactComponent as CreateAcountOrange } from "../../assets/svgs/icon_create-account-orange.svg";
-import { ReactComponent as WithdrawOrange } from "../../assets/svgs/icon_withdraw-orange.svg";
-import { ReactComponent as InvestOrange } from "../../assets/svgs/icon_invest-orange.svg";
-import { ReactComponent as RewardOrange } from "../../assets/svgs/icon_reward-orange.svg";
-import { ReactComponent as NumberCircle } from "../../assets/svgs/circle_stroke.svg";
+import { ReactComponent as CreateAcountOrange } from "assets/svgs/icon_create-account-orange.svg";
+import { ReactComponent as WithdrawOrange } from "assets/svgs/icon_withdraw-orange.svg";
+import { ReactComponent as InvestOrange } from "assets/svgs/icon_invest-orange.svg";
+import { ReactComponent as RewardOrange } from "assets/svgs/icon_reward-orange.svg";
+import { ReactComponent as NumberCircle } from "assets/svgs/circle_stroke.svg";
 
 const HowITWorks = () => {
   const classes = useStyles();

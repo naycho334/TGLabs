@@ -8,16 +8,16 @@ import {
 } from "@material-ui/core";
 import { memo, useCallback, useEffect, useState } from "react";
 
-import useForceUpdate from "../../hooks/useForceUpdate";
+import useForceUpdate from "hooks/useForceUpdate";
 import DataTable from "./statistics/DataTable";
 import TabPanel from "./statistics/TabPanel";
 import DataCard from "./statistics/DataCard";
 import useStyles from "./styles";
 
-import { ReactComponent as Calendar } from "../../assets/svgs/icon_calendar-purple.svg";
-import { ReactComponent as Withdraw } from "../../assets/svgs/icon_withdraw-purple.svg";
-import { ReactComponent as Invest } from "../../assets/svgs/icon_invest-purple.svg";
-import { ReactComponent as Users } from "../../assets/svgs/icon_users-purple.svg";
+import { ReactComponent as Calendar } from "assets/svgs/icon_calendar-purple.svg";
+import { ReactComponent as Withdraw } from "assets/svgs/icon_withdraw-purple.svg";
+import { ReactComponent as Invest } from "assets/svgs/icon_invest-purple.svg";
+import { ReactComponent as Users } from "assets/svgs/icon_users-purple.svg";
 
 const data = [
   {

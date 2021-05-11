@@ -1,12 +1,12 @@
 import { Box, Grid, Typography } from "@material-ui/core";
 import { lazy, memo } from "react";
 
-import LightBlueTypography from "../../components/Typography/LightBlueTypography";
+import LightBlueTypography from "components/Typography/LightBlueTypography";
 import useStyles from "./styles";
 
-import { ReactComponent as Logo } from "../../assets/svgs/logo_symbol_tglab-inverse.svg";
+import { ReactComponent as Logo } from "assets/svgs/logo_symbol_tglab-inverse.svg";
 
-const TargetProgress = lazy(() => import("../../components/TargetProgress"));
+const TargetProgress = lazy(() => import("components/TargetProgress"));
 
 const TokenSupply = () => {
   const classes = useStyles();

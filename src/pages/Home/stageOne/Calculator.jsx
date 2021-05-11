@@ -13,10 +13,10 @@ import propTypes from "prop-types";
 import { memo } from "react";
 // import _ from "lodash";
 
-import LightBlueGradientButton from "../../../components/Buttons/LightBlueGradientButton";
-import NoFieldsetSelect from "../../../components/Selects/NoFieldsetSelect";
-import { useInputStyles } from "../../../hooks/useInputStyles";
-import { endpoints } from "../../../routes";
+import LightBlueGradientButton from "components/Buttons/LightBlueGradientButton";
+import NoFieldsetSelect from "components/Selects/NoFieldsetSelect";
+import { useInputStyles } from "hooks/useInputStyles";
+import { endpoints } from "routes";
 
 const Calculator = (props) => {
   const {

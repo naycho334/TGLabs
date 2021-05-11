@@ -92,6 +92,25 @@ const useStyles = makeStyles(theme => {
         "& .mb-3": {
           marginBottom: theme.spacing(2),
         },
+
+        "& .links": {
+          justifyContent: 'space-between',
+          position: 'relative',
+  
+          "& a:nth-child(1)": {
+            paddingRight: theme.spacing(3)
+          },
+  
+          "&:after": {
+            backgroundColor: colors.grey[300],
+            position: 'absolute',
+            height: '100%',
+            content: '""',
+            left: '50%',
+            width: 1,
+            top: 0,
+          },
+        },
       },
 
       [theme.breakpoints.down("sm")]: {
@@ -104,6 +123,7 @@ const useStyles = makeStyles(theme => {
         },
 
         "& .MuiDrawer-paper": {
+          boxShadow: 'none',
           width: '100%',
         },
 

@@ -1,6 +1,6 @@
 import { CircularProgress } from "@material-ui/core";
 
-import { ReactComponent as Logo } from "../../assets/svgs/logo_tglab-inverse.svg";
+import { ReactComponent as Logo } from "assets/svgs/logo_tglab-inverse.svg";
 
 import useStyles from "./styles";
 

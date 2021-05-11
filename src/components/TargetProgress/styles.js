@@ -3,7 +3,7 @@ import { makeStyles, colors } from "@material-ui/core";
 const useStyles = makeStyles(theme => {
   return {
     progressBarContainer: {
-      padding: theme.spacing(6, 8, 4, 6),
+      padding: theme.spacing(6, 0, 4, 0),
       marginBottom: theme.spacing(3),
 
       "& .progressBar": {

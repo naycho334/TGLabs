@@ -7,7 +7,7 @@ import Sidebar from "./Sidebar";
 import Navbar from "./Navbar";
 
 const DashboardPage = (props) => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const { isAdmin, children } = props;
   const theme = useTheme();
 

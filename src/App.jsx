@@ -10,6 +10,7 @@ import mainTheme from "./styles/theme";
 import { endpoints } from "./routes";
 
 import "react-perfect-scrollbar/dist/css/styles.css";
+import "@fontsource/roboto";
 
 // Commun components
 const DashboardPage = lazy(() => import("./components/DashboardPage"));
@@ -108,15 +109,17 @@ const App = () => {
               strict
               render={() => (
                 <DashboardPage isAdmin={false}>
-                  
                   {/* ICO Information */}
                   <Route
-                    path={endpoints.dashboard.user.ico_dashboard.index}
+                    path={[
+                      endpoints.dashboard.user.ico_dashboard.index,
+                      endpoints.dashboard.user.home.index,
+                    ]}
                     component={UserICODashboard}
                     strict
                     exact
                   />
-                  
+
                   {/* ICO Information */}
                   <Route
                     path={endpoints.dashboard.user.ico_information.index}
@@ -172,7 +175,6 @@ const App = () => {
                     strict
                     exact
                   />
-
                 </DashboardPage>
               )}
             />
@@ -185,7 +187,10 @@ const App = () => {
                 <DashboardPage isAdmin={true}>
                   {/* ICO Information */}
                   <Route
-                    path={endpoints.dashboard.admin.ico_information.index}
+                    path={[
+                      endpoints.dashboard.admin.ico_information.index,
+                      endpoints.dashboard.admin.home.index,
+                    ]}
                     component={AdminICOInformation}
                     strict
                     exact

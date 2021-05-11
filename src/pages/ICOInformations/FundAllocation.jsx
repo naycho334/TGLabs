@@ -3,9 +3,9 @@ import { memo } from "react";
 
 import useStyles from "./styles";
 
-import { ReactComponent as FundChart } from "../../assets/svgs/fund-allocation.svg";
+import { ReactComponent as FundChart } from "assets/svgs/fund-allocation.svg";
 
-import coinBlurred from "../../assets/pngs/coin.png";
+import coinBlurred from "assets/pngs/coin.png";
 
 const data = [
   {

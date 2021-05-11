@@ -2,13 +2,13 @@ import { Box, Link, Typography } from "@material-ui/core";
 import { lazy } from "react";
 import { Link as RouterLink } from "react-router-dom";
 
-import LightBlueGradientButton from "../../components/Buttons/LightBlueGradientButton";
-import LightBlueOutlinedButton from "../../components/Buttons/LightBlueOutlinedButton";
-import { endpoints } from "../../routes";
+import LightBlueGradientButton from "components/Buttons/LightBlueGradientButton";
+import LightBlueOutlinedButton from "components/Buttons/LightBlueOutlinedButton";
+import { endpoints } from "routes";
 import useStyles from "./styles";
 
 const ThemeAnimation = lazy(() =>
-  import("../../components/Animations/ThemeAnimation")
+  import("components/Animations/ThemeAnimation")
 );
 
 const Header = () => {

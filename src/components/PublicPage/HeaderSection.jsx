@@ -4,7 +4,7 @@ import propTypes from "prop-types";
 import { memo } from "react";
 import clsx from "clsx";
 
-import { endpoints } from "../../routes";
+import { endpoints } from "routes";
 import useStyles from "./styles";
 
 const HeaderSection = (props) => {
