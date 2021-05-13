@@ -8,14 +8,15 @@ import LightBlueGradientButton from "components/Buttons/LightBlueGradientButton"
 import DefaultTextField from "components/TextFields/DefaultTextField";
 import TGLogo from "components/Animations/TGLogo";
 import useStyles from "./styles";
+import {
+  FacebookIcon,
+  InstagramIcon,
+  LinkedInIcon,
+  TwitterIcon,
+} from "../../components/Icons/Social";
 
 import illustration from "assets/pngs/login_illustration.png";
 import TGLabBlurredLogo from "assets/pngs/thlab2.png";
-
-import { ReactComponent as InstagramIcon } from "assets/svgs/social/instagram-icon.svg";
-import { ReactComponent as LinkedInIcon } from "assets/svgs/social/linked-in-icon.svg";
-import { ReactComponent as FacebookIcon } from "assets/svgs/social/facebook-icon.svg";
-import { ReactComponent as TwitterIcon } from "assets/svgs/social/twitter-icon.svg";
 
 const Login = () => {
   const [height, setHeight] = useState(0);

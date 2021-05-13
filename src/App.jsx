@@ -44,7 +44,6 @@ const UserFAQ = lazy(() => import("./pages/User/FAQ"));
 const ICOInformationsPage = lazy(() => import("./pages/ICOInformations"));
 const ProductsPage = lazy(() => import("./pages/Products"));
 const HomePage = lazy(() => import("./pages/Home"));
-// const RegisterPage = lazy(() => import("./pages/Register"));
 
 const App = () => {
   const viewPort = useViewPort({ xs: 0.75, sm: 0.85, md: 0.95, lg: 1 });

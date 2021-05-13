@@ -4,7 +4,7 @@ import { lazy, memo } from "react";
 import LightBlueTypography from "components/Typography/LightBlueTypography";
 import useStyles from "./styles";
 
-import { ReactComponent as Logo } from "assets/svgs/logo_symbol_tglab-inverse.svg";
+import { TGCryptoColorIcon } from "../../components/Icons/Crypto";
 
 const TargetProgress = lazy(() => import("components/TargetProgress"));
 
@@ -25,7 +25,7 @@ const TokenSupply = () => {
         <LightBlueTypography component="div" align="center" variant="h5">
           {Number(2000000).toLocaleString()}
           <Box ml={2} display="inline">
-            <Logo style={{ transform: "translateY(4px) scale(.9)" }} />
+            <TGCryptoColorIcon style={{ transform: "translateY(4px) scale(.9)" }} />
           </Box>
         </LightBlueTypography>
       </Grid>

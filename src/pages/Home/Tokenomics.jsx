@@ -4,17 +4,17 @@ import { memo } from "react";
 
 import LightBlueGradientButton from "components/Buttons/LightBlueGradientButton";
 import LightBlueTypography from "components/Typography/LightBlueTypography";
+import { TGCryptoColorIcon } from "../../components/Icons/Crypto";
 import TokenSupply from "./tokenomics/TokenSupply";
 import Benefits from "./tokenomics/Benefits";
+import { endpoints } from "routes";
 import useStyles from "./styles";
 
 import { ReactComponent as ProfitDistributionHor } from "assets/svgs/profit_distribution_hor.svg";
 import { ReactComponent as ProfitDistributionVer } from "assets/svgs/profit_distribution_ver.svg";
-import { ReactComponent as Logo } from "assets/svgs/logo_symbol_tglab-inverse.svg";
 
 import BenefitsIllustration from "assets/pngs/benefits_illustration.png";
 import DiceBluered from "assets/pngs/dice.png";
-import { endpoints } from "routes";
 
 const data = {
   benefits: {
@@ -81,7 +81,7 @@ const Tokenomics = () => {
               <LightBlueTypography component="div" align="center" variant="h5">
                 {Number(2000000).toLocaleString()}
                 <Box ml={2} display="inline">
-                  <Logo style={{ transform: "translateY(4px) scale(.9)" }} />
+                  <TGCryptoColorIcon style={{ transform: "translateY(4px) scale(.9)" }} />
                 </Box>
               </LightBlueTypography>
 

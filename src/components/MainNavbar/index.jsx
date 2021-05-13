@@ -21,9 +21,8 @@ import { endpoints } from "routes";
 import SideMenu from "./SideMenu";
 import useStyles from "./styles";
 
-import { ReactComponent as MenuIcon } from "assets/svgs/icon_hamburger-menu.svg";
 import { ReactComponent as LogoIcon } from "assets/svgs/logo_tglab-inverse.svg";
-import { ReactComponent as AccountIcon } from "assets/svgs/icon_myaccount.svg";
+import { HamburgerIcon, AccountIcon } from "../Icons/Icons";
 
 const navbarLinks = {
   mega: [
@@ -166,7 +165,7 @@ const MainNavbar = () => {
               <Grid container spacing={2} alignItems="center">
                 {[
                   { type: "user", Icon: AccountIcon },
-                  { type: "mega", Icon: MenuIcon },
+                  { type: "mega", Icon: HamburgerIcon },
                 ].map(({ type, Icon }) => (
                   <Grid item key={type}>
                     <IconButton

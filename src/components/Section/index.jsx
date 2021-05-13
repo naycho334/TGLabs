@@ -1,30 +1,43 @@
-import { CardContent, Grid, Typography } from "@material-ui/core";
+import { CardContent, Divider, Grid, Typography } from "@material-ui/core";
 import propTypes from "prop-types";
 import { memo } from "react";
 
 import CustomCard from "./CustomCard";
-import useStyles from "./styles";
+// import useStyles from "./styles";
 
 const Section = (props) => {
-  const { title, children } = props;
-  const classes = useStyles();
+  const { title, className, header, footer, children } = props;
+  // const classes = useStyles();
 
   return (
-    <CustomCard>
+    <CustomCard className={className}>
       <CardContent>
-        <Grid container>
+        <Grid container direction="column" justify="space-between">
           <Grid item>
-            <Typography
-              gutterBottom
-              variant="body1"
-              className="bold"
-              component="h2"
-            >
-              {title}
-            </Typography>
+            {/* Title */}
+            <Grid item>
+              <Typography
+                className="bold section-title"
+                variant="body1"
+                component="h2"
+                gutterBottom
+              >
+                {title}
+              </Typography>
+            </Grid>
+
+            {/* Header */}
+            {header}
+
+            {/* Content */}
+            <Grid item xs={12}>
+              {children}
+            </Grid>
           </Grid>
-          <Grid item xs={12}>
-            {children}
+
+          <Grid item>
+            {footer && <Divider className="footer" />}
+            <Grid item>{footer}</Grid>
           </Grid>
         </Grid>
       </CardContent>
@@ -34,7 +47,10 @@ const Section = (props) => {
 
 Section.propTypes = {
   title: propTypes.string.isRequired,
+  className: propTypes.string,
   children: propTypes.any,
+  header: propTypes.any,
+  footer: propTypes.any,
 };
 
 export default memo(Section);

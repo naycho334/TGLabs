@@ -12,14 +12,15 @@ import { Add } from "@material-ui/icons";
 import propTypes from "prop-types";
 
 import LightBlueGradientButton from "../Buttons/LightBlueGradientButton";
+import {
+  NotificationIcon,
+  HamburgerIcon,
+  TGLogoSmIcon,
+  SupportIcon,
+  AccountIcon,
+  CloseIcon,
+} from "../Icons/Icons";
 import useStyles from "./styles";
-
-import { ReactComponent as NotificationIcon } from "assets/svgs/icons/icon_notification.svg";
-import { ReactComponent as HamburgerIcon } from "assets/svgs/icons/icon_hamburger-menu.svg";
-import { ReactComponent as CloseIcon } from "assets/svgs/icons/icon_close-menu.svg";
-import { ReactComponent as AccountIcon } from "assets/svgs/icons/icon_account.svg";
-import { ReactComponent as TGLogoSmIcon } from "assets/svgs/icons/tg-logo-sm.svg";
-import { ReactComponent as SupportIcon } from "assets/svgs/icon_support.svg";
 
 const Navbar = (props) => {
   const { open, isAdmin, openSidebar } = props;

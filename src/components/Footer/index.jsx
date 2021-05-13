@@ -13,11 +13,12 @@ import GolderGradientButton from "components/Buttons/GolderGradientButton";
 import WhiteLink from "components/Links/WhiteLink";
 import { endpoints } from "routes";
 import useStyles from "./styles";
-
-import { ReactComponent as InstagramIcon } from "assets/svgs/social/instagram-icon.svg";
-import { ReactComponent as LinkedInIcon } from "assets/svgs/social/linked-in-icon.svg";
-import { ReactComponent as FacebookIcon } from "assets/svgs/social/facebook-icon.svg";
-import { ReactComponent as TwitterIcon } from "assets/svgs/social/twitter-icon.svg";
+import {
+  FacebookIcon,
+  InstagramIcon,
+  LinkedInIcon,
+  TwitterIcon,
+} from "../Icons/Social";
 
 import { ReactComponent as TGLabsLogo } from "assets/svgs/logo_tglabs-inverse.svg";
 import { ReactComponent as BeioLogo } from "assets/svgs/logo_beio-inverse.svg";

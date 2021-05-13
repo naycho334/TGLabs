@@ -3,7 +3,6 @@ import { lazy, useState } from "react";
 
 import AcceptedCurrencies from "./stageOne/AcceptedCurrencies";
 import Calculator from "./stageOne/Calculator";
-import CountDown from "./stageOne/CountDown";
 import Discounts from "./stageOne/Discounts";
 import useStyles from "./styles";
 
@@ -14,6 +13,7 @@ import { ReactComponent as TetherIcon } from "assets/svgs/crypto-color/logo_teth
 import bluredLogo from "assets/pngs/Group 59.png";
 import bluredChip from "assets/pngs/chip2.png";
 
+const EndingCountdown = lazy(() => import("components/EndingCountdown"));
 const TargetProgress = lazy(() => import("components/TargetProgress"));
 
 const discounts = [
@@ -65,7 +65,7 @@ const StageOne = () => {
       </Typography>
 
       {/* Countdown */}
-      <CountDown time={Date.now() + 10 ** 9} />
+      <EndingCountdown time={Date.now() + 10 ** 9} />
 
       {/* Progress bar */}
       <TargetProgress

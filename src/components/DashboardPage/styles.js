@@ -8,10 +8,6 @@ const useStyles = makeStyles(theme => {
     "@global": {
       "body": {
         backgroundColor: '#FEFAED',
-
-        [theme.breakpoints.down("sm")]: {
-          backgroundColor: theme.palette.common.white
-        }
       }
     },
     navbar: {
@@ -96,11 +92,11 @@ const useStyles = makeStyles(theme => {
         "& .links": {
           justifyContent: 'space-between',
           position: 'relative',
-  
+
           "& a:nth-child(1)": {
             paddingRight: theme.spacing(3)
           },
-  
+
           "&:after": {
             backgroundColor: colors.grey[300],
             position: 'absolute',
@@ -137,8 +133,9 @@ const useStyles = makeStyles(theme => {
       paddingBottom: theme.spacing(4),
       paddingTop: theme.spacing(3),
 
-      "& .pageTitle": {
-        color: colors.grey[600]
+      "& .page-title": {
+        color: colors.grey[600],
+        fontSize: 24
       }
     },
     list: {

@@ -11,8 +11,9 @@ import PerfectScrollbar from "react-perfect-scrollbar";
 import { memo } from "react";
 import clsx from "clsx";
 
+import { TGCryptoColorIcon } from "components/Icons/Crypto";
+
 import { ReactComponent as BitcoinIcon } from "assets/svgs/crypto-color/logo_bitcoin-color.svg";
-import { ReactComponent as Logo } from "assets/svgs/logo_symbol_tglab-inverse.svg";
 
 const DataTable = () => {
   return (
@@ -69,7 +70,7 @@ const DataTable = () => {
                   <TableCell>
                     <div className="tglab">
                       <Typography variant="caption">0.456733</Typography>
-                      <Logo />
+                      <TGCryptoColorIcon />
                     </div>
                   </TableCell>
                   <TableCell>

@@ -17,7 +17,7 @@ const Page = (props) => {
       <Container component="main" maxWidth={false} className={classes.content}>
         <Grid container spacing={2}>
           <Grid item xs={12}>
-            <Typography className="bold pageTitle" component="h1" variant="h6">
+            <Typography className="bold page-title" component="h1" variant="h6">
               {title}
             </Typography>
           </Grid>

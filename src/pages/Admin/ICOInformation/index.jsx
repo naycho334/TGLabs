@@ -1,3 +1,4 @@
+import { Grid } from "@material-ui/core";
 import { lazy, memo } from "react";
 
 import AwaitingApproval from "./AwaitingApproval";
@@ -11,9 +12,16 @@ const Page = lazy(() => import("components/DashboardPage/Page"));
 const ICOInformation = () => {
   return (
     <Page title="ICO Information">
-      <CurrentICOStage />
-
-      <Totals />
+      <Grid item xs={12}>
+        <Grid container spacing={2}>
+          <Grid item xs={12} lg>
+            <CurrentICOStage />
+          </Grid>
+          <Grid item xs={12} lg="auto">
+            <Totals />
+          </Grid>
+        </Grid>
+      </Grid>
 
       <ICOPurchases />
 

@@ -1,0 +1,17 @@
+<svg id="logo_symbol_tglab-inverse" xmlns="http://www.w3.org/2000/svg" width="28" height="25.536" viewBox="0 0 28 25.536">
+  <path id="Rectangle_5" data-name="Rectangle 5" d="M7,0H7a7,7,0,0,1,7,7v7.183a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V7A7,7,0,0,1,7,0Z" transform="translate(7)" fill="#138bbd"/>
+  <path id="Path_4" data-name="Path 4" d="M422.971-220.56l-3.425,3.47a.776.776,0,0,0,.541,1.323h6.851a.776.776,0,0,0,.541-1.323l-3.425-3.47A.758.758,0,0,0,422.971-220.56Z" transform="translate(-409.4 241.303)" fill="#feeca8"/>
+  <path id="Path_5" data-name="Path 5" d="M362.311-324.989h-14a7.046,7.046,0,0,0-7,7.091h0a7.046,7.046,0,0,0,7,7.091h0a6.986,6.986,0,0,0,6.188-3.778.9.9,0,0,1,.812-.518.9.9,0,0,1,.812.518,6.986,6.986,0,0,0,6.188,3.778,7.046,7.046,0,0,0,7-7.091h0A7.046,7.046,0,0,0,362.311-324.989Z" transform="translate(-341.311 332.08)" fill="#2af6ff"/>
+  <g id="Group_4" data-name="Group 4" transform="translate(3.343 10.315)">
+    <g id="Group_2" data-name="Group 2" transform="translate(16.445 0)">
+      <ellipse id="Ellipse_1" data-name="Ellipse 1" cx="1.175" cy="1.19" rx="1.175" ry="1.19" fill="#2e1c89"/>
+      <ellipse id="Ellipse_2" data-name="Ellipse 2" cx="1.175" cy="1.19" rx="1.175" ry="1.19" transform="translate(0 5.011)" fill="#2e1c89"/>
+    </g>
+    <g id="Group_3" data-name="Group 3" transform="translate(13.972 2.505)">
+      <ellipse id="Ellipse_3" data-name="Ellipse 3" cx="1.175" cy="1.19" rx="1.175" ry="1.19" fill="#2e1c89"/>
+      <ellipse id="Ellipse_4" data-name="Ellipse 4" cx="1.175" cy="1.19" rx="1.175" ry="1.19" transform="translate(4.946)" fill="#2e1c89"/>
+    </g>
+    <rect id="Rectangle_6" data-name="Rectangle 6" width="7.296" height="2.381" rx="1.19" transform="translate(0 2.505)" fill="#2e1c89"/>
+    <rect id="Rectangle_7" data-name="Rectangle 7" width="7.392" height="2.35" rx="1.175" transform="translate(2.473 7.392) rotate(-90)" fill="#2e1c89"/>
+  </g>
+</svg>
