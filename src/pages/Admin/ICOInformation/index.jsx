@@ -1,6 +1,7 @@
 import { Grid } from "@material-ui/core";
 import { lazy, memo } from "react";
 
+import { ICOInformationIcon } from "components/Icons/Icons";
 import AwaitingApproval from "./AwaitingApproval";
 import CurrentICOStage from "./CurrentICOStage";
 import TopContributors from "./TopContributors";
@@ -11,7 +12,7 @@ const Page = lazy(() => import("components/DashboardPage/Page"));
 
 const ICOInformation = () => {
   return (
-    <Page title="ICO Information">
+    <Page title="ICO Information" icon={ICOInformationIcon}>
       <Grid item xs={12}>
         <Grid container spacing={2}>
           <Grid item xs={12} lg>

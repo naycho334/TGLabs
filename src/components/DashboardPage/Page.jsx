@@ -6,7 +6,7 @@ import { memo } from "react";
 import useStyles from "./styles";
 
 const Page = (props) => {
-  const { title, children } = props;
+  const { title, children, icon: Icon } = props;
   const classes = useStyles();
 
   return (
@@ -20,6 +20,8 @@ const Page = (props) => {
             <Typography className="bold page-title" component="h1" variant="h6">
               {title}
             </Typography>
+
+            {Icon && <Icon className="fixedIcon" />}
           </Grid>
           {children}
         </Grid>
@@ -31,6 +33,7 @@ const Page = (props) => {
 Page.propTypes = {
   title: propTypes.string.isRequired,
   children: propTypes.any,
+  icon: propTypes.any,
 };
 
 Page.defaultProps = {

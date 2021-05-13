@@ -10,16 +10,17 @@ import {
 } from "@material-ui/core";
 import { Add } from "@material-ui/icons";
 import propTypes from "prop-types";
+import { memo } from "react";
 
 import LightBlueGradientButton from "../Buttons/LightBlueGradientButton";
 import {
-  NotificationIcon,
   HamburgerIcon,
   TGLogoSmIcon,
   SupportIcon,
   AccountIcon,
   CloseIcon,
 } from "../Icons/Icons";
+import Notifications from "./Notifications";
 import useStyles from "./styles";
 
 const Navbar = (props) => {
@@ -79,16 +80,7 @@ const Navbar = (props) => {
 
               {/* Notifications */}
               <Grid item>
-                <IconButton>
-                  <Badge
-                    anchorOrigin={{ horizontal: "right", vertical: "top" }}
-                    color="secondary"
-                    badgeContent={4}
-                    variant="dot"
-                  >
-                    <NotificationIcon />
-                  </Badge>
-                </IconButton>
+                <Notifications />
               </Grid>
 
               {/* User account */}
@@ -125,4 +117,4 @@ Navbar.defaultProps = {
   isAdmin: false,
 };
 
-export default Navbar;
+export default memo(Navbar);

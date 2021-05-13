@@ -5,11 +5,9 @@ import _ from "lodash";
 
 import { TGCryptoColorIcon } from "components/Icons/Crypto";
 import { formatPrice } from "lib/helpers";
-// import useStyles from "./styles";
 
 const RemainingTokens = (props) => {
   const { price, amount } = props;
-  // const classes = useStyles();
 
   return (
     <Grid
@@ -27,7 +25,7 @@ const RemainingTokens = (props) => {
             </Typography>
           </Grid>
           <Grid item>
-            <Typography variant="body2" className="bold" variant="span">
+            <Typography variant="body2" className="bold" component="span">
               {price}
             </Typography>
           </Grid>
@@ -43,7 +41,7 @@ const RemainingTokens = (props) => {
           <Grid item>
             <Grid container spacing={1} alignItems="center">
               <Grid item>
-                <Typography variant="body2" className="bold" variant="span">
+                <Typography variant="body2" className="bold" component="span">
                   {formatPrice(amount, "usd")}
                 </Typography>
               </Grid>
@@ -60,7 +58,7 @@ const RemainingTokens = (props) => {
 
 RemainingTokens.propTypes = {
   amount: propTypes.number.isRequired,
-  price: propTypes.number.isRequired,
+  price: propTypes.string.isRequired,
 };
 
 export default memo(RemainingTokens);

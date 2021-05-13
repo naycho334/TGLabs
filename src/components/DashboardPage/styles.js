@@ -19,6 +19,68 @@ const useStyles = makeStyles(theme => {
         backgroundColor: theme.palette.common.white
       }
     },
+    notifications: {
+      border: `1px solid ${theme.palette.lightBlue.dark}`,
+      borderRadius: 0,
+      maxWidth: 400,
+      width: '100%',
+
+      "& .header": {
+        padding: theme.spacing(2, 2),
+        color: '#8F96A5',
+
+        "& .badge": {
+          borderRadius: theme.spacing(1),
+          marginLeft: theme.spacing(2),
+          border: `1px solid #8F96A5`,
+          padding: theme.spacing(.5),
+        },
+      },
+
+      "& .content": {
+        padding: theme.spacing(2),
+        height: 400,
+      },
+
+      "& .footer": {
+        "& button": {
+          paddingBottom: theme.spacing(1.5),
+          color: theme.palette.orange.main,
+          paddingTop: theme.spacing(1.5),
+          fontWeight: 'bold',
+        },
+      },
+    },
+    notification:{
+      borderRadius: theme.spacing(1),
+      padding: theme.spacing(1.5),
+      border: `1.5px solid`,
+      
+      "&.default":{
+        backgroundColor: colors.grey[50],
+        borderColor: colors.grey[800],
+      },
+      
+      "&.danger":{
+        backgroundColor: colors.red[50],
+        borderColor: colors.red[800],
+      },
+      
+      "&.info":{
+        backgroundColor: colors.lightBlue[50],
+        borderColor: colors.lightBlue[800],
+      },
+      
+      "&.warning":{
+        backgroundColor: colors.orange[50],
+        borderColor: colors.orange[800],
+      },
+      
+      "& .separator":{
+        margin: theme.spacing(1, 0)
+      },
+      
+    },
     seperator: {
       backgroundColor: colors.grey[300],
       height: 30,
@@ -136,7 +198,14 @@ const useStyles = makeStyles(theme => {
       "& .page-title": {
         color: colors.grey[600],
         fontSize: 24
-      }
+      },
+
+      "& .fixedIcon": {
+        transform: `scale(10)`,
+        position: 'absolute',
+        opacity: .08
+      },
+
     },
     list: {
       "& .subheader": {
