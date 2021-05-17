@@ -3,6 +3,7 @@ import PerfectScrollbars from "react-perfect-scrollbar";
 import { memo, useState } from "react";
 import propTypes from "prop-types";
 
+import DashboardContext from "./context";
 import Sidebar from "./Sidebar";
 import Navbar from "./Navbar";
 
@@ -12,31 +13,32 @@ const DashboardPage = (props) => {
   const theme = useTheme();
 
   return (
-    <Box display="flex">
-      {/* Sidebar */}
-      <Hidden smDown>
-        <Sidebar isAdmin={isAdmin} />
-      </Hidden>
-      <Hidden mdUp>
-        <Sidebar
-          onClose={() => setOpen(false)}
-          variant="temporary"
-          isAdmin={isAdmin}
-          open={open}
-        />
-      </Hidden>
-
-      {/* Body */}
-      <Box flex={1}>
-        {/* Navbar */}
-        <Navbar openSidebar={setOpen} isAdmin={isAdmin} open={open} />
+    <DashboardContext.Provider value={{ isAdmin }}>
+      <Box display="flex">
+        {/* Sidebar */}
+        <Hidden smDown>
+          <Sidebar />
+        </Hidden>
+        <Hidden mdUp>
+          <Sidebar
+            onClose={() => setOpen(false)}
+            variant="temporary"
+            open={open}
+          />
+        </Hidden>
 
         {/* Body */}
-        <Box height={`calc(100vh - ${theme.spacing(9)}px)`}>
-          <PerfectScrollbars>{children}</PerfectScrollbars>
+        <Box flex={1}>
+          {/* Navbar */}
+          <Navbar openSidebar={setOpen} isAdmin={isAdmin} open={open} />
+
+          {/* Body */}
+          <Box height={`calc(100vh - ${theme.spacing(9)}px)`}>
+            <PerfectScrollbars>{children}</PerfectScrollbars>
+          </Box>
         </Box>
       </Box>
-    </Box>
+    </DashboardContext.Provider>
   );
 };
 

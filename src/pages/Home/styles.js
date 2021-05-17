@@ -38,6 +38,7 @@ const useStyles = makeStyles((theme) => {
           position: 'absolute',
           height: '100%',
           width: '100%',
+          zIndex: -1,
           left: 0,
           top: 0,
 
@@ -97,102 +98,9 @@ const useStyles = makeStyles((theme) => {
         marginBottom: theme.spacing(3),
       },
 
-      "& .discountsContainer": {
+      "& .stagesTimeline":{
         backgroundColor: theme.palette.yellow.light1,
-        padding: theme.spacing(6, 8, 0, 6),
-      },
-      "& .line": {
-        background: `linear-gradient(0deg, ${theme.palette.lightBlue.main}, ${theme.palette.yellow.light})`,
-        borderRadius: 15,
-        margin: 'auto',
-        height: 450,
-        width: 15,
-
-        [theme.breakpoints.up("md")]: {
-          background: `linear-gradient(-90deg, ${theme.palette.lightBlue.main}, ${theme.palette.yellow.light})`,
-          margin: 'unset',
-          width: '100%',
-          height: 15,
-        }
-      },
-      "& .discounts": {
-        position: 'relative'
-      },
-      "& .discount": {
-        position: 'absolute',
-        display: 'flex',
-
-        "& > span:last-child": {
-          color: theme.palette.purple.light
-        },
-
-        "&:before": {
-          border: `4px solid ${theme.palette.purple.light}`,
-          position: 'absolute',
-          borderRadius: 15,
-          content: '""',
-          height: 30,
-          width: 30,
-        },
-
-        [theme.breakpoints.down("sm")]: {
-          transform: 'translateY(-15px)',
-          justifyContent: 'center',
-          flexDirection: 'row',
-          alignItems: 'center',
-          width: '100%',
-          left: 0,
-
-          "& > span": {
-            transform: 'translateY(30px)',
-            width: 100,
-
-            "&:nth-child(1)": {
-              marginRight: theme.spacing(4) + 15,
-              flexDirection: 'column',
-              textAlign: 'right',
-              display: 'flex',
-            }
-          },
-
-          "&:before": {
-            transform: 'translateX(-50%)',
-            left: '50%',
-          },
-
-          "&:nth-child(2)": {
-            "&:before": {
-              visibility: 'hidden'
-            },
-          },
-        },
-
-        [theme.breakpoints.up("md")]: {
-          justifyContent: 'space-between',
-          height: theme.spacing(8),
-          flexDirection: 'column',
-          top: theme.spacing(-3),
-
-          "& > span": {
-            marginLeft: 30
-          },
-
-          "&:before": {
-            transform: 'translateY(-50%)',
-            top: '50%',
-            left: 0,
-          },
-
-          "&:nth-child(2)": {
-            "& span": {
-              marginLeft: 0
-            },
-
-            "&:before": {
-              visibility: 'hidden'
-            },
-          },
-        }
+        paddingTop: theme.spacing(6),
       },
 
       "& .calculatorContainer": {

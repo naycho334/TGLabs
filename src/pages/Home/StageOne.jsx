@@ -1,34 +1,37 @@
 import { Typography } from "@material-ui/core";
 import { lazy, useState } from "react";
+import moment from "moment";
 
 import AcceptedCurrencies from "./stageOne/AcceptedCurrencies";
 import Calculator from "./stageOne/Calculator";
-import Discounts from "./stageOne/Discounts";
 import useStyles from "./styles";
 
-import { ReactComponent as ChainLinkIcon } from "assets/svgs/crypto-color/logo_chainlink-color.svg";
-import { ReactComponent as BitcoinIcon } from "assets/svgs/crypto-color/logo_bitcoin-color.svg";
-import { ReactComponent as TetherIcon } from "assets/svgs/crypto-color/logo_tether-color.svg";
+import {
+  ChainLinkColorIcon,
+  BitcoinColorIcon,
+  TetherColorIcon,
+} from "components/Icons/Crypto";
 
 import bluredLogo from "assets/pngs/Group 59.png";
 import bluredChip from "assets/pngs/chip2.png";
 
 const EndingCountdown = lazy(() => import("components/EndingCountdown"));
 const TargetProgress = lazy(() => import("components/TargetProgress"));
+const StagesTimeline = lazy(() => import("components/StagesTimeline"));
 
-const discounts = [
-  { label: "Pre-ICO 1 ( @ $1.00 )", discount: 0 },
-  { label: "Pre-ICO 2 ( @ $1.40 )", discount: 5 },
-  { label: "ICO Stage 1 ( @ $1.80 )", discount: 0 },
-  { label: "ICO Stage 2 ( @ $2.50 )", discount: 10 },
-  { label: "ICO Stage 3 ( @ $3.45 )", discount: 0 },
-  { label: "ICO Stage 4 ( @ $5.00 )", discount: 0 },
+const stages = [
+  { name: "Pre-ICO 1", price: 1.00, discount: 0, date_start: moment().subtract(90, 'days').toDate(), date_end: moment().subtract(30, 'days').toDate(), available_tokens: 200000 },
+  { name: "Pre-ICO 2", price: 1.40, discount: 5, date_start: moment().subtract(30, 'days').toDate(), date_end: moment().add(30, 'days').toDate(), available_tokens: 200000 },
+  { name: "ICO Stage 1", price: 1.80, discount: 0, date_start: moment().add(30, 'days').toDate(), date_end: moment().add(90, 'days').toDate(), available_tokens: 200000 },
+  { name: "ICO Stage 2", price: 2.50, discount: 10, date_start: moment().add(90, 'days').toDate(), date_end: moment().add(150, 'days').toDate(), available_tokens: 200000 },
+  { name: "ICO Stage 3", price: 3.45, discount: 0, date_start: moment().add(150, 'days').toDate(), date_end: moment().add(210, 'days').toDate(), available_tokens: 200000 },
+  { name: "ICO Stage 4", price: 5.00, discount: 0, date_start: moment().add(210, 'days').toDate(), date_end: moment().add(270, 'days').toDate(), available_tokens: 200000 },
 ];
 
 const currencies = [
-  { label: "BTC", Icon: BitcoinIcon },
-  { label: "LINK", Icon: ChainLinkIcon },
-  { label: "USDT", Icon: TetherIcon },
+  { label: "BTC", Icon: BitcoinColorIcon },
+  { label: "LINK", Icon: ChainLinkColorIcon },
+  { label: "USDT", Icon: TetherColorIcon },
 ];
 
 const StageOne = () => {
@@ -78,8 +81,8 @@ const StageOne = () => {
         ]}
       />
 
-      {/* Discount */}
-      <Discounts discounts={discounts} />
+      {/* Stages timeline */}
+      <StagesTimeline className="stagesTimeline" stages={stages} />
 
       {/* Calculator */}
       <Calculator
@@ -89,7 +92,7 @@ const StageOne = () => {
         currencyValue={currency}
         discountValue={discount}
         currencies={currencies}
-        discounts={discounts}
+        stages={stages}
         amount={amount}
       />
 

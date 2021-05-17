@@ -9,8 +9,8 @@ import {
   Box,
 } from "@material-ui/core";
 import { Add } from "@material-ui/icons";
+import { memo, useContext } from "react";
 import propTypes from "prop-types";
-import { memo } from "react";
 
 import LightBlueGradientButton from "../Buttons/LightBlueGradientButton";
 import {
@@ -21,10 +21,12 @@ import {
   CloseIcon,
 } from "../Icons/Icons";
 import Notifications from "./Notifications";
+import DashboardContext from "./context";
 import useStyles from "./styles";
 
 const Navbar = (props) => {
-  const { open, isAdmin, openSidebar } = props;
+  const { isAdmin } = useContext(DashboardContext);
+  const { open, openSidebar } = props;
   const classes = useStyles();
 
   return (
@@ -109,12 +111,7 @@ const Navbar = (props) => {
 
 Navbar.propTypes = {
   openSidebar: propTypes.func.isRequired,
-  isAdmin: propTypes.bool.isRequired,
   open: propTypes.bool.isRequired,
-};
-
-Navbar.defaultProps = {
-  isAdmin: false,
 };
 
 export default memo(Navbar);

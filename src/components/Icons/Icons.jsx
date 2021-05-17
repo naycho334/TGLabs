@@ -15,8 +15,12 @@ import { ReactComponent as ProductsIcon } from "assets/svgs/icons/icon_products-
 import { ReactComponent as SettingsIcon } from "assets/svgs/icons/icon_settings-panel.svg";
 import { ReactComponent as RewardsIcon } from "assets/svgs/icons/icon_rewards-panel.svg";
 import { ReactComponent as LogoutIcon } from "assets/svgs/icons/icon_logout-panel.svg";
+import { ReactComponent as CalendarIcon } from "assets/svgs/icons/icon_calendar.svg";
 import { ReactComponent as UserIcon } from "assets/svgs/icons/icon_users-panel.svg";
+import { ReactComponent as CheckedIcon } from "assets/svgs/icons/icon_checked.svg";
 import { ReactComponent as FAQIcon } from "assets/svgs/icons/icon_faq-panel.svg";
+import { ReactComponent as EditIcon } from "assets/svgs/icons/icon_edit.svg";
+import { ReactComponent as TimeIcon } from "assets/svgs/icons/icon_time.svg";
 
 export {
   RewardsInformationIcon,
@@ -27,14 +31,18 @@ export {
   ReferralsIcon,
   HamburgerIcon,
   TGLogoSmIcon,
+  CalendarIcon,
   WithdrawIcon,
   ProductsIcon,
   SettingsIcon,
   RewardsIcon,
   SupportIcon,
   AccountIcon,
+  CheckedIcon,
   LogoutIcon,
   CloseIcon,
   UserIcon,
+  EditIcon,
+  TimeIcon,
   FAQIcon,
 };

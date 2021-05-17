@@ -7,6 +7,7 @@ import CurrentICOStage from "./CurrentICOStage";
 import TopContributors from "./TopContributors";
 import ICOPurchases from "./ICOPurchases";
 import Totals from "./Totals";
+import Stages from "./Stages";
 
 const Page = lazy(() => import("components/DashboardPage/Page"));
 
@@ -23,6 +24,8 @@ const ICOInformation = () => {
           </Grid>
         </Grid>
       </Grid>
+
+      <Stages />
 
       <ICOPurchases />
 

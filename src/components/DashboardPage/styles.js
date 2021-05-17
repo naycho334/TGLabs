@@ -21,8 +21,8 @@ const useStyles = makeStyles(theme => {
     },
     notifications: {
       border: `1px solid ${theme.palette.lightBlue.dark}`,
+      maxWidth: `${400}px !important`,
       borderRadius: 0,
-      maxWidth: 400,
       width: '100%',
 
       "& .header": {
@@ -201,9 +201,12 @@ const useStyles = makeStyles(theme => {
       },
 
       "& .fixedIcon": {
-        transform: `scale(10)`,
+        transform: `scale(10) translateX(50%)`,
         position: 'absolute',
-        opacity: .08
+        opacity: .08,
+        zIndex: -1,
+        left: 220,
+        top: -5,
       },
 
     },

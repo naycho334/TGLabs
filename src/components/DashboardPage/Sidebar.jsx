@@ -12,14 +12,15 @@ import {
   Link,
 } from "@material-ui/core";
 import { Link as RouterLink, matchPath, useLocation } from "react-router-dom";
+import { memo, Fragment, lazy, useContext } from "react";
 import PerfectScrollbar from "react-perfect-scrollbar";
-import { memo, Fragment, lazy } from "react";
 import propTypes from "prop-types";
 import clsx from "clsx";
 import _ from "lodash";
 
 import SidebarFooter from "./SidebarFooter";
 import TGLogo from "../Animations/TGLogo";
+import DashboardContext from "./context";
 import { endpoints } from "routes";
 import useStyles from "./styles";
 import {
@@ -175,7 +176,8 @@ const links = {
 };
 
 const Sidebar = (props) => {
-  const { isAdmin, variant, open, onClose } = props;
+  const { isAdmin } = useContext(DashboardContext);
+  const { variant, open, onClose } = props;
   const classes = useStyles();
   const { pathname } = useLocation();
 
@@ -283,7 +285,6 @@ const Sidebar = (props) => {
 
 Sidebar.propTypes = {
   variant: propTypes.oneOf(["temporary", "permanent"]).isRequired,
-  isAdmin: propTypes.bool.isRequired,
   onClose: propTypes.func.isRequired,
   open: propTypes.bool.isRequired,
 };
@@ -291,7 +292,6 @@ Sidebar.propTypes = {
 Sidebar.defaultProps = {
   variant: "permanent",
   onClose: () => {},
-  isAdmin: false,
   open: false,
 };
 

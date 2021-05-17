@@ -1,4 +1,4 @@
-import { colors, makeStyles } from "@material-ui/core";
+import { colors, lighten, makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles(theme => {
   return {
@@ -67,7 +67,7 @@ const useStyles = makeStyles(theme => {
       }
     },
     totals: {
-      [theme.breakpoints.up("lg")]:{
+      [theme.breakpoints.up("lg")]: {
         flex: 'unset',
         width: 348,
       },
@@ -80,6 +80,30 @@ const useStyles = makeStyles(theme => {
           width: 15.5,
         }
       }
+    },
+    stagesTimeline: {
+      backgroundColor: lighten(theme.palette.lightBlue.main, .92),
+      padding: `${theme.spacing(7, 3)} !important`,
+    },
+    stageDialog:{
+      "& .title > *":{
+        fontWeight: 'bold',
+        color: '#8F96A5',
+      },
+      
+      "& .inputIcon":{
+        padding: theme.spacing(1.5),
+        
+        "& svg":{
+          height: 20,
+        },
+        
+        "& text":{
+          fontSize: '.40rem',
+          fontWeight: 'bold',
+          fill: '#5F6777',
+        }
+      },
     }
   }
 });

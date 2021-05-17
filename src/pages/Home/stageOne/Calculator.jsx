@@ -17,6 +17,7 @@ import LightBlueGradientButton from "components/Buttons/LightBlueGradientButton"
 import NoFieldsetSelect from "components/Selects/NoFieldsetSelect";
 import { useInputStyles } from "hooks/useInputStyles";
 import { endpoints } from "routes";
+import { formatPrice } from "lib/helpers";
 
 const Calculator = (props) => {
   const {
@@ -26,7 +27,7 @@ const Calculator = (props) => {
     currencyValue,
     discountValue,
     currencies,
-    discounts,
+    stages,
     amount,
   } = props;
   const [container1, handleInputFocus1] = useInputStyles();
@@ -54,8 +55,8 @@ const Calculator = (props) => {
             />
             <NoFieldsetSelect
               onFocus={handleInputFocus1.bind(null, "focus")}
-              onBlur={handleInputFocus1.bind(null, "blur")}
               MenuProps={{ MenuListProps: { dense: true } }}
+              onBlur={handleInputFocus1.bind(null, "blur")}
               IconComponent={ExpandMore}
               onChange={changeCurrency}
               value={currencyValue}
@@ -88,9 +89,9 @@ const Calculator = (props) => {
               input={<InputBase />}
               value={discountValue}
             >
-              {discounts.map(({ label }, i) => (
-                <MenuItem value={i} key={label}>
-                  {label}
+              {stages.map(({ name, price }, i) => (
+                <MenuItem value={i} key={name}>
+                  {name} ( @ {formatPrice(price, "usd", "sp")} )
                 </MenuItem>
               ))}
             </NoFieldsetSelect>
@@ -139,7 +140,7 @@ Calculator.propTypes = {
       Icon: propTypes.object.isRequired,
     })
   ).isRequired,
-  discounts: propTypes.arrayOf(
+  stages: propTypes.arrayOf(
     propTypes.shape({
       discount: propTypes.number.isRequired,
       label: propTypes.string.isRequired,
