@@ -34,7 +34,8 @@ const links = {
   ],
   list2: [
     { title: "Timeline", path: endpoints.home.index + "#timeline" },
-    { title: "Products", path: endpoints.products.index },
+    { title: "Products", path: endpoints.home.index + '#products' },
+    { title: "Services", path: endpoints.services.index },
     { title: "Statistics", path: endpoints.home.index + "#statistics" },
     { title: "FAQ", path: endpoints.home.index + "#faq" },
   ],

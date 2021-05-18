@@ -8,8 +8,8 @@ export const endpoints = {
   signup: {
     index: '/signup'
   },
-  products: {
-    index: '/products'
+  services: {
+    index: '/services'
   },
   ico_info: {
     index: '/ico-informations'

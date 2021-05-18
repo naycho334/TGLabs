@@ -4,7 +4,7 @@ import propTypes from "prop-types";
 
 const TextToSvg = (props) => {
   const { text } = props;
-  const [view, setView] = useState({ x: 0, h: 0, w: 0, h: 0 });
+  const [view, setView] = useState({ x: 0, y: 0, w: 0, h: 0 });
 
   const handleTextSize = useCallback((text) => {
     if (!text) return;

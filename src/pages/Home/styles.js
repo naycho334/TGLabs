@@ -237,13 +237,19 @@ const useStyles = makeStyles((theme) => {
 
       [theme.breakpoints.down("md")]: {
         "& .step": {
-          maxWidth: 300,
+          paddingBottom: 0,
           margin: 'auto',
+          maxWidth: 400,
+
+          "& h6":{
+            fontSize: '1.1rem'
+          }
         },
 
         "& .nextStep": {
           justifyContent: 'center',
           display: 'flex',
+          padding: 0,
 
           "& svg": {
             transform: 'rotate(90deg)',

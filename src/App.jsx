@@ -42,7 +42,7 @@ const UserFAQ = lazy(() => import("./pages/User/FAQ"));
 
 // Public pages
 const ICOInformationsPage = lazy(() => import("./pages/ICOInformations"));
-const ProductsPage = lazy(() => import("./pages/Products"));
+const ServicesPage = lazy(() => import("./pages/Services"));
 const HomePage = lazy(() => import("./pages/Home"));
 
 const App = () => {
@@ -86,10 +86,10 @@ const App = () => {
               exact
             />
 
-            {/* Products page */}
+            {/* Services page */}
             <Route
-              path={endpoints.products.index}
-              component={ProductsPage}
+              path={endpoints.services.index}
+              component={ServicesPage}
               strict
               exact
             />

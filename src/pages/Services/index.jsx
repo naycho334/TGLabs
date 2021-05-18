@@ -14,14 +14,14 @@ const ExpressionOfInterest = lazy(() =>
 const Footer = lazy(() => import("components/Footer"));
 const FAQ = lazy(() => import("components/FAQ"));
 
-const Products = () => {
+const Services = () => {
   const classes = useStyles();
 
   return (
     <PerfectScrollbar className="globalScrollbar">
-      <PublicPage hasNavbar title="Products - TGLabs">
+      <PublicPage hasNavbar title="Services - TGLabs">
         <Container maxWidth="lg">
-          <HeaderSection title="Products" />
+          <HeaderSection title="Services" />
           <FAQ />
           <ExpressionOfInterest />
         </Container>
@@ -31,4 +31,4 @@ const Products = () => {
   );
 };
 
-export default memo(Products);
+export default memo(Services);

@@ -32,6 +32,7 @@ const Stages = () => {
           stages={_.values(stages)}
           onClick={editStage}
           isAdmin={isAdmin}
+          isDashboard
         />
       </Paper>
 

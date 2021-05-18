@@ -110,12 +110,13 @@ const useStyles = makeStyles(theme => {
           left: 0,
 
           "& > span": {
-            transform: 'translateY(30px)',
-            width: 100,
+            transform: 'translateY(38px)',
+            fontSize: '1.2rem',
+            width: 150,
 
             "&:nth-child(1)": {
               marginRight: theme.spacing(4) + 15,
-              transform: 'translateY(38px)',
+              justifyContent: 'flex-end',
               flexDirection: 'column',
               textAlign: 'right',
               display: 'flex',
@@ -140,7 +141,8 @@ const useStyles = makeStyles(theme => {
             
             "& > div":{
               flexDirection: 'column',
-              lineHeight: '.9rem',
+              lineHeight: '1.1rem',
+              fontSize: '1rem',
               display: 'flex',
             },
             

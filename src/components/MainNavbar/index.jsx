@@ -33,7 +33,8 @@ const navbarLinks = {
     { title: "Statistics", path: endpoints.home.index + "#statistics" },
     { title: "Timeline", path: endpoints.home.index + "#timeline" },
     { title: "FAQ", path: endpoints.home.index + "#faq" },
-    { title: "Products", path: endpoints.products.index },
+    { title: "Products", path: endpoints.home.index + '#products' },
+    { title: "Services", path: endpoints.services.index },
   ],
   user: [
     { title: "Login", path: endpoints.login.index },

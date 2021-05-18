@@ -9,7 +9,7 @@ import { formatPrice } from "lib/helpers";
 import useStyles from "./styles";
 
 const StagesTimeline = (props) => {
-  const { isAdmin, stages, onClick, className } = props;
+  const { isDashboard, isAdmin, stages, onClick, className } = props;
   const classes = useStyles();
 
   const getStatus = (stage) => {
@@ -54,7 +54,10 @@ const StagesTimeline = (props) => {
             >
               <div>
                 <span>{stage.name}</span>{" "}
-                <span>( @ {formatPrice(stage.price, "usd", "sp")} )</span>
+                <span>
+                  ( @ {formatPrice(Number(stage.price).toFixed(2), "usd", "sp")}{" "}
+                  )
+                </span>
               </div>
               {isAdmin && (
                 <IconButton
@@ -66,11 +69,15 @@ const StagesTimeline = (props) => {
                 </IconButton>
               )}
             </Typography>
-            {getStatus(array[index - 1]) === "completed" && index > 0 && (
-              <CheckedIcon className="status checked" />
-            )}
-            {getStatus(array[index - 1]) === "pending" && index > 0 && (
-              <TimeIcon className="status pending" />
+            {isDashboard && (
+              <>
+                {getStatus(array[index - 1]) === "completed" && index > 0 && (
+                  <CheckedIcon className="status checked" />
+                )}
+                {getStatus(array[index - 1]) === "pending" && index > 0 && (
+                  <TimeIcon className="status pending" />
+                )}
+              </>
             )}
             <Typography variant="body2" component="span">
               Discount: {stage.discount}%
@@ -93,12 +100,14 @@ StagesTimeline.propTypes = {
       name: propTypes.string.isRequired,
     })
   ).isRequired,
+  isDashboard: propTypes.bool,
   className: propTypes.string,
   onClick: propTypes.func,
   isAdmin: propTypes.bool,
 };
 
 StagesTimeline.defaultProps = {
+  isDashboard: false,
   isAdmin: false,
 };
 
