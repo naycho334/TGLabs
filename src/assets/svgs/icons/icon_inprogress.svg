@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="17.928" height="17.928" viewBox="0 0 17.928 17.928">
+  <g id="icon_inprogress" transform="translate(0.625 0.625)">
+    <g id="icon_checked-large" data-name="icon checked-large" transform="translate(-828.589 -8253.24)">
+      <path id="Path_1418" data-name="Path 1418" d="M833.1,8261.534l2.641,2.29,5.02-4.489" fill="none" stroke="#feeca8" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
+    </g>
+    <g id="Group_2343" data-name="Group 2343" transform="translate(-828.589 -8253.24)">
+      <path id="Path_7066" data-name="Path 7066" d="M836.928,8253.24a8.339,8.339,0,1,0,0,16.678" fill="none" stroke="#feeca8" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25" stroke-dasharray="2.189"/>
+      <path id="Path_7067" data-name="Path 7067" d="M836.928,8269.918a8.339,8.339,0,1,0,0-16.678" fill="none" stroke="#2af6ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
+    </g>
+  </g>
+</svg>

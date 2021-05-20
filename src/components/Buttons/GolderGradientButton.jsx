@@ -17,6 +17,10 @@ const GolderGradientButton = withStyles((theme) => {
       "&.reverse": {
         background: `linear-gradient(90deg, ${theme.palette.golden.light}, ${theme.palette.golden.main})`,
       },
+
+      "&.uppercase": {
+        textTransform: "uppercase",
+      },
     },
   };
 })(Button);
