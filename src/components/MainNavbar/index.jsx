@@ -9,9 +9,10 @@ import {
   Box,
 } from "@material-ui/core";
 import { useLocation, Link as RouterLink } from "react-router-dom";
+import { useResizeDetector } from "react-resize-detector";
 import { HighlightOffRounded } from "@material-ui/icons";
+import { useCallback, useRef, useState } from "react";
 import { HashLink } from "react-router-hash-link";
-import { useRef, useState } from "react";
 import clsx from "clsx";
 import _ from "lodash";
 
@@ -33,7 +34,7 @@ const navbarLinks = {
     { title: "Statistics", path: endpoints.home.index + "#statistics" },
     { title: "Timeline", path: endpoints.home.index + "#timeline" },
     { title: "FAQ", path: endpoints.home.index + "#faq" },
-    { title: "Products", path: endpoints.home.index + '#products' },
+    { title: "Products", path: endpoints.home.index + "#products" },
     { title: "Services", path: endpoints.services.index },
   ],
   user: [
@@ -43,11 +44,23 @@ const navbarLinks = {
 };
 
 const MainNavbar = () => {
+  const [links, setLinks] = useState({});
   const [activeMenu, setActiveMenu] = useState(null);
   const { pathname, hash } = useLocation();
   const indicatorRef = useRef();
   const classes = useStyles();
   const currentPage = pathname + hash;
+
+  const onResize = useCallback(() => {
+    _.values(links)
+      .filter((element) => element.classList.contains("active"))
+      .forEach((element) => {
+        const { offsetLeft, offsetWidth } = element.parentElement;
+        indicatorRef.current.style.cssText = `left: ${offsetLeft}px; width: ${offsetWidth}px`;
+      });
+  }, [links]);
+
+  const { ref: navbarRef } = useResizeDetector({ onResize });
 
   const hasActiveNavbar = !!_.find(navbarLinks.mega, (obj) =>
     currentPage.includes(obj.path)
@@ -56,18 +69,9 @@ const MainNavbar = () => {
   /**
    * Set active nav link indicator
    */
-  const setActiveNavLink = (element) => {
-    if (element) {
-      const isActive = element.classList.contains("active");
-      const parent = element.parentElement;
-      // console.log(parent)
-
-      if (isActive) {
-        const { offsetLeft, offsetWidth } = parent;
-        console.log({ offsetLeft, offsetWidth });
-        indicatorRef.current.style.cssText = `left: ${offsetLeft}px; width: ${offsetWidth}px`;
-      }
-    }
+  const setActiveNavLink = (index, element) => {
+    if (element && !_.has(links, index))
+      setLinks((state) => ({ ...state, [index]: element }));
   };
 
   /**
@@ -97,7 +101,12 @@ const MainNavbar = () => {
 
             {/* Pages */}
             <Grid item className={classes.hideOnSmallScreens}>
-              <Grid className={classes.links} container spacing={3}>
+              <Grid
+                className={classes.links}
+                ref={navbarRef}
+                spacing={3}
+                container
+              >
                 <div
                   className={clsx(
                     hasActiveNavbar && "active",
@@ -105,14 +114,14 @@ const MainNavbar = () => {
                   )}
                   ref={indicatorRef}
                 />
-                {navbarLinks.mega.map(({ title, path }) => (
+                {navbarLinks.mega.map(({ title, path }, index) => (
                   <Grid item key={path}>
                     <HashLink
                       className={clsx(
                         currentPage.includes(path) && "active",
                         classes.link
                       )}
-                      ref={setActiveNavLink}
+                      ref={setActiveNavLink.bind(null, index)}
                       to={path}
                     >
                       <Typography variant="body2">{title}</Typography>

@@ -1,4 +1,4 @@
-try {
+(function () {
   // Поинт
   gsap.set("#point1, #point2, #point3, #point4, #point5, #point6, #point7, #point8, #point9, #point10", { opacity: 0 })
   gsap.timeline({ repeat: -1 })
@@ -124,15 +124,15 @@ try {
       .to(target, { duration: time * 0.5, skewX: 20, scaleX: 0.4, scaleY: 0.4, ease: 'none' }, '>')
     return tempTl;
   }
-  tlrul3 = gsap.timeline({ paused: true })
+  var tlrul3 = gsap.timeline({ paused: true })
   document.querySelectorAll('#rul3 > *').forEach((elem, index) => {
     tlrul3.add(moveCusino(elem, 6, '#casline3'), index * 1.2)
   })
-  tlrul2 = gsap.timeline({ paused: true })
+  var tlrul2 = gsap.timeline({ paused: true })
   document.querySelectorAll('#rul2 > *').forEach((elem, index) => {
     tlrul2.add(moveCusino(elem, 6, '#casline2'), index * 1.2)
   })
-  tlrul1 = gsap.timeline({ paused: true })
+  var tlrul1 = gsap.timeline({ paused: true })
   document.querySelectorAll('#rul1 > *').forEach((elem, index) => {
     tlrul1.add(moveCusino(elem, 6, '#casline1'), index * 1.2)
   })
@@ -157,7 +157,5 @@ try {
   gsap.to("#money7", { duration: 1.2, scale: 1.1, transformOrigin: 'center', repeat: -1, yoyo: true, ease: 'sin.inOut' })
   gsap.to("#money8", { duration: 1.3, scale: 1.1, transformOrigin: 'center', repeat: -1, yoyo: true, ease: 'sin.inOut' })
   gsap.to("#colb", { duration: 2, y: -8, transformOrigin: 'center', repeat: -1, yoyo: true, ease: 'sin.inOut' })
-}
-catch (error) {
-  console.error("Home animation", error)
-}
+
+})()
