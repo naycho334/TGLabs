@@ -1,19 +1,8 @@
-import { useEffect } from "react";
+import SVGAnimator from "components/SVGAnimator";
 
 const ThemeAnimation = ()=>{
-
-  useEffect(() => {
-    // Create script element
-    const animationScript = document.createElement("script");
-    animationScript.src = "/assets/js/home-animation.js";
-
-    document.body.append(animationScript);
-
-    // unmount scripts elements
-    return ()=> animationScript.remove();
-  }, []);
-
   return(
+    <SVGAnimator script="/assets/js/home-animation.js">
     <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="1147.76" height="769.9" viewBox="0 0 1147.76 769.9">
         <defs>
           <linearGradient id="linear-gradient" x1="1147.86" y1="375.73" x2="-0.1" y2="376.03" gradientUnits="userSpaceOnUse">
@@ -5890,7 +5879,8 @@ const ThemeAnimation = ()=>{
             </g>
           </g>
         </g>
-      </svg>
+       </svg>
+    </SVGAnimator>
   )
 }
 

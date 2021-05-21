@@ -43,31 +43,33 @@ var TelegramIconAnimation = () => {
     var h = 10001001001;
     var counting = setInterval(countnow, diffrence);
     function countnow() {
-      if (h == 10001001001) {
-        h = d1;
-        document.querySelector(element).textContent = d1;
+      if (!document.querySelector(element)) clearInterval(counting);
+      else
+        if (h == 10001001001) {
+          h = d1;
+          document.querySelector(element).textContent = d1;
 
-      }
-      else if (h == d1) {
-        h = d2;
-        document.querySelector(element).textContent = d2;
+        }
+        else if (h == d1) {
+          h = d2;
+          document.querySelector(element).textContent = d2;
 
-      }
-      else if (h == d2) {
-        h = d3;
-        document.querySelector(element).textContent = d3;
+        }
+        else if (h == d2) {
+          h = d3;
+          document.querySelector(element).textContent = d3;
 
-      }
-      else if (h == d3) {
-        h = d4;
-        document.querySelector(element).textContent = 10010111100;
+        }
+        else if (h == d3) {
+          h = d4;
+          document.querySelector(element).textContent = 10010111100;
 
-      }
-      else if (h == d4) {
-        h = 10001001001;
-        document.querySelector(element).textContent = 10001001001;
+        }
+        else if (h == d4) {
+          h = 10001001001;
+          document.querySelector(element).textContent = 10001001001;
 
-      }
+        }
     }
   };
   counter('#BinaryText1', 1101001101101, 0010110010010, 0110101111010, 1011011011011, 100);

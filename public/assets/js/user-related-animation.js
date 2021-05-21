@@ -109,6 +109,8 @@ var UR_Aanimation=()=>{
         var h=1;
           var counting = setInterval(countnow, 500);
           function countnow() {
+            if (!document.querySelector(element)) clearInterval(counting);
+            else
             if (h==1) {
               h=2;
               document.querySelector(element).textContent = "2";
