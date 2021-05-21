@@ -1,17 +1,16 @@
-import {
-  Typography,
-  Container,
-  useTheme,
-  Grid,
-  Tabs,
-  Tab,
-} from "@material-ui/core";
-import { memo, useCallback, useEffect, useState } from "react";
+import { Typography, Container, Grid, Tabs, Tab } from "@material-ui/core";
+import { memo, useState } from "react";
 
-import useForceUpdate from "hooks/useForceUpdate";
-import DataTable from "./statistics/DataTable";
+import AmountCell from "components/DataTable/components/AmountCell";
+import StatusCell from "components/DataTable/components/StatusCell";
+import TgLabCell from "components/DataTable/components/TgLabCell";
+import DateCell from "components/DataTable/components/DateCell";
+import HashCell from "components/DataTable/components/HashCell";
+import UserCell from "components/DataTable/components/UserCell";
+import { BitcoinColorIcon } from "components/Icons/Crypto";
+import StatisticsCard from "./statistics/StatisticsCard";
+import DataTable from "components/DataTable";
 import TabPanel from "./statistics/TabPanel";
-import DataCard from "./statistics/DataCard";
 import useStyles from "./styles";
 
 import { ReactComponent as Calendar } from "assets/svgs/icon_calendar-purple.svg";
@@ -36,41 +35,42 @@ const data = [
   { Icon: Users, value: 2342, unit: "Users", caption: "Registered" },
 ];
 
-let currentScreen = false;
+const tableHead = [
+  { label: "Date" },
+  { label: "User" },
+  { label: "Amount" },
+  { label: "TGLab" },
+  { label: "Hash" },
+  { label: "" },
+];
+
+const tableData = Array(8).fill({
+  date: "14.2.2021 07:40 PM",
+  user: "fernd...@gmail.com",
+  amount: "0,00034056",
+  tglab: "0.456733",
+  hash: "aa11c31e7a696eaeec254036826411499...",
+  status: "complete",
+});
 
 const Statistics = () => {
-  const smallScreenWidth = useTheme().breakpoints.width("sm");
   const [value, setValue] = useState(0);
-  const forceUpdate = useForceUpdate();
   const classes = useStyles();
 
-  const isSmallScreen = window.innerWidth <= smallScreenWidth;
-
-  const tables = [
-    { label: "Purchases", Component: isSmallScreen ? DataCard : DataTable },
-    { label: "Withdrawals", Component: isSmallScreen ? DataCard : DataTable },
-  ];
-
-  /**
-   * Handle window size change
-   */
-  const handleResizeWindow = useCallback(() => {
-    const isSmallScreen = window.innerWidth <= smallScreenWidth;
-    if (currentScreen !== isSmallScreen) {
-      currentScreen = isSmallScreen;
-      forceUpdate();
-    }
-  }, [forceUpdate, smallScreenWidth]);
+  const tables = [{ label: "Purchases" }, { label: "Withdrawals" }];
 
   /**
    * Change table type
    */
   const changeTableType = (event, newValue) => setValue(newValue);
 
-  useEffect(() => {
-    handleResizeWindow();
-    window.addEventListener("resize", handleResizeWindow);
-    return () => window.removeEventListener("resize", handleResizeWindow);
+  const mapData = (item) => ({
+    0: { value: item.date },
+    1: { value: item.user },
+    2: { value: item.amount, unit: "BTC", icon: BitcoinColorIcon },
+    3: { value: item.tglab },
+    4: { value: item.hash },
+    5: { value: item.status, className: item.status },
   });
 
   return (
@@ -96,14 +96,27 @@ const Statistics = () => {
               ))}
             </Tabs>
           </div>
-          {tables.map(({ Component }, index) => (
+          {tables.map((_, index) => (
             <TabPanel
               id={`tabTable-${index}`}
               value={value}
               index={index}
               key={index}
             >
-              <Component />
+              <DataTable
+                tableHead={tableHead}
+                mapData={mapData}
+                data={tableData}
+                cardComponent={StatisticsCard}
+                components={[
+                  { component: DateCell },
+                  { component: UserCell },
+                  { component: AmountCell },
+                  { component: TgLabCell },
+                  { component: HashCell },
+                  { component: StatusCell, tableCellProps: { align: "right" } },
+                ]}
+              />
             </TabPanel>
           ))}
         </div>

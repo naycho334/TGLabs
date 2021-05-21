@@ -53,10 +53,10 @@ const StagesTimeline = (props) => {
               component="span"
             >
               <div>
-                <span>{stage.name}</span>{" "}
+                <span>{stage.name}</span>&nbsp;
                 <span>
-                  ( @ {formatPrice(Number(stage.price).toFixed(2), "usd", "sp")}{" "}
-                  )
+                  ( @ {formatPrice(Number(stage.price).toFixed(2), "usd", "sp")}
+                  &nbsp;)
                 </span>
               </div>
               {isAdmin && (
@@ -93,9 +93,9 @@ StagesTimeline.propTypes = {
   stages: propTypes.arrayOf(
     propTypes.shape({
       available_tokens: propTypes.number.isRequired,
-      date_start: propTypes.string.isRequired,
-      date_end: propTypes.string.isRequired,
       discount: propTypes.number.isRequired,
+      date_start: propTypes.any.isRequired,
+      date_end: propTypes.any.isRequired,
       price: propTypes.number.isRequired,
       name: propTypes.string.isRequired,
     })

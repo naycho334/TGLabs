@@ -29,3 +29,15 @@ export const formatPrice = (price, currency, pattern = "sp c") => {
     .replace("p", Number(price).toLocaleString())
     .replace("c", currency_)
 }
+
+/**
+ * Get card component data
+ */
+export function getComponent(index) {
+  const Component = _.get(this.components, [index, "component"], null);
+  const componentProps = _.get(this.components, [index, "props"], {});
+  const title = _.get(this.tableHead, [index, "label"], null);
+  const props = _.get(this.data, index, {});
+
+  return { Component, title, props: { ...componentProps, ...props } };
+};

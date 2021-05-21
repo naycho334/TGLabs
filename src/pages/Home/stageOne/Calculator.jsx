@@ -16,8 +16,8 @@ import { memo } from "react";
 import LightBlueGradientButton from "components/Buttons/LightBlueGradientButton";
 import NoFieldsetSelect from "components/Selects/NoFieldsetSelect";
 import { useInputStyles } from "hooks/useInputStyles";
-import { endpoints } from "routes";
 import { formatPrice } from "lib/helpers";
+import { endpoints } from "routes";
 
 const Calculator = (props) => {
   const {
@@ -142,8 +142,8 @@ Calculator.propTypes = {
   ).isRequired,
   stages: propTypes.arrayOf(
     propTypes.shape({
-      discount: propTypes.number.isRequired,
-      label: propTypes.string.isRequired,
+      price: propTypes.number.isRequired,
+      name: propTypes.string.isRequired,
     })
   ).isRequired,
 };
