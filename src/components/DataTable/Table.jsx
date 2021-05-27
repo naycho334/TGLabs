@@ -62,12 +62,14 @@ const Table = (props) => {
               {components.map(
                 ({ component: Component, tableCellProps, props }, index) => (
                   <TableCell key={index} {...tableCellProps}>
-                    <Component
-                      {...{
-                        ..._.defaultTo(props, {}),
-                        ..._.defaultTo(data[index], {}),
-                      }}
-                    />
+                    {Component && (
+                      <Component
+                        {...{
+                          ..._.defaultTo(props, {}),
+                          ..._.defaultTo(data[index], {}),
+                        }}
+                      />
+                    )}
                   </TableCell>
                 )
               )}

@@ -125,16 +125,16 @@ const useStyles = makeStyles(theme => {
       fontSize: '.65rem',
       borderRadius: 4,
 
-      "&.pending": {
+      "&.disabled": {
         color: colors.grey[500]
       },
 
-      "&.complete": {
+      "&.info": {
         borderColor: theme.palette.lightBlue.dark,
         color: theme.palette.lightBlue.dark,
       },
 
-      "&.unconfirmed": {
+      "&.danger": {
         borderColor: colors.orange[800],
         color: colors.orange[800]
       },

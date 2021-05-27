@@ -26,6 +26,7 @@ import { ReactComponent as FAQIcon } from "assets/svgs/icons/icon_faq-panel.svg"
 import { ReactComponent as SearchIcon } from "assets/svgs/icons/icon_search.svg";
 import { ReactComponent as EditIcon } from "assets/svgs/icons/icon_edit.svg";
 import { ReactComponent as TimeIcon } from "assets/svgs/icons/icon_time.svg";
+import { ReactComponent as LockIcon } from "assets/svgs/icons/icon_lock.svg";
 import { ReactComponent as LXRIcon } from "assets/svgs/icons/logo_lxr.svg";
 
 export {
@@ -55,6 +56,7 @@ export {
   UserIcon,
   EditIcon,
   TimeIcon,
+  LockIcon,
   FAQIcon,
   LXRIcon,
 };

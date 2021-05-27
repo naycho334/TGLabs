@@ -5,6 +5,7 @@ import notificationsReducer from "components/DashboardPage/notifications.slide";
 import adminIcoInformationReducer from "pages/Admin/ICOInformation/index.slice";
 import userIcoInformationReducer from "pages/User/ICOInformation/index.slice";
 import adminTransactionsReducer from "pages/Admin/Transactions/index.slice";
+import adminUsersReducer from "pages/Admin/Users/index.slice";
 
 const { configureStore } = require("@reduxjs/toolkit");
 
@@ -18,6 +19,7 @@ const store = configureStore({
     adminIcoInformationReducer,
     adminIcoPurchasesReducer,
     adminTransactionsReducer,
+    adminUsersReducer,
 
     // User
     userIcoInformationReducer,
