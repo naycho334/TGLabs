@@ -15,6 +15,8 @@ import { adminUsersActions } from "./index.slice";
 import { LockIcon } from "components/Icons/Icons";
 import DataTable from "components/DataTable";
 import Section from "components/Section";
+import useStyles from "./styles";
+import clsx from "clsx";
 
 let timer;
 
@@ -23,6 +25,8 @@ const AllUsers = () => {
     (state) => state.adminUsersReducer
   );
   const dispatch = useDispatch();
+  const classes = useStyles();
+
   const allRowsChecked = _.values(data).every((row) => row.checked);
   const checkedRowsCount = _.chain(data)
     .filter((row) => row.checked)
@@ -69,7 +73,7 @@ const AllUsers = () => {
     3: { value: item.email },
     4: { value: item.country, className: "grey-text" },
     5: { value: item.status },
-    6: { value: "icon" },
+    6: { value: null, className: clsx("lockiIcon", item.status) },
     7: { value: item.checked, id: item.id },
   });
 
@@ -89,7 +93,7 @@ const AllUsers = () => {
   };
 
   return (
-    <Grid item xs={12}>
+    <Grid item xs={12} className={classes.allUsers}>
       <Section
         title="Pending Withdrawals"
         header={
