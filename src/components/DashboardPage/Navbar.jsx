@@ -39,7 +39,7 @@ const Navbar = (props) => {
       <Toolbar className={classes.drawer}>
         <Grid alignItems="center" container>
           <Grid item xs>
-            <Hidden smDown>
+            <Hidden mdDown>
               {!isAdmin && (
                 <LightBlueGradientButton
                   variant="contained"
@@ -50,7 +50,7 @@ const Navbar = (props) => {
                 </LightBlueGradientButton>
               )}
             </Hidden>
-            <Hidden mdUp>
+            <Hidden lgUp>
               <Box display="flex" alignItems="center">
                 <TGLogoSmIcon style={{ marginRight: 12 }} />
 
@@ -66,10 +66,12 @@ const Navbar = (props) => {
             <Grid alignItems="center" container spacing={1}>
               {/* Support button */}
               <Grid item>
-                <Hidden smDown>
-                  <Button startIcon={<SupportIcon />}>Support</Button>
+                <Hidden mdDown>
+                  <Button startIcon={<SupportIcon className="supportIcon" />}>
+                    Support
+                  </Button>
                 </Hidden>
-                <Hidden mdUp>
+                <Hidden lgUp>
                   <IconButton>
                     <SupportIcon />
                   </IconButton>
@@ -98,7 +100,7 @@ const Navbar = (props) => {
                   </Badge>
                 </IconButton>
               </Grid>
-              <Hidden smDown>
+              <Hidden mdDown>
                 <Grid item>username@gmail.com</Grid>
               </Hidden>
             </Grid>

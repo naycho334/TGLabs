@@ -11,11 +11,11 @@ import { HashLink } from "react-router-hash-link";
 import propTypes from "prop-types";
 // import _ from "lodash";
 
-import WhiteLink from "../Links/WhiteLink";
+import WhiteLink from "components/Links/WhiteLink";
 import useStyles from "./styles";
 
-import LightBlueTypography from "../Typography/LightBlueTypography";
-import GolderGradientButton from "../Buttons/GolderGradientButton";
+import LightBlueTypography from "components/Typography/LightBlueTypography";
+import GoldenGradientButton from "components/Buttons/GoldenGradientButton";
 
 import Texture from "assets/svgs/background_texture-one.svg";
 import TGLab2BlurredLogo from "assets/pngs/thlab2.png";
@@ -84,9 +84,9 @@ const SideMenu = (props) => {
 
         <Grid container spacing={3}>
           <Grid item xs={12}>
-            <GolderGradientButton variant="contained">
+            <GoldenGradientButton variant="contained">
               Buy Token
-            </GolderGradientButton>
+            </GoldenGradientButton>
           </Grid>
           <Grid item xs={12}>
             <LightBlueTypography component="span">

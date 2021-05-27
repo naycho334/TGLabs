@@ -3,6 +3,7 @@ import { Card, withStyles } from "@material-ui/core";
 const CustomCard = withStyles((theme) => {
   return {
     root: {
+      borderRadius: theme.spacing(2),
       height: "100%",
 
       "& > div": {

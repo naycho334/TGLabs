@@ -16,10 +16,10 @@ const DashboardPage = (props) => {
     <DashboardContext.Provider value={{ isAdmin }}>
       <Box display="flex">
         {/* Sidebar */}
-        <Hidden smDown>
+        <Hidden mdDown>
           <Sidebar />
         </Hidden>
-        <Hidden mdUp>
+        <Hidden lgUp>
           <Sidebar
             onClose={() => setOpen(false)}
             variant="temporary"
@@ -33,7 +33,7 @@ const DashboardPage = (props) => {
           <Navbar openSidebar={setOpen} isAdmin={isAdmin} open={open} />
 
           {/* Body */}
-          <Box height={`calc(100vh - ${theme.spacing(9)}px)`}>
+          <Box height={`calc(100vh - ${theme.spacing(8)}px)`}>
             <PerfectScrollbars>{children}</PerfectScrollbars>
           </Box>
         </Box>

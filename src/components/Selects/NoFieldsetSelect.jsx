@@ -1,12 +1,30 @@
-import { Select, withStyles } from "@material-ui/core";
+import { InputBase, Select, withStyles } from "@material-ui/core";
 
 const NoFieldsetSelect = withStyles((theme) => {
   return {
     root: {
       padding: theme.spacing(1.25, 3, 1.25, 1.25),
+      borderRadius: theme.spacing(1),
 
       "& fieldset": {
         visibility: "hidden",
+      },
+
+      "&.chart": {
+        fontWeight: "bold",
+
+        "&:after, &:before": {
+          display: "none",
+          border: 0,
+        },
+
+        "&:hover": {
+          display: "none",
+
+          "&:before": {
+            display: "none",
+          },
+        },
       },
     },
     select: {
@@ -20,5 +38,26 @@ const NoFieldsetSelect = withStyles((theme) => {
     },
   };
 })(Select);
+
+export const NoFieldsetSelectInput = withStyles((theme) => {
+  return {
+    root: {
+      borderRadius: theme.spacing(1),
+      overflow: "hidden",
+      fontWeight: "bold",
+      color: '#8f96ab',
+
+      "&:after, &:before": {
+        borderColor: 'none',
+      },
+
+      "&:hover": {
+        "&:before": {
+          borderColor: 'none'
+        },
+      },
+    },
+  };
+})(InputBase);
 
 export default NoFieldsetSelect;

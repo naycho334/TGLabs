@@ -1,10 +1,11 @@
 import { useDispatch, useSelector } from "react-redux";
-import { Grid, Paper } from "@material-ui/core";
 import { memo, lazy, useContext } from "react";
+import { Grid } from "@material-ui/core";
 import _ from "lodash";
 
 import DashboardContext from "components/DashboardPage/context";
 import { adminIcoInformationActions } from "./index.slice";
+import CustomCard from "components/Section/CustomCard";
 import StageDialog from "./components/StageDialog";
 import useStyles from "./styles";
 
@@ -26,7 +27,7 @@ const Stages = () => {
 
   return (
     <Grid item xs={12}>
-      <Paper>
+      <CustomCard>
         <StagesTimeline
           className={classes.stagesTimeline}
           stages={_.values(stages)}
@@ -34,7 +35,7 @@ const Stages = () => {
           isAdmin={isAdmin}
           isDashboard
         />
-      </Paper>
+      </CustomCard>
 
       <StageDialog />
     </Grid>

@@ -2,7 +2,6 @@ import { Box, Grid, Typography } from "@material-ui/core";
 import { getComponent } from "lib/helpers";
 import propTypes from "prop-types";
 import { memo } from "react";
-import _ from "lodash";
 
 const StatisticsCard = (props) => {
   const get = getComponent.bind(props);

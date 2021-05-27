@@ -67,8 +67,9 @@ const slice = createSlice({
         .map((stage, id) => ({ [id]: { ...stage, id } }))
         .reduce((p, n) => ({ ...p, ...n }), {}),
       stageToEdit: null,
-      readOnly: false,
-    }
+      isReadOnly: false,
+    },
+    monthlyReport: false
   },
   reducers: {
     /**
@@ -84,22 +85,29 @@ const slice = createSlice({
     editStageData: (state, { payload }) => {
       state.stages.stageToEdit = { ...state.stages.stageToEdit, ...payload }
     },
+
+    /**
+     * Change monthly report value
+     */
+    updateMonthlyReport: (state, {payload})=>{
+      state.monthlyReport = payload;
+    }
   },
   extraReducers: {
     /**
      * Save stage changes
      */
     [saveStageChanges.pending]: (state, action) => {
-      state.stages.readOnly = true
+      state.stages.isReadOnly = true
     },
     [saveStageChanges.fulfilled]: (state, action) => {
-      state.stages.readOnly = false;
+      state.stages.isReadOnly = false;
       const data = state.stages.stageToEdit;
       state.stages.data[data.id] = data;
       state.stages.stageToEdit = null;
     },
     [saveStageChanges.rejected]: (state, action) => {
-      state.stages.readOnly = false
+      state.stages.isReadOnly = false
     },
   },
 });

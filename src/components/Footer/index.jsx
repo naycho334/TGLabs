@@ -9,7 +9,7 @@ import { Fragment } from "react";
 import _ from "lodash";
 
 import LightBlueTypography from "components/Typography/LightBlueTypography";
-import GolderGradientButton from "components/Buttons/GolderGradientButton";
+import GoldenGradientButton from "components/Buttons/GoldenGradientButton";
 import WhiteLink from "components/Links/WhiteLink";
 import { endpoints } from "routes";
 import useStyles from "./styles";
@@ -105,9 +105,9 @@ const Footer = () => {
             ))}
             <Grid item xs>
               <div className="buyToken">
-                <GolderGradientButton variant="contained" className="reverse">
+                <GoldenGradientButton variant="contained" className="reverse">
                   Buy Token
-                </GolderGradientButton>
+                </GoldenGradientButton>
 
                 <img src={TgLabBlurred} alt="TGLab blurred" />
               </div>

@@ -1,4 +1,4 @@
-import { colors, createMuiTheme } from "@material-ui/core";
+import { colors, createMuiTheme, lighten } from "@material-ui/core";
 
 let theme = createMuiTheme();
 
@@ -86,7 +86,42 @@ const mainTheme = createMuiTheme({
       root: {
         "&.white-text": {
           color: "#FFF"
-        }
+        },
+        "&.black-text": {
+          color: "#000"
+        },
+        "&.bold":{
+          fontWeight: 'bold',
+        },
+        "&.rounded-1":{
+          borderRadius: theme.spacing(1)
+        },
+      },
+      contained:{
+        "&.purple-bg":{
+          backgroundColor: "#6B24D6",
+          
+          "&:hover":{
+            backgroundColor: lighten("#6B24D6", .1),
+          },
+          
+          "&:disabled":{
+            backgroundColor: colors.grey[300],
+          },
+        },
+        
+        "&.orange-bg":{
+          backgroundColor: "#F48A5B",
+          
+          "&:hover":{
+            backgroundColor: lighten("#F48A5B", .1),
+          },
+          
+          "&:disabled":{
+            backgroundColor: colors.grey[300],
+          },
+        },
+        
       }
     },
     MuiListItemIcon: {

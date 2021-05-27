@@ -16,8 +16,8 @@ import { HashLink } from "react-router-hash-link";
 import clsx from "clsx";
 import _ from "lodash";
 
-import GolderGradientButton from "../Buttons/GolderGradientButton";
-import GolderLink from "../Links/GoldenLink";
+import GoldenGradientButton from "components/Buttons/GoldenGradientButton";
+import GolderLink from "components/Links/GoldenLink";
 import { endpoints } from "routes";
 import SideMenu from "./SideMenu";
 import useStyles from "./styles";
@@ -148,9 +148,9 @@ const MainNavbar = () => {
                     component={RouterLink}
                     underline="none"
                   >
-                    <GolderGradientButton variant="contained" disableElevation>
+                    <GoldenGradientButton variant="contained" disableElevation>
                       Login
-                    </GolderGradientButton>
+                    </GoldenGradientButton>
                   </Link>
                 </Grid>
 

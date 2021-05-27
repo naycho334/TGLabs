@@ -1,44 +1,51 @@
 import { Grid, Divider, Box, Button } from "@material-ui/core";
 import { MoreHorizOutlined } from "@material-ui/icons";
-import PerfectScrollbar from "react-perfect-scrollbar";
 import { Fragment, memo } from "react";
 import propTypes from "prop-types";
 
 const CardsContainer = (props) => {
-  const { cardComponent: Component, tableHead, data, components } = props;
+  const {
+    cardComponent: Component,
+    canLoadMore,
+    components,
+    tableHead,
+    loadMore,
+    data,
+  } = props;
 
   return (
     <>
-      <PerfectScrollbar style={{ maxHeight: 590 }}>
-        <Box padding={1}>
-          <Grid container spacing={2}>
-            {data.map((item, index, { length }) => (
-              <Fragment key={index}>
-                <Component
-                  components={components}
-                  tableHead={tableHead}
-                  data={item}
-                />
-                {length > index + 1 && (
-                  <Grid item xs={12}>
-                    <Divider />
-                  </Grid>
-                )}
-              </Fragment>
-            ))}
-          </Grid>
-        </Box>
-      </PerfectScrollbar>
-      <Button className="loadMore" size="small">
-        <span>Load More</span>
-        <MoreHorizOutlined />
-      </Button>
+      <Box padding={1}>
+        <Grid container spacing={2}>
+          {data.map((item, index, { length }) => (
+            <Fragment key={index}>
+              <Component
+                components={components}
+                tableHead={tableHead}
+                data={item}
+              />
+              {length > index + 1 && (
+                <Grid item xs={12}>
+                  <Divider />
+                </Grid>
+              )}
+            </Fragment>
+          ))}
+        </Grid>
+      </Box>
+      {canLoadMore && (
+        <Button onClick={loadMore} className="loadMore" size="small">
+          <span>Load More</span>
+          <MoreHorizOutlined />
+        </Button>
+      )}
     </>
   );
 };
 
 CardsContainer.propTypes = {
   cardComponent: propTypes.any.isRequired,
+  canLoadMore: propTypes.bool.isRequired,
   components: propTypes.arrayOf(
     propTypes.shape({
       component: propTypes.any.isRequired,
@@ -52,7 +59,8 @@ CardsContainer.propTypes = {
       props: propTypes.object,
     })
   ).isRequired,
-  data: propTypes.object.isRequired,
+  loadMore: propTypes.func.isRequired,
+  data: propTypes.any.isRequired,
 };
 
 export default memo(CardsContainer);

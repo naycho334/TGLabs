@@ -45,54 +45,57 @@ const DefaultTextField = withStyles((theme) => {
       },
 
       "&.outlined": {
-
-        "& .MuiInputBase-root":{
+        "& .MuiInputBase-root": {
           borderRadius: theme.spacing(1),
           border: `1px solid #F0F0F0`,
-          backgroundColor: '#F8F8F8',
-          transition: 'all .3s',
-          
-          "&.Mui-focused":{
-            backgroundColor: '#fff'
+          backgroundColor: "#F8F8F8",
+          transition: "all .3s",
+
+          "&.Mui-focused": {
+            backgroundColor: "#fff",
           },
-          
-          "&:hover:not(.Mui-focused)":{
-            backgroundColor: darken('#fff', .1)
+
+          "&:hover:not(.Mui-focused)": {
+            backgroundColor: darken("#fff", 0.1),
           },
         },
-        
+
         "& input, & textarea": {
           padding: theme.spacing(1.25),
-          fontSize: '.95rem',
-          color: '#5F6777',
-          height: '100%',
-          width: '100%',
+          fontSize: ".95rem",
+          color: "#5F6777",
+          height: "100%",
+          width: "100%",
         },
 
-        "& .MuiInput-formControl":{
-          marginTop: 0
+        "& .MuiInput-formControl": {
+          marginTop: 0,
         },
 
-        "& label":{
-          textTransform: 'capitalize',
-          fontSize: '.85rem',
-          color: '#5F6777',
+        "& label": {
+          textTransform: "capitalize",
+          fontSize: ".85rem",
+          color: "#5F6777",
 
-          "&.Mui-focused":{
-            color: '#3f51b5'
+          "&.Mui-focused": {
+            color: "#3f51b5",
           },
         },
 
-        "& .Mui-disabled":{
-          "&.MuiFormLabel-root":{
-            color: '#00000061'
+        "& .Mui-disabled": {
+          "&.MuiFormLabel-root": {
+            color: "#00000061",
           },
-          "& .inputIcon text":{
-            fill: '#00000061'
+          "& .inputIcon text": {
+            fill: "#00000061",
           },
-          "& input, & textarea":{
-            color: '#00000061'
+          "& input, & textarea": {
+            color: "#00000061",
           },
+        },
+
+        "&.noLabel": {
+          marginTop: 0,
         },
       },
     },

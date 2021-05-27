@@ -1,6 +1,8 @@
+import { Divider } from "@material-ui/core";
 import propTypes from "prop-types";
 import { memo } from "react";
 import clsx from "clsx";
+import _ from "lodash";
 
 import useStyles from "components/DataTable/styles";
 import useSmallScreen from "hooks/useSmallScreen";
@@ -8,27 +10,41 @@ import CardsContainer from "./CardsContainer";
 import Table from "./Table";
 
 const DataTable = (props) => {
-  const { tableHead, components, mapData, data, cardComponent } = props;
+  const {
+    cardComponent,
+    cardsCount,
+    components,
+    className,
+    tableHead,
+    loadMore,
+    mapData,
+    data,
+  } = props;
   const isSmallScreen = useSmallScreen();
   const classes = useStyles();
 
-  const mappedData = data.map(mapData);
+  const mappedData = (_.isObject(data) ? _.values(data) : data).map(mapData);
 
   return (
-    <div className={clsx(classes.dataTable)}>
+    <div className={clsx(classes.dataTable, className)}>
       {isSmallScreen ? (
         <CardsContainer
+          canLoadMore={_.lt(cardsCount, mappedData.length)}
+          data={mappedData.slice(0, cardsCount)}
           cardComponent={cardComponent}
-          tableHead={tableHead}
           components={components}
-          data={mappedData}
+          tableHead={tableHead}
+          loadMore={loadMore}
         />
       ) : (
-        <Table
-          components={components}
-          tableHead={tableHead}
-          data={mappedData}
-        />
+        <>
+          <Divider className={classes.separator} />
+          <Table
+            components={components}
+            tableHead={tableHead}
+            data={mappedData}
+          />
+        </>
       )}
     </div>
   );
@@ -48,7 +64,14 @@ DataTable.propTypes = {
       props: propTypes.object,
     })
   ).isRequired,
-  data: propTypes.object.isRequired,
+  cardsCount: propTypes.number.isRequired,
+  loadMore: propTypes.func.isRequired,
+  data: propTypes.any.isRequired,
+  className: propTypes.string,
+};
+
+DataTable.defaultProps = {
+  cardsCount: 3,
 };
 
 export default memo(DataTable);

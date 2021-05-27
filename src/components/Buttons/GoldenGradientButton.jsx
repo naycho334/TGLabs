@@ -1,6 +1,6 @@
 import { Button, withStyles } from "@material-ui/core";
 
-const GolderGradientButton = withStyles((theme) => {
+const GoldenGradientButton = withStyles((theme) => {
   return {
     contained: {
       background: `linear-gradient(90deg, ${theme.palette.golden.main}, ${theme.palette.golden.light})`,
@@ -25,4 +25,4 @@ const GolderGradientButton = withStyles((theme) => {
   };
 })(Button);
 
-export default GolderGradientButton;
+export default GoldenGradientButton;

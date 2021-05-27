@@ -4,6 +4,7 @@ const useStyles = makeStyles(theme => {
   return ({
     dataTable: {
       backgroundColor: theme.palette.common.white,
+      height: '100%',
 
       "& [role='tabpanel']": {
         borderTop: `1px solid ${colors.grey[300]}`,
@@ -39,6 +40,13 @@ const useStyles = makeStyles(theme => {
       }
     },
 
+    separator: {
+      margin: theme.spacing(2, -3, .5, -3),
+
+      [theme.breakpoints.down("md")]: {
+        marginBottom: theme.spacing(3)
+      }
+    },
 
     date: {
       color: colors.grey[600],
@@ -80,6 +88,11 @@ const useStyles = makeStyles(theme => {
 
       "& svg": {
         marginRight: theme.spacing(1),
+      },
+
+      "& .usdValue": {
+        lineHeight: `10px`,
+        fontSize: 10,
       },
     },
 
@@ -126,6 +139,34 @@ const useStyles = makeStyles(theme => {
         color: colors.orange[800]
       },
     },
+
+    address: {
+      color: theme.palette.purple.main,
+      fontWeight: 'bold'
+    },
+
+    checkBox: {
+      "& svg": {
+        color: theme.palette.purple.light,
+        transition: 'all .2s',
+
+        "& path": {
+          fill: colors.grey[200],
+        },
+      },
+
+      "& .checked path": {
+        fill: theme.palette.purple.light
+      },
+      
+      "& .checkboxLabel": {
+        marginRight: theme.spacing(1)
+      },
+      
+      "& .Mui-disabled .checked path": {
+        fill: colors.grey[200],
+      },
+    }
 
   })
 })

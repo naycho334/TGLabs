@@ -32,7 +32,7 @@ import SicBoOnDemand from "components/Animations/SicBoOnDemand";
 import BragAnimation from "components/Animations/BragAnimation";
 import RouletteBingo from "components/Animations/RouletteBingo";
 
-import GolderGradientButton from "components/Buttons/GolderGradientButton";
+import GoldenGradientButton from "components/Buttons/GoldenGradientButton";
 import { CheckedOutlineIcon } from "components/Icons/Icons";
 import { InProgressIcon } from "components/Icons/Icons";
 import useForceUpdate from "hooks/useForceUpdate";
@@ -303,13 +303,13 @@ const TrueGamingLabGames = () => {
         </div>
       </Grid>
       <Grid item xs={12}>
-        <GolderGradientButton
+        <GoldenGradientButton
           className="uppercase viewMoreButton"
           variant="contained"
           disableElevation
         >
           View More
-        </GolderGradientButton>
+        </GoldenGradientButton>
       </Grid>
     </Grid>
   );

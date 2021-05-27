@@ -1,45 +1,57 @@
-import { CardContent, Divider, Grid, Typography } from "@material-ui/core";
+import { CardContent, Typography, Divider, Grid, Box } from "@material-ui/core";
 import propTypes from "prop-types";
 import { memo } from "react";
 
 import CustomCard from "./CustomCard";
-// import useStyles from "./styles";
+import useStyles from "./styles";
 
 const Section = (props) => {
-  const { title, className, header, footer, children } = props;
-  // const classes = useStyles();
+  const { title, headerProps, className, header, footer, children } = props;
+  const classes = useStyles();
 
   return (
     <CustomCard className={className}>
       <CardContent>
-        <Grid container direction="column" justify="space-between">
-          <Grid item>
-            {/* Title */}
-            <Grid item>
-              <Typography
-                className="bold section-title"
-                variant="body1"
-                component="h2"
-                gutterBottom
+        <Box
+          justifyContent="space-between"
+          flexDirection="column"
+          display="flex"
+        >
+          <Box display="flex" flexDirection="column" flexWrap="nowrap" flex="1">
+            <Box flex="none">
+              <Grid
+                className={classes.header}
+                alignItems="center"
+                container
+                {...headerProps}
               >
-                {title}
-              </Typography>
-            </Grid>
+                {/* Title */}
+                <Grid item>
+                  <Typography
+                    className="section-title bold"
+                    component="span"
+                    variant="body1"
+                    gutterBottom
+                  >
+                    {title}
+                  </Typography>
+                </Grid>
 
-            {/* Header */}
-            {header}
-
+                {/* Header */}
+                {header}
+              </Grid>
+            </Box>
             {/* Content */}
-            <Grid item xs={12}>
-              {children}
-            </Grid>
-          </Grid>
+            <Box flex="1">{children}</Box>
+          </Box>
 
-          <Grid item>
-            {footer && <Divider className="footer" />}
-            <Grid item>{footer}</Grid>
-          </Grid>
-        </Grid>
+          {footer && (
+            <Box flex="none">
+              <Divider className="footer" />
+              {footer}
+            </Box>
+          )}
+        </Box>
       </CardContent>
     </CustomCard>
   );
@@ -47,6 +59,7 @@ const Section = (props) => {
 
 Section.propTypes = {
   title: propTypes.string.isRequired,
+  headerProps: propTypes.object,
   className: propTypes.string,
   children: propTypes.any,
   header: propTypes.any,

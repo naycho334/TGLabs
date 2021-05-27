@@ -1,24 +1,16 @@
-import { useCallback, useEffect } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useTheme } from "@material-ui/core";
 
-import useForceUpdate from "hooks/useForceUpdate";
-
-let currentScreen = false;
-
 const useSmallScreen = () => {
-  const smallScreenWidth = useTheme().breakpoints.width("md");
-  const forceUpdate = useForceUpdate();
+  const smallScreenWidth = useTheme().breakpoints.width("lg");
+  const [isSmallScreen, setSmallScreen] = useState(null);
 
   /**
    * Handle window size change
    */
   const handleResizeWindow = useCallback(() => {
-    const isSmallScreen = window.innerWidth <= smallScreenWidth;
-    if (currentScreen !== isSmallScreen) {
-      currentScreen = isSmallScreen;
-      forceUpdate();
-    }
-  }, [forceUpdate, smallScreenWidth]);
+    setSmallScreen(window.innerWidth <= smallScreenWidth)
+  }, [smallScreenWidth]);
 
   useEffect(() => {
     handleResizeWindow();
@@ -26,7 +18,7 @@ const useSmallScreen = () => {
     return () => window.removeEventListener("resize", handleResizeWindow);
   }, [handleResizeWindow]);
 
-  return window.innerWidth <= smallScreenWidth;
+  return isSmallScreen;
 };
 
 export default useSmallScreen;

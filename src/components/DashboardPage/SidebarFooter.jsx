@@ -1,23 +1,29 @@
 import { Link as RouterLink } from "react-router-dom";
 import { Typography, Link } from "@material-ui/core";
 import { memo } from "react";
+import clsx from "clsx";
+
 import {
   FacebookIcon,
-  InstagramIcon,
-  LinkedInIcon,
+  TelegramIcon,
+  DiscordIcon,
   TwitterIcon,
 } from "../Icons/Social";
+import useStyles from "./styles";
 
 const socialLinks = [
   { Icon: FacebookIcon, href: "#" },
-  { Icon: InstagramIcon, href: "#" },
+  { Icon: DiscordIcon, href: "#" },
   { Icon: TwitterIcon, href: "#" },
-  { Icon: LinkedInIcon, href: "#" },
+  { Icon: TelegramIcon, href: "#" },
 ];
 
-const SidebarFooter = () => {
+const SidebarFooter = (props) => {
+  const { className } = props;
+  const classes = useStyles();
+
   return (
-    <div className="footer">
+    <div className={clsx(classes.footer, className)}>
       <div className="links d-flex mb-3">
         {[
           { title: "Terms of Use", link: "#" },

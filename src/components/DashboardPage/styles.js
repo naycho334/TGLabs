@@ -15,6 +15,12 @@ const useStyles = makeStyles(theme => {
       width: '100%',
       flex: 1,
 
+      "& .supportIcon": {
+        "& path": {
+          stroke: theme.palette.purple.light1,
+        }
+      },
+
       [theme.breakpoints.down("sm")]: {
         backgroundColor: theme.palette.common.white
       }
@@ -51,35 +57,35 @@ const useStyles = makeStyles(theme => {
         },
       },
     },
-    notification:{
+    notification: {
       borderRadius: theme.spacing(1),
       padding: theme.spacing(1.5),
       border: `1.5px solid`,
-      
-      "&.default":{
+
+      "&.default": {
         backgroundColor: colors.grey[50],
         borderColor: colors.grey[800],
       },
-      
-      "&.danger":{
+
+      "&.danger": {
         backgroundColor: colors.red[50],
         borderColor: colors.red[800],
       },
-      
-      "&.info":{
+
+      "&.info": {
         backgroundColor: colors.lightBlue[50],
         borderColor: colors.lightBlue[800],
       },
-      
-      "&.warning":{
+
+      "&.warning": {
         backgroundColor: colors.orange[50],
         borderColor: colors.orange[800],
       },
-      
-      "& .separator":{
+
+      "& .separator": {
         margin: theme.spacing(1, 0)
       },
-      
+
     },
     seperator: {
       backgroundColor: colors.grey[300],
@@ -129,48 +135,6 @@ const useStyles = makeStyles(theme => {
         borderRight: 0,
       },
 
-      "& .footer": {
-        padding: theme.spacing(MENU_OFFSET),
-        marginTop: 'auto',
-
-        "& svg": {
-          marginRight: theme.spacing(2),
-          height: 22,
-          width: 22,
-
-          "& *": {
-            fill: 'silver'
-          },
-        },
-
-        "& .d-flex": {
-          display: 'flex'
-        },
-
-        "& .mb-3": {
-          marginBottom: theme.spacing(2),
-        },
-
-        "& .links": {
-          justifyContent: 'space-between',
-          position: 'relative',
-
-          "& a:nth-child(1)": {
-            paddingRight: theme.spacing(3)
-          },
-
-          "&:after": {
-            backgroundColor: colors.grey[300],
-            position: 'absolute',
-            height: '100%',
-            content: '""',
-            left: '50%',
-            width: 1,
-            top: 0,
-          },
-        },
-      },
-
       [theme.breakpoints.down("sm")]: {
         "& .sidebar": {
           display: 'none'
@@ -194,6 +158,11 @@ const useStyles = makeStyles(theme => {
     content: {
       paddingBottom: theme.spacing(4),
       paddingTop: theme.spacing(3),
+      maxWidth: '100vw',
+
+      [theme.breakpoints.up("lg")]: {
+        width: `calc(100vw - ${SIDEBAR_WIDTH}px)`
+      },
 
       "& .page-title": {
         color: colors.grey[600],
@@ -207,6 +176,12 @@ const useStyles = makeStyles(theme => {
         zIndex: -1,
         left: 220,
         top: -5,
+
+        [theme.breakpoints.down("md")]: {
+          transform: `scale(4) translateX(50%)`,
+          left: 120,
+          top: 30,
+        }
       },
 
     },
@@ -286,6 +261,55 @@ const useStyles = makeStyles(theme => {
         display: 'block',
         margin: 'auto'
       },
+    },
+    footer: {
+      padding: theme.spacing(MENU_OFFSET),
+      marginTop: 'auto',
+
+      "& svg": {
+        marginRight: theme.spacing(2),
+        height: 22,
+        width: 22,
+
+        "& *": {
+          fill: 'silver'
+        },
+      },
+
+      "& .d-flex": {
+        display: 'flex'
+      },
+
+      "& .mb-3": {
+        marginBottom: theme.spacing(2),
+      },
+
+      "& .links": {
+        justifyContent: 'space-between',
+        position: 'relative',
+
+        "& a:nth-child(1)": {
+          paddingRight: theme.spacing(3)
+        },
+
+        "&:after": {
+          backgroundColor: colors.grey[300],
+          position: 'absolute',
+          height: '100%',
+          content: '""',
+          left: '50%',
+          width: 1,
+          top: 0,
+        },
+      },
+
+      "&.page":{
+        flexDirection: 'column',
+        alignItems: 'center',
+        textAlign: 'center',
+        display: 'flex',
+        maxWidth: 250,
+      }
     }
   }
 });

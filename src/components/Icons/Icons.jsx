@@ -10,6 +10,7 @@ import { ReactComponent as ICOInformationIcon } from "assets/svgs/icons/icon_ico
 import { ReactComponent as ICODashboardIcon } from "assets/svgs/icons/icon_ico_dashboard-panel.svg";
 import { ReactComponent as TransactionsIcon } from "assets/svgs/icons/icon_transactions-panel.svg";
 import { ReactComponent as CheckedOutlineIcon } from "assets/svgs/icons/icon_checked-outline.svg";
+import { ReactComponent as CheckBoxFullIcon } from "assets/svgs/icons/icon_checked-full.svg";
 import { ReactComponent as ReferralsIcon } from "assets/svgs/icons/icon_referrals-panel.svg";
 import { ReactComponent as WithdrawIcon } from "assets/svgs/icons/icon_withdraw-panel.svg";
 import { ReactComponent as ProductsIcon } from "assets/svgs/icons/icon_products-panel.svg";
@@ -22,6 +23,7 @@ import { ReactComponent as CalendarIcon } from "assets/svgs/icons/icon_calendar.
 import { ReactComponent as UserIcon } from "assets/svgs/icons/icon_users-panel.svg";
 import { ReactComponent as CheckedIcon } from "assets/svgs/icons/icon_checked.svg";
 import { ReactComponent as FAQIcon } from "assets/svgs/icons/icon_faq-panel.svg";
+import { ReactComponent as SearchIcon } from "assets/svgs/icons/icon_search.svg";
 import { ReactComponent as EditIcon } from "assets/svgs/icons/icon_edit.svg";
 import { ReactComponent as TimeIcon } from "assets/svgs/icons/icon_time.svg";
 import { ReactComponent as LXRIcon } from "assets/svgs/icons/logo_lxr.svg";
@@ -33,6 +35,7 @@ export {
   ICODashboardIcon,
   TransactionsIcon,
   NotificationIcon,
+  CheckBoxFullIcon,
   TruePayLogoIcon,
   InProgressIcon,
   ReferralsIcon,
@@ -46,6 +49,7 @@ export {
   SupportIcon,
   AccountIcon,
   CheckedIcon,
+  SearchIcon,
   LogoutIcon,
   CloseIcon,
   UserIcon,
