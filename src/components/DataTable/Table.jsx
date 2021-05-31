@@ -17,7 +17,7 @@ import { CheckBoxFullIcon } from "components/Icons/Icons";
 import useStyles from "./styles";
 
 const Table = (props) => {
-  const { tableHead, data, components } = props;
+  const { tableHead, data, components, onClick } = props;
   const classes = useStyles();
 
   return (
@@ -58,7 +58,12 @@ const Table = (props) => {
         </TableHead>
         <TableBody>
           {_.defaultTo(data, []).map((data, index) => (
-            <TableRow key={index}>
+            <TableRow
+              {...(_.isFunction(onClick)
+                ? { onClick: onClick.bind(null, data.id), "data-clickable": 1 }
+                : {})}
+              key={index}
+            >
               {components.map(
                 ({ component: Component, tableCellProps, props }, index) => (
                   <TableCell key={index} {...tableCellProps}>
@@ -85,7 +90,7 @@ Table.propTypes = {
   components: propTypes.arrayOf(
     propTypes.shape({
       component: propTypes.any.isRequired,
-      tableCellProps: propTypes,
+      tableCellProps: propTypes.object,
       props: propTypes.object,
     })
   ).isRequired,

@@ -2,6 +2,7 @@ import { Grid, Divider, Box, Button } from "@material-ui/core";
 import { MoreHorizOutlined } from "@material-ui/icons";
 import { Fragment, memo } from "react";
 import propTypes from "prop-types";
+import _ from "lodash";
 
 const CardsContainer = (props) => {
   const {
@@ -10,16 +11,23 @@ const CardsContainer = (props) => {
     components,
     tableHead,
     loadMore,
+    onClick,
     data,
   } = props;
 
   return (
     <>
-      <Box padding={1}>
+      <Box padding={1} py={3}>
         <Grid container spacing={2}>
           {data.map((item, index, { length }) => (
             <Fragment key={index}>
               <Component
+                {...(_.isFunction(onClick)
+                  ? {
+                      onClick: onClick.bind(null, item.id),
+                      "data-clickable": 1,
+                    }
+                  : {})}
                 components={components}
                 tableHead={tableHead}
                 data={item}
@@ -49,7 +57,7 @@ CardsContainer.propTypes = {
   components: propTypes.arrayOf(
     propTypes.shape({
       component: propTypes.any.isRequired,
-      tableCellProps: propTypes,
+      tableCellProps: propTypes.object,
       props: propTypes.object,
     })
   ).isRequired,

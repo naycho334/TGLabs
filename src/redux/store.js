@@ -1,5 +1,7 @@
 import adminAwaitingApprovalReducer from "pages/Admin/ICOInformation/awaitingApproval.slice";
 import adminTopContributorsReducer from "pages/Admin/ICOInformation/topContributors.slice";
+import adminOpenSupportTicketsReducer from "pages/Admin/Support/openSupportTickets.slice";
+import adminAllSupportTicketsReducer from "pages/Admin/Support/allSupportTickets.slice";
 import adminIcoPurchasesReducer from "pages/Admin/ICOInformation/icoPurchases.slice";
 import notificationsReducer from "components/DashboardPage/notifications.slide";
 import adminIcoInformationReducer from "pages/Admin/ICOInformation/index.slice";
@@ -14,6 +16,8 @@ const store = configureStore({
     notificationsReducer,
 
     // Admin
+    adminOpenSupportTicketsReducer,
+    adminAllSupportTicketsReducer,
     adminAwaitingApprovalReducer,
     adminTopContributorsReducer,
     adminIcoInformationReducer,

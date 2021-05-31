@@ -4,7 +4,7 @@ const DefaultTextField = withStyles((theme) => {
   return {
     root: {
       marginTop: "calc(.9rem + 8px)",
-      borderRadius: 4,
+      backgroundColor: "#F8F8F8",
 
       "& input, & textarea": {
         fontWeight: 400,

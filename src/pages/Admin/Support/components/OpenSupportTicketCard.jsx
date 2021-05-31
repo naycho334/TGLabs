@@ -2,12 +2,14 @@ import { Box, Grid, Typography } from "@material-ui/core";
 import { getComponent } from "lib/helpers";
 import propTypes from "prop-types";
 import { memo } from "react";
+import _ from "lodash";
 
-const ICOPurchasesCard = (props) => {
+const OpenSupportTicketCard = (props) => {
   const get = getComponent.bind(props);
+  const extraProps = _.omit(props, ["components", "tableHead", "data"]);
 
   return (
-    <Grid item xs={12}>
+    <Grid item xs={12} {...extraProps}>
       <Grid container>
         <Grid item xs={12}>
           <Box mb={1.5}>
@@ -39,11 +41,11 @@ const ICOPurchasesCard = (props) => {
   );
 };
 
-ICOPurchasesCard.propTypes = {
+OpenSupportTicketCard.propTypes = {
   components: propTypes.arrayOf(
     propTypes.shape({
       component: propTypes.any.isRequired,
-      tableCellProps: propTypes,
+      tableCellProps: propTypes.object,
       props: propTypes.object,
     })
   ).isRequired,
@@ -56,4 +58,4 @@ ICOPurchasesCard.propTypes = {
   data: propTypes.object.isRequired,
 };
 
-export default memo(ICOPurchasesCard);
+export default memo(OpenSupportTicketCard);

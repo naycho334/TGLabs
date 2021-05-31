@@ -2,7 +2,7 @@ import { Typography } from "@material-ui/core";
 import propTypes from "prop-types";
 import { memo } from "react";
 import clsx from "clsx";
-import _, { get } from "lodash";
+import _ from "lodash";
 
 import useStyles from "components/DataTable/styles";
 

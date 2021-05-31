@@ -32,6 +32,7 @@ const ICOInformation = () => {
       header={
         <ReportSwitch
           title="Email me a report every month"
+          disabled={monthlyReport.loading}
           onChange={updateMonthlyReport}
           checked={monthlyReport}
         />

@@ -10,13 +10,6 @@ const saveStageChanges = createAsyncThunk(`${PREFIX}/update_stage_value`, async 
   return new Promise((resolve) => setTimeout(resolve, 1500))
 });
 
-/**
- * Fetch all withdrawals data
- */
-const updateMonthlyReport = createAsyncThunk(`${PREFIX}/update_monthly_report`, async () => {
-  return new Promise((resolve) => setTimeout(resolve, 1500))
-})
-
 const slice = createSlice({
   name: PREFIX,
   initialState: {
@@ -76,11 +69,7 @@ const slice = createSlice({
       stageToEdit: null,
       isReadOnly: false,
     },
-
-    monthlyReport: {
-      checked: false,
-      loading: false,
-    }
+    monthlyReport: false
   },
   reducers: {
     /**
@@ -96,6 +85,13 @@ const slice = createSlice({
     editStageData: (state, { payload }) => {
       state.stages.stageToEdit = { ...state.stages.stageToEdit, ...payload }
     },
+
+    /**
+     * Change monthly report value
+     */
+    updateMonthlyReport: (state, {payload})=>{
+      state.monthlyReport = payload;
+    }
   },
   extraReducers: {
     /**
@@ -112,20 +108,6 @@ const slice = createSlice({
     },
     [saveStageChanges.rejected]: (state, action) => {
       state.stages.isReadOnly = false
-    },
-
-    /**
-     * Update monthly report
-     */
-    [updateMonthlyReport.pending]: (state) => {
-      state.monthlyReport.loading = true;
-    },
-    [updateMonthlyReport.fulfilled]: (state) => {
-      state.monthlyReport.loading = false
-      state.monthlyReport.checked = !state.monthlyReport.checked;
-    },
-    [updateMonthlyReport.rejected]: (state) => {
-      state.monthlyReport.loading = false
     },
   },
 });

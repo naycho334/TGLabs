@@ -18,12 +18,17 @@ const DataTable = (props) => {
     tableHead,
     loadMore,
     mapData,
+    onClick,
     data,
   } = props;
   const isSmallScreen = useSmallScreen();
   const classes = useStyles();
 
   const mappedData = (_.isObject(data) ? _.values(data) : data).map(mapData);
+  
+  const handleClick = (id, ev) => {
+    if (ev.target.tagName !== "INPUT") onClick(id);
+  };
 
   return (
     <div className={clsx(classes.dataTable, className)}>
@@ -34,6 +39,7 @@ const DataTable = (props) => {
           cardComponent={cardComponent}
           components={components}
           tableHead={tableHead}
+          onClick={handleClick}
           loadMore={loadMore}
         />
       ) : (
@@ -42,6 +48,7 @@ const DataTable = (props) => {
           <Table
             components={components}
             tableHead={tableHead}
+            onClick={handleClick}
             data={mappedData}
           />
         </>
@@ -68,6 +75,7 @@ DataTable.propTypes = {
   loadMore: propTypes.func.isRequired,
   data: propTypes.any.isRequired,
   className: propTypes.string,
+  onClick: propTypes.func,
 };
 
 DataTable.defaultProps = {

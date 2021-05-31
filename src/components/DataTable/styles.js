@@ -12,11 +12,24 @@ const useStyles = makeStyles(theme => {
         transform: 'translateY(-4px)',
       },
 
+      "& [data-clickable='1']": {
+        borderRadius: theme.spacing(1.5),
+        cursor: 'pointer',
+
+        "&:hover": {
+          backgroundColor: colors.grey[50],
+        },
+      },
+
       "& th, & .overline": {
         backgroundColor: theme.palette.common.white,
         textTransform: 'uppercase',
         color: colors.grey[400],
         fontSize: '.8rem'
+      },
+
+      "& tbody tr td": {
+        height: 45
       },
 
       "& .ps__rail-y": {

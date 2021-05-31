@@ -2,30 +2,23 @@ import { Box, Grid, Typography } from "@material-ui/core";
 import { getComponent } from "lib/helpers";
 import propTypes from "prop-types";
 import { memo } from "react";
+import _ from "lodash";
 
-const AllUsersCard = (props) => {
+const AllSupprtTicketsCard = (props) => {
   const get = getComponent.bind(props);
+  const extraProps = _.omit(props, ["components", "tableHead", "data"]);
 
   return (
-    <Grid item xs={12}>
+    <Grid {...extraProps} xs={12} item>
       <Grid container>
         <Grid item xs={12}>
           <Box mb={1.5}>
             <Grid justify="space-between" alignItems="center" container>
-              {get([0]).map(({ Component, props, title }, index) => (
+              {get([0, 5]).map(({ Component, props, title }, index) => (
                 <Grid item key={index}>
                   <Component {...props} />
                 </Grid>
               ))}
-              <Grid item>
-                <Grid container spacing={2}>
-                  {get([6, 5]).map(({ Component, props, title }, index) => (
-                    <Grid item key={index}>
-                      <Component {...props} />
-                    </Grid>
-                  ))}
-                </Grid>
-              </Grid>
             </Grid>
           </Box>
         </Grid>
@@ -49,7 +42,7 @@ const AllUsersCard = (props) => {
             </Grid>
           </Grid>
           <Grid item>
-            {get([7]).map(({ Component, props, title }, index) => (
+            {get([6]).map(({ Component, props, title }, index) => (
               <Grid item xs={12} key={index}>
                 <Component {...props} />
               </Grid>
@@ -61,11 +54,11 @@ const AllUsersCard = (props) => {
   );
 };
 
-AllUsersCard.propTypes = {
+AllSupprtTicketsCard.propTypes = {
   components: propTypes.arrayOf(
     propTypes.shape({
       component: propTypes.any.isRequired,
-      tableCellProps: propTypes,
+      tableCellProps: propTypes.object,
       props: propTypes.object,
     })
   ).isRequired,
@@ -78,4 +71,4 @@ AllUsersCard.propTypes = {
   data: propTypes.object.isRequired,
 };
 
-export default memo(AllUsersCard);
+export default memo(AllSupprtTicketsCard);

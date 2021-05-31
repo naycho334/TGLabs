@@ -111,11 +111,6 @@ const useStyles = makeStyles(theme => {
       padding: `${theme.spacing(7, 3)} !important`,
     },
     stageDialog: {
-      "& .title > *": {
-        fontWeight: 'bold',
-        color: '#8F96A5',
-      },
-
       "& .inputIcon": {
         padding: theme.spacing(1.5),
 

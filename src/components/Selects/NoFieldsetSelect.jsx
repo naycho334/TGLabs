@@ -1,4 +1,4 @@
-import { InputBase, Select, withStyles } from "@material-ui/core";
+import { darken, InputBase, Select, withStyles } from "@material-ui/core";
 
 const NoFieldsetSelect = withStyles((theme) => {
   return {
@@ -29,6 +29,21 @@ const NoFieldsetSelect = withStyles((theme) => {
     },
     select: {
       paddingRight: `${theme.spacing(4)}px !important`,
+
+      "&.outlined": {
+        borderRadius: theme.spacing(1),
+        border: `1px solid #F0F0F0`,
+        backgroundColor: "#F8F8F8",
+        transition: "all .3s",
+
+        "&.Mui-focused": {
+          backgroundColor: "#fff",
+        },
+
+        "&:hover:not(.Mui-focused)": {
+          backgroundColor: darken("#fff", 0.1),
+        },
+      },
     },
     icon: {
       transform: "translate(-50%, -50%)",
@@ -45,15 +60,15 @@ export const NoFieldsetSelectInput = withStyles((theme) => {
       borderRadius: theme.spacing(1),
       overflow: "hidden",
       fontWeight: "bold",
-      color: '#8f96ab',
+      color: "#8f96ab",
 
       "&:after, &:before": {
-        borderColor: 'none',
+        borderColor: "none",
       },
 
       "&:hover": {
         "&:before": {
-          borderColor: 'none'
+          borderColor: "none",
         },
       },
     },

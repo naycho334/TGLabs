@@ -5,7 +5,6 @@ let theme = createMuiTheme();
 const mainTheme = createMuiTheme({
 
   palette: {
-
     golden: {
       main: '#FFB993',
       light: '#FEECA8',
@@ -32,9 +31,6 @@ const mainTheme = createMuiTheme({
       light: "#FEECA8",
       light1: "#FFFAEB",
     },
-    // background: {
-    //   default: "#222222"
-    // },
   },
   overrides: {
     MuiLink: {
@@ -56,8 +52,14 @@ const mainTheme = createMuiTheme({
         "&.white-text": {
           color: theme.palette.common.white
         },
+        "&.blue-text": {
+          color: '#138BBD',
+        },
         "&.grey-text": {
           color: colors.grey[400]
+        },
+        "&.dark-grey-text": {
+          color: colors.grey[500]
         },
         "&.purple-text": {
           color: "#6B24D6"
@@ -90,38 +92,38 @@ const mainTheme = createMuiTheme({
         "&.black-text": {
           color: "#000"
         },
-        "&.bold":{
+        "&.bold": {
           fontWeight: 'bold',
         },
-        "&.rounded-1":{
+        "&.rounded-1": {
           borderRadius: theme.spacing(1)
         },
       },
-      contained:{
-        "&.purple-bg":{
+      contained: {
+        "&.purple-bg": {
           backgroundColor: "#6B24D6",
-          
-          "&:hover":{
+
+          "&:hover": {
             backgroundColor: lighten("#6B24D6", .1),
           },
-          
-          "&:disabled":{
+
+          "&:disabled": {
             backgroundColor: colors.grey[300],
           },
         },
-        
-        "&.orange-bg":{
+
+        "&.orange-bg": {
           backgroundColor: "#F48A5B",
-          
-          "&:hover":{
+
+          "&:hover": {
             backgroundColor: lighten("#F48A5B", .1),
           },
-          
-          "&:disabled":{
+
+          "&:disabled": {
             backgroundColor: colors.grey[300],
           },
         },
-        
+
       }
     },
     MuiListItemIcon: {

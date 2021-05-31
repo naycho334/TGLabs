@@ -12,32 +12,28 @@ const TopContributorsCard = (props) => {
         <Grid item xs={12}>
           <Box mb={1.5}>
             <Grid justify="space-between" alignItems="center" container>
-              {[0]
-                .map((index) => get(index))
-                .map(({ Component, props, title }, index) => (
-                  <Grid item key={index}>
-                    <Component {...props} />
-                  </Grid>
-                ))}
+              {get([0]).map(({ Component, props, title }, index) => (
+                <Grid item key={index}>
+                  <Component {...props} />
+                </Grid>
+              ))}
             </Grid>
           </Box>
         </Grid>
-        {[1, 2]
-          .map((index) => get(index))
-          .map(({ Component, props, title }, index) => (
-            <Grid item xs={12} key={index}>
-              <Grid container alignItems="center">
-                <Grid item xs={3}>
-                  <Typography variant="caption" className="overline">
-                    {index === 1 ? "TGLAB" : title}
-                  </Typography>
-                </Grid>
-                <Grid item xs={9}>
-                  <Component {...props} />
-                </Grid>
+        {get([1, 2]).map(({ Component, props, title }, index) => (
+          <Grid item xs={12} key={index}>
+            <Grid container alignItems="center">
+              <Grid item xs={3}>
+                <Typography variant="caption" className="overline">
+                  {index === 1 ? "TGLAB" : title}
+                </Typography>
+              </Grid>
+              <Grid item xs={9}>
+                <Component {...props} />
               </Grid>
             </Grid>
-          ))}
+          </Grid>
+        ))}
       </Grid>
     </Grid>
   );

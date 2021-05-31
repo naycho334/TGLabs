@@ -33,11 +33,17 @@ export const formatPrice = (price, currency, pattern = "sp c") => {
 /**
  * Get card component data
  */
-export function getComponent(index) {
-  const Component = _.get(this.components, [index, "component"], null);
-  const componentProps = _.get(this.components, [index, "props"], {});
-  const title = _.get(this.tableHead, [index, "label"], null);
-  const props = _.get(this.data, index, {});
+export function getComponent(indexes = []) {
+  if (!_.isArray(indexes)) return [];
 
-  return { Component, title, props: { ...componentProps, ...props } };
+  const data = (index) => {
+    const Component = _.get(this.components, [index, "component"], null);
+    const componentProps = _.get(this.components, [index, "props"], {});
+    const title = _.get(this.tableHead, [index, "label"], null);
+    const props = _.get(this.data, index, {});
+
+    return { Component, title, props: { ...componentProps, ...props } };
+  }
+
+  return indexes.map(index => data(index))
 };

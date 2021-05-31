@@ -14,22 +14,19 @@ const AllWithdrawalsCard = (props) => {
             <Grid item xs={12}>
               <Box mb={1.5}>
                 <Grid justify="space-between" alignItems="center" container>
-                  {[0, 5]
-                    .map((index) => get(index))
-                    .map(({ Component, props }, index) => (
-                      <Grid item key={index}>
-                        <Component {...props} />
-                      </Grid>
-                    ))}
+                  {get([0, 5]).map(({ Component, props }, index) => (
+                    <Grid item key={index}>
+                      <Component {...props} />
+                    </Grid>
+                  ))}
                 </Grid>
               </Box>
             </Grid>
             <Grid container alignItems="center">
               <Grid item xs>
                 <Grid container>
-                  {[1, 2, 3, 4]
-                    .map((index) => get(index))
-                    .map(({ Component, props, title }, index) => (
+                  {get([1, 2, 3, 4]).map(
+                    ({ Component, props, title }, index) => (
                       <Grid item xs={12} key={index}>
                         <Grid container alignItems="center">
                           <Grid item xs={3}>
@@ -42,7 +39,8 @@ const AllWithdrawalsCard = (props) => {
                           </Grid>
                         </Grid>
                       </Grid>
-                    ))}
+                    )
+                  )}
                 </Grid>
               </Grid>
             </Grid>

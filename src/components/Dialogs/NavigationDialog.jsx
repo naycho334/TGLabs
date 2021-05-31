@@ -12,31 +12,8 @@ import { memo } from "react";
 
 import useSmallScreen from "hooks/useSmallScreen";
 
-const CustomDialog = withStyles((theme) => ({
-  root: {
-    "& .dialogContent": {
-      paddingBottom: theme.spacing(4),
-      paddingTop: theme.spacing(3),
-      
-      [theme.breakpoints.up("lg")]:{
-        margin: "auto",
-        maxWidth: 375,
-      }
-    },
-  },
-  container: {
-    display: "block",
-  },
-  paper: {
-    maxHeight: "unset",
-    height: "100%",
-    width: "100%",
-    margin: 0,
-  },
-}))(Dialog);
-
 const NavigationDialog = (_props) => {
-  const { title, children, onClose, ...props } = _props;
+  const { title, children, onClose, header, ...props } = _props;
   const isSmallScreen = useSmallScreen();
 
   return (
@@ -51,7 +28,12 @@ const NavigationDialog = (_props) => {
             </Grid>
           )}
           <Grid item xs>
-            <span>{title}</span>
+            <Grid container spacing={2} alignItems="center">
+              <Grid item>
+                <span className="title">{title}</span>
+              </Grid>
+              {header}
+            </Grid>
           </Grid>
         </Grid>
       </DialogTitle>
@@ -60,5 +42,41 @@ const NavigationDialog = (_props) => {
     </CustomDialog>
   );
 };
+
+const CustomDialog = withStyles((theme) => ({
+  root: {
+    "& .title": {
+      fontWeight: 'bold',
+      color: '#8F96A5',
+    },
+    "& .dialogContent": {
+      paddingBottom: theme.spacing(4),
+      paddingTop: theme.spacing(3),
+
+      [theme.breakpoints.down("md")]: {
+      },
+      
+      [theme.breakpoints.up("lg")]: {
+        margin: "auto",
+        maxWidth: 375,
+      },
+    },
+  },
+  container: {
+    [theme.breakpoints.down("md")]: {
+      display: "block",
+    },
+  },
+  paper: {
+    [theme.breakpoints.down("md")]: {
+      maxHeight: "unset",
+      maxWidth: "unset",
+      borderRadius: 0,
+      height: "100%",
+      width: "100%",
+      margin: 0,
+    },
+  },
+}))(Dialog);
 
 export default memo(NavigationDialog);
