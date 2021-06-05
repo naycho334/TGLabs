@@ -31,7 +31,6 @@ const Login = () => {
     if (dom) {
       const height = _.get(dom.getClientRects(), [0, "y"], 0);
       setHeight(height);
-      console.log({ height });
     }
   }, []);
 

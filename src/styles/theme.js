@@ -98,6 +98,18 @@ const mainTheme = createMuiTheme({
         "&.rounded-1": {
           borderRadius: theme.spacing(1)
         },
+        "&.rounded": {
+          borderRadius: theme.spacing(5)
+        },
+        "&.purple-text": {
+          color: "#6B24D6",
+        },
+        "&.capitalize": {
+          textTransform: 'capitalize'
+        },
+        "&.orange-text": {
+          color: "#F48A5B",
+        }
       },
       contained: {
         "&.purple-bg": {
@@ -124,6 +136,11 @@ const mainTheme = createMuiTheme({
           },
         },
 
+      },
+      outlined: {
+        "&.purple-border": {
+          borderColor: "#6B24D6"
+        }
       }
     },
     MuiListItemIcon: {

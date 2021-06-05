@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="23.461" height="18.421" viewBox="0 0 23.461 18.421">
+  <g id="icon_upload" transform="translate(0.75 0.75)">
+    <g id="icon_upload-cloud">
+      <g id="Group_1910" data-name="Group 1910" transform="translate(6.811 7.293)">
+        <g id="arrow_right" data-name="arrow right" transform="translate(0 0.001)">
+          <path id="Path_5619" data-name="Path 5619" d="M772.129,408.457l3.424-3.238,3.424,3.238" transform="translate(-772.129 -405.219)" fill="none" stroke="#6b24d6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+        </g>
+        <line id="Line_52" data-name="Line 52" y2="9.628" transform="translate(3.424)" fill="none" stroke="#6b24d6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      </g>
+      <path id="Path_6838" data-name="Path 6838" d="M779.878,415.5h4.339a3.934,3.934,0,0,0,0-7.855h-.412a7.06,7.06,0,0,0-6.858-7.1,6.915,6.915,0,0,0-6.521,5,4.863,4.863,0,0,0-4.46,4.969h0a4.85,4.85,0,0,0,4.707,4.982h2.018" transform="translate(-765.967 -400.55)" fill="none" stroke="#6b24d6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    </g>
+  </g>
+</svg>

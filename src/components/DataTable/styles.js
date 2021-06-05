@@ -21,11 +21,17 @@ const useStyles = makeStyles(theme => {
         },
       },
 
-      "& th, & .overline": {
+      "& th": {
         backgroundColor: theme.palette.common.white,
         textTransform: 'uppercase',
         color: colors.grey[400],
-        fontSize: '.8rem'
+        fontSize: '.8rem',
+      },
+      
+      "&:not(td) .overline": {
+        color: colors.grey[400],
+        textTransform: 'unset',
+        fontSize: '.8rem',
       },
 
       "& tbody tr td": {
@@ -35,6 +41,29 @@ const useStyles = makeStyles(theme => {
       "& .ps__rail-y": {
         height: 'calc( 100% - 37px ) !important',
         zIndex: 5
+      },
+
+      "& .extendCard":{
+        
+        "& .separator":{
+          display: 'none'
+        },
+        
+        "& .currencies":{
+          paddingTop: theme.spacing(2),
+          display: 'none',
+        },
+        
+        "&.open":{
+          backgroundColor: '#F2FFFF',
+          border: `1px solid silver`,
+          padding: theme.spacing(2),
+
+          "& .currencies, & .separator":{
+            display: 'block',
+          },
+        },
+
       },
 
       "& .loadMore": {
@@ -51,6 +80,32 @@ const useStyles = makeStyles(theme => {
           },
         },
       }
+    },
+
+    table:{
+      borderCollapse: 'collapse',
+      
+      "& tbody":{
+        "& tr:nth-child(2)":{
+          display:'none'
+        },
+        
+        "&.expandTable":{
+          borderRight: `2px solid rgba(224, 224, 224, 1)`,
+          borderLeft: `2px solid rgba(224, 224, 224, 1)`,
+          backgroundColor: '#F2FFFF',
+          position: 'relative',
+          
+          "& tr:nth-child(2)":{
+            display:'table-row',
+      
+            "& tr:nth-child(2) td":{
+              borderBottom: 0
+            },
+          },
+        },
+      },
+      
     },
 
     separator: {
@@ -100,13 +155,40 @@ const useStyles = makeStyles(theme => {
       },
 
       "& svg": {
-        marginRight: theme.spacing(1),
+        margin: theme.spacing(0, 1),
       },
 
       "& .usdValue": {
         lineHeight: `10px`,
         fontSize: 10,
       },
+
+      "& .textSvg": {
+        fontWeight: 'bold',
+        fill: 'silver',
+        width: 22,
+      }
+    },
+
+    image: {
+      maxWidth: 100
+    },
+
+    action: {
+      padding: theme.spacing(1),
+      color: colors.grey[600],
+
+      "& svg": {
+        transition: 'all .3s',
+        height: 15,
+        width: 15,
+      },
+
+      "&.open":{
+        "& svg":{
+          transform: 'rotateZ(180deg)'
+        }
+      }
     },
 
     tglab: {
@@ -171,16 +253,15 @@ const useStyles = makeStyles(theme => {
       "& .checked path": {
         fill: theme.palette.purple.light
       },
-      
+
       "& .checkboxLabel": {
         marginRight: theme.spacing(1)
       },
-      
+
       "& .Mui-disabled .checked path": {
         fill: colors.grey[200],
       },
-    }
-
+    },
   })
 })
 

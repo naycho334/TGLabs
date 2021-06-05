@@ -15,6 +15,7 @@ const DataTable = (props) => {
     cardsCount,
     components,
     className,
+    keepTable,
     tableHead,
     loadMore,
     mapData,
@@ -24,31 +25,31 @@ const DataTable = (props) => {
   const isSmallScreen = useSmallScreen();
   const classes = useStyles();
 
-  const mappedData = (_.isObject(data) ? _.values(data) : data).map(mapData);
-  
+  const mappedData = _.values(data).map(mapData);
+
   const handleClick = (id, ev) => {
-    if (ev.target.tagName !== "INPUT") onClick(id);
+    if (["INPUT"].includes(ev.target.tagName)) onClick(id);
   };
 
   return (
     <div className={clsx(classes.dataTable, className)}>
-      {isSmallScreen ? (
+      {isSmallScreen && !keepTable ? (
         <CardsContainer
+          onClick={_.isFunction(onClick) ? handleClick : null}
           canLoadMore={_.lt(cardsCount, mappedData.length)}
           data={mappedData.slice(0, cardsCount)}
           cardComponent={cardComponent}
           components={components}
           tableHead={tableHead}
-          onClick={handleClick}
           loadMore={loadMore}
         />
       ) : (
         <>
           <Divider className={classes.separator} />
           <Table
+            onClick={_.isFunction(onClick) ? handleClick : null}
             components={components}
             tableHead={tableHead}
-            onClick={handleClick}
             data={mappedData}
           />
         </>
@@ -75,6 +76,7 @@ DataTable.propTypes = {
   loadMore: propTypes.func.isRequired,
   data: propTypes.any.isRequired,
   className: propTypes.string,
+  keepTable: propTypes.bool,
   onClick: propTypes.func,
 };
 

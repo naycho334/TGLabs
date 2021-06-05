@@ -21,7 +21,7 @@ const TgLabCell = (props) => {
 };
 
 TgLabCell.propTypes = {
-  value: propTypes.string.isRequired,
+  value: propTypes.oneOfType([propTypes.string, propTypes.number]).isRequired,
   className: propTypes.string,
 };
 

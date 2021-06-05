@@ -6,6 +6,7 @@ import {
   Checkbox,
   TableRow,
   Box,
+  Grid,
 } from "@material-ui/core";
 import PerfectScrollbar from "react-perfect-scrollbar";
 import propTypes from "prop-types";
@@ -14,7 +15,9 @@ import clsx from "clsx";
 import _ from "lodash";
 
 import { CheckBoxFullIcon } from "components/Icons/Icons";
+import TableRowItem from "./components/TableRowItem";
 import useStyles from "./styles";
+import { Fragment } from "react";
 
 const Table = (props) => {
   const { tableHead, data, components, onClick } = props;
@@ -22,7 +25,7 @@ const Table = (props) => {
 
   return (
     <PerfectScrollbar style={{ maxHeight: 300 }}>
-      <MuiTable stickyHeader size="small">
+      <MuiTable className={classes.table} stickyHeader size="small">
         <TableHead>
           <TableRow>
             {tableHead.map(({ label, checkbox, checkBoxProps }, index) => (
@@ -56,31 +59,48 @@ const Table = (props) => {
             ))}
           </TableRow>
         </TableHead>
-        <TableBody>
-          {_.defaultTo(data, []).map((data, index) => (
-            <TableRow
-              {...(_.isFunction(onClick)
-                ? { onClick: onClick.bind(null, data.id), "data-clickable": 1 }
-                : {})}
-              key={index}
-            >
-              {components.map(
-                ({ component: Component, tableCellProps, props }, index) => (
-                  <TableCell key={index} {...tableCellProps}>
-                    {Component && (
-                      <Component
-                        {...{
-                          ..._.defaultTo(props, {}),
-                          ..._.defaultTo(data[index], {}),
-                        }}
-                      />
-                    )}
-                  </TableCell>
-                )
-              )}
-            </TableRow>
-          ))}
-        </TableBody>
+        {_.defaultTo(data, []).map((item, index) => (
+          <Fragment key={index}>
+            {_.has(item, "expand") ? (
+              (() => {
+                const open = _.get(data, [index, "expand", "open"], false);
+
+                return (
+                  <TableBody className={clsx(open && "expandTable")}>
+                    <TableRowItem
+                      components={components}
+                      onClick={onClick}
+                      index={index}
+                      data={item}
+                    />
+                    <TableRow>
+                      <TableCell colSpan={tableHead.length}>
+                        <Grid container>
+                          {_.values(item.expand)
+                            .filter((obj) => _.isObject(obj))
+                            .map(({ component: Component, props }, index) => (
+                              <Grid item xs key={index}>
+                                <Component {...props} />
+                              </Grid>
+                            ))}
+                        </Grid>
+                      </TableCell>
+                    </TableRow>
+                  </TableBody>
+                );
+              })()
+            ) : (
+              <TableBody>
+                <TableRowItem
+                  components={components}
+                  onClick={onClick}
+                  index={index}
+                  data={item}
+                />
+              </TableBody>
+            )}
+          </Fragment>
+        ))}
       </MuiTable>
     </PerfectScrollbar>
   );

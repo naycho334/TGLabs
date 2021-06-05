@@ -23,7 +23,9 @@ import { ReactComponent as CalendarIcon } from "assets/svgs/icons/icon_calendar.
 import { ReactComponent as UserIcon } from "assets/svgs/icons/icon_users-panel.svg";
 import { ReactComponent as CheckedIcon } from "assets/svgs/icons/icon_checked.svg";
 import { ReactComponent as FAQIcon } from "assets/svgs/icons/icon_faq-panel.svg";
+import { ReactComponent as UploadIcon } from "assets/svgs/icons/icon_upload.svg";
 import { ReactComponent as SearchIcon } from "assets/svgs/icons/icon_search.svg";
+import { ReactComponent as RemoveIcon } from "assets/svgs/icons/icon_remove.svg";
 import { ReactComponent as EditIcon } from "assets/svgs/icons/icon_edit.svg";
 import { ReactComponent as TimeIcon } from "assets/svgs/icons/icon_time.svg";
 import { ReactComponent as LockIcon } from "assets/svgs/icons/icon_lock.svg";
@@ -52,6 +54,8 @@ export {
   CheckedIcon,
   SearchIcon,
   LogoutIcon,
+  UploadIcon,
+  RemoveIcon,
   CloseIcon,
   UserIcon,
   EditIcon,

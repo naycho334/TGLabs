@@ -6,18 +6,30 @@ import clsx from "clsx";
 import useStyles from "components/DataTable/styles";
 
 const AmountCell = (props) => {
-  const { value, unit, icon: Icon, className, usd, ...props_ } = props;
+  const {
+    icon: Icon,
+    className,
+    iconRight,
+    value,
+    unit,
+    usd,
+    ...props_
+  } = props;
   const classes = useStyles();
 
   return (
     <div className={clsx(classes.amount, className)} {...props_}>
-      <Icon />
+      {!iconRight && <Icon />}
       <Box display="flex" flexDirection={usd ? "column" : "row"}>
         <div>
-          <Typography variant="caption">{value}</Typography>
-          <Typography variant="caption" className="unit">
-            {String(unit).toUpperCase()}
+          <Typography className="amountValue" variant="caption">
+            {value}
           </Typography>
+          {unit && (
+            <Typography variant="caption" className="unit">
+              {String(unit).toUpperCase()}
+            </Typography>
+          )}
         </div>
         {usd && (
           <Typography className="usdValue grey-text" variant="caption">
@@ -25,15 +37,16 @@ const AmountCell = (props) => {
           </Typography>
         )}
       </Box>
+      {iconRight && <Icon />}
     </div>
   );
 };
 
 AmountCell.propTypes = {
-  value: propTypes.string.isRequired,
-  unit: propTypes.string.isRequired,
+  value: propTypes.oneOfType([propTypes.string, propTypes.number]).isRequired,
   icon: propTypes.any.isRequired,
   className: propTypes.string,
+  unit: propTypes.string,
   usd: propTypes.number,
 };
 

@@ -3,7 +3,7 @@ import { Box } from "@material-ui/core";
 import propTypes from "prop-types";
 
 const TextToSvg = (props) => {
-  const { text } = props;
+  const { text, className } = props;
   const [view, setView] = useState({ x: 0, y: 0, w: 0, h: 0 });
 
   const handleTextSize = useCallback((text) => {
@@ -19,6 +19,7 @@ const TextToSvg = (props) => {
     <Box
       viewBox={`${view.x} ${view.y} ${view.w} ${view.h}`}
       xmlns="http://www.w3.org/2000/svg"
+      className={className}
       component="svg"
       height={30}
     >

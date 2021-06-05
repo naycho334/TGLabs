@@ -7,13 +7,15 @@ import clsx from "clsx";
 import useStyles from "components/DataTable/styles";
 
 const DateCell = (props) => {
-  const { value, className, ...props_ } = props;
+  const { value, className, typographyProps, ...props_ } = props;
   const classes = useStyles();
 
   return (
     <div className={clsx(classes.date, className)} {...props_}>
       <AccessTime />
-      <Typography variant="caption">14.2.2021 07:40 PM</Typography>
+      <Typography variant="caption" {...typographyProps}>
+        {value}
+      </Typography>
     </div>
   );
 };

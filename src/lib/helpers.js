@@ -45,5 +45,5 @@ export function getComponent(indexes = []) {
     return { Component, title, props: { ...componentProps, ...props } };
   }
 
-  return indexes.map(index => data(index))
+  return indexes.map(index => data(index)).filter(item => !_.isEmpty(item.Component))
 };

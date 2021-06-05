@@ -1,18 +1,23 @@
-import { Grid } from "@material-ui/core";
 import { lazy, memo } from "react";
+import _ from "lodash";
 
-import useStyles from "./styles";
+import { RewardsInformationIcon } from "components/Icons/Icons";
+import PlatformRewardsReceived from "./PlatformRewardsReceived";
+import PlatformDialog from "./components/PlatformDialog";
+import DistributionHistory from "./DistributionHistory";
+import LivePlatformPools from "./LivePlatformPools";
+import RewardPool from "./RewardPool";
 
 const Page = lazy(() => import("components/DashboardPage/Page"));
 
 const RewardsInformation = () => {
-  const classes = useStyles();
-
   return (
-    <Page title="Rewards Information">
-      <Grid item xs={12}>
-        CONTENT HERE
-      </Grid>
+    <Page title="Rewards Information" icon={RewardsInformationIcon}>
+      <RewardPool />
+      <LivePlatformPools />
+      <PlatformRewardsReceived />
+      <DistributionHistory />
+      {/* <PlatformDialog /> */}
     </Page>
   );
 };
