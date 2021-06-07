@@ -1,6 +1,4 @@
 import { Divider, Grid, MenuItem, Typography } from "@material-ui/core";
-import { KeyboardArrowDown } from "@material-ui/icons";
-import { Pie, Cell } from "recharts";
 import { lazy, memo } from "react";
 
 import { formatPrice } from "lib/helpers";
@@ -8,8 +6,6 @@ import Section from "components/Section";
 import useStyles from "./styles";
 
 import { ReactComponent as AccountIcon } from "assets/svgs/icons/icon_account.svg";
-import { NoFieldsetSelectInput } from "components/Selects/NoFieldsetSelect";
-import NoFieldsetSelect from "components/Selects/NoFieldsetSelect";
 
 const PieChart = lazy(() => import("components/PieChart"));
 
@@ -22,15 +18,6 @@ const COLORS = ["#E78F65", "#138BBD"];
 
 const Totals = () => {
   const classes = useStyles();
-
-  const renderCustomizedLabel = (params) => {
-    const props = ["x", "y", "fill", "textAnchor"]
-      .map((key) => ({ [key]: params[key] }))
-      .reduce((p, n) => ({ ...p, ...n }), {});
-    const percentage = (params.percent * 100).toFixed(0);
-
-    return <text {...props} fontWeight="bold">{`${percentage}%`}</text>;
-  };
 
   return (
     <Section className={classes.totals} title="Totals">
