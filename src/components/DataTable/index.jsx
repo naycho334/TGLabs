@@ -28,7 +28,7 @@ const DataTable = (props) => {
   const mappedData = _.values(data).map(mapData);
 
   const handleClick = (id, ev) => {
-    if (["INPUT"].includes(ev.target.tagName)) onClick(id);
+    if (!["INPUT"].includes(ev.target.tagName)) onClick(id);
   };
 
   return (

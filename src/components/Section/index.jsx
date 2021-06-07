@@ -1,23 +1,44 @@
-import { CardContent, Typography, Divider, Grid, Box } from "@material-ui/core";
+import {
+  CardContent,
+  Typography,
+  Divider,
+  Grid,
+  Box,
+  useTheme,
+} from "@material-ui/core";
+import PerfectScrollbar from "react-perfect-scrollbar";
 import propTypes from "prop-types";
 import { memo } from "react";
+import _ from "lodash";
 
 import CustomCard from "./CustomCard";
 import useStyles from "./styles";
 
 const Section = (props) => {
-  const { title, headerProps, className, header, footer, children } = props;
+  const { title, headerProps, className, maxHeight, header, footer, children } =
+    props;
   const classes = useStyles();
+  const theme = useTheme();
+
+  console.log({ maxHeight });
 
   return (
-    <CustomCard className={className}>
+    <CustomCard
+      className={className}
+      {...(_.isNumber(maxHeight) ? { style: { maxHeight } } : {})}
+    >
       <CardContent>
         <Box
           justifyContent="space-between"
           flexDirection="column"
           display="flex"
         >
-          <Box display="flex" flexDirection="column" flexWrap="nowrap" flex="1">
+          <Box
+            display="flex"
+            flexDirection="column"
+            flexWrap="nowrap"
+            height="100%"
+          >
             <Box flex="none">
               <Grid
                 className={classes.header}
@@ -42,7 +63,16 @@ const Section = (props) => {
               </Grid>
             </Box>
             {/* Content */}
-            <Box flex="1">{children}</Box>
+            {/* <PerfectScrollbar>
+              
+            </PerfectScrollbar> */}
+            <Box
+              height={`calc(100% - ${theme.spacing(2)}px)`}
+              overflow="hidden"
+              maxHeight="100%"
+            >
+              {children}
+            </Box>
           </Box>
 
           {footer && (
@@ -61,6 +91,7 @@ Section.propTypes = {
   title: propTypes.string.isRequired,
   headerProps: propTypes.object,
   className: propTypes.string,
+  maxHeight: propTypes.number,
   children: propTypes.any,
   header: propTypes.any,
   footer: propTypes.any,

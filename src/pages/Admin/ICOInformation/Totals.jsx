@@ -1,24 +1,22 @@
 import { Divider, Grid, MenuItem, Typography } from "@material-ui/core";
 import { KeyboardArrowDown } from "@material-ui/icons";
-import { PieChart, Pie, Cell } from "recharts";
-import { memo } from "react";
+import { Pie, Cell } from "recharts";
+import { lazy, memo } from "react";
 
-import { formatPrice } from "../../../lib/helpers";
+import { formatPrice } from "lib/helpers";
 import Section from "components/Section";
 import useStyles from "./styles";
 
 import { ReactComponent as AccountIcon } from "assets/svgs/icons/icon_account.svg";
-import NoFieldsetSelect from "components/Selects/NoFieldsetSelect";
 import { NoFieldsetSelectInput } from "components/Selects/NoFieldsetSelect";
+import NoFieldsetSelect from "components/Selects/NoFieldsetSelect";
+
+const PieChart = lazy(() => import("components/PieChart"));
 
 const data = [
   { name: "Group C", value: 36 },
   { name: "Group D", value: 64 },
 ];
-
-const data02 = Array(35)
-  .fill(1)
-  .map(() => ({ name: "", value: 1 }));
 
 const COLORS = ["#E78F65", "#138BBD"];
 
@@ -36,71 +34,17 @@ const Totals = () => {
 
   return (
     <Section className={classes.totals} title="Totals">
-      <div className="chartContainer">
-        <PieChart width={300} height={300}>
-          <Pie
-            label={renderCustomizedLabel}
-            isAnimationActive={true}
-            legendType="circle"
-            cornerRadius={100}
-            paddingAngle={-10}
-            labelLine={false}
-            outerRadius={110}
-            innerRadius={90}
-            startAngle={200}
-            endAngle={-160}
-            dataKey="value"
-            stroke="none"
-            data={data}
-            fill="red"
-            cx="50%"
-            cy="50%"
-          >
-            {data.map((entry, index) => (
-              <Cell
-                fill={COLORS[index % COLORS.length]}
-                key={`cell-${index}`}
-                radius={50}
-              />
-            ))}
-          </Pie>
-
-          <Pie
-            innerRadius={77}
-            outerRadius={80}
-            paddingAngle={5}
-            dataKey="value"
-            data={data02}
-            fill="silver"
-            cx="50%"
-            cy="50%"
-          />
-        </PieChart>
-
-        <div className="chartContent">
-          <div>
-            <Typography variant="overline" className="grey-text">
-              Raised
-            </Typography>
-          </div>
-          <div>
-            <Typography variant="body2">$2.434.394,46</Typography>
-          </div>
-          <div>
-            <NoFieldsetSelect
-              input={<NoFieldsetSelectInput />}
-              IconComponent={KeyboardArrowDown}
-              onChange={() => {}}
-              id="currencies-list"
-              className="chart"
-              value="usd"
-            >
-              <MenuItem value="usd">USD</MenuItem>
-              <MenuItem value="eur">EUR</MenuItem>
-            </NoFieldsetSelect>
-          </div>
-        </div>
-      </div>
+      <PieChart
+        data={data}
+        chartContent={{
+          amount: formatPrice(33694.874, "usd", "sp"),
+          label: "Raised",
+          unit: "usd",
+        }}
+        onChangeCurrency={() => alert("ok")}
+        noTable
+        colors={COLORS}
+      />
 
       {/* Remaining */}
       <div className="remaining">

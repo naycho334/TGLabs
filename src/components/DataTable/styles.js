@@ -4,7 +4,7 @@ const useStyles = makeStyles(theme => {
   return ({
     dataTable: {
       backgroundColor: theme.palette.common.white,
-      height: '100%',
+      height: `calc(100% - ${theme.spacing(2)}px)`,
 
       "& [role='tabpanel']": {
         borderTop: `1px solid ${colors.grey[300]}`,
@@ -192,6 +192,7 @@ const useStyles = makeStyles(theme => {
     },
 
     tglab: {
+      alignItems: 'center',
       display: 'flex',
 
       "& span": {

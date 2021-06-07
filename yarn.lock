@@ -3989,6 +3989,11 @@
   "resolved" "https://registry.npmjs.org/crypto-random-string/-/crypto-random-string-1.0.0.tgz"
   "version" "1.0.0"
 
+"cryptocurrency-icons@^0.17.2":
+  "integrity" "sha512-301lellubLNhxkySIBNNG3VD05rWfMR+CFgo9LoLfuNybG2OLy0mpWduxv65WZkJpLl9hhpaVAxCV5SYbG5o9A=="
+  "resolved" "https://registry.npmjs.org/cryptocurrency-icons/-/cryptocurrency-icons-0.17.2.tgz"
+  "version" "0.17.2"
+
 "css-blank-pseudo@^0.1.4":
   "integrity" "sha512-LHz35Hr83dnFeipc7oqFDmsjHdljj3TQtxGGiNWSOsTLIAubSm4TEz8qCaKFpk7idaQ1GfWscF4E6mgpBysA1w=="
   "resolved" "https://registry.npmjs.org/css-blank-pseudo/-/css-blank-pseudo-0.1.4.tgz"

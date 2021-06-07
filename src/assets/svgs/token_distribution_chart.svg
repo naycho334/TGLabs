@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1052.254" height="720.18" viewBox="0 0 1052.254 720.18">
+  <g id="Group_2630" data-name="Group 2630" transform="translate(-167.869 -3067.678)">
+    <path id="Path_7075" data-name="Path 7075" d="M538.809,3348.016a164.645,164.645,0,0,1,149.551-95.733q6.492,0,12.861.5l1.669-58.147c-4.8-.31-9.647-.485-14.53-.485A222.78,222.78,0,0,0,486.19,3323.28Z" fill="#8e78f7" opacity="0.2"/>
+    <path id="Path_7076" data-name="Path 7076" d="M708.229,3253.205c3.253.411,6.472.928,9.663,1.526l7.326-57.753q-6.108-1.046-12.327-1.754Z" fill="#f48a5b" opacity="0.2"/>
+    <path id="Path_7077" data-name="Path 7077" d="M725.189,3197.205l-7.323,57.726a164.573,164.573,0,1,1-179.057,93.085L486.19,3323.28a221.887,221.887,0,0,0-20.591,93.63c0,123.028,99.733,222.761,222.761,222.761s222.761-99.733,222.761-222.761C911.121,3306.43,830.688,3214.759,725.189,3197.205Z" fill="rgba(245,75,0,0.5)" stroke="#f54b00" stroke-linecap="round" stroke-width="4"/>
+    <path id="Path_7078" data-name="Path 7078" d="M700.773,3252.44q3.751.3,7.456.765l4.662-57.981q-5.146-.587-10.362-.94Z" fill="#feeca8" opacity="0.2"/>
+    <circle id="Ellipse_310" data-name="Ellipse 310" cx="257.945" cy="257.945" r="257.945" transform="translate(430.415 3158.965)" fill="none" stroke="#cecece" stroke-linecap="round" stroke-width="1.623" stroke-dasharray="4.328 6.492" opacity="0.6"/>
+    <line id="Line_383" data-name="Line 383" x1="3.893" y2="159.996" transform="translate(700.13 3094.908)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.146" opacity="0.8"/>
+    <line id="Line_384" data-name="Line 384" x1="8.764" y2="109.426" transform="translate(708.209 3144.334)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.146" opacity="0.8"/>
+    <line id="Line_385" data-name="Line 385" x1="13.818" y2="109.243" transform="translate(717.808 3146.371)" fill="none" stroke="#f54b00" stroke-linecap="round" stroke-width="8"/>
+    <circle id="Ellipse_311" data-name="Ellipse 311" cx="164.339" cy="164.339" r="164.339" transform="translate(524.021 3252.571)" fill="none" stroke="#feeca8" stroke-linecap="round" stroke-linejoin="round" stroke-width="10"/>
+    <text id="Token_Distribution_Pricing" data-name="Token
+Distribution
+& Pricing" transform="translate(582.752 3374.428)" fill="#fff" font-size="24" font-family="SegoeUI, Segoe UI"><tspan x="82.432" y="26">Token</tspan><tspan x="51.412" y="54">Distribution</tspan><tspan x="64.613" y="82">& Pricing</tspan></text>
+    <g id="Group_2624" data-name="Group 2624">
+      <text id="Private_Sale" data-name="Private Sale" transform="translate(778, 3108)" fill="#cecece" font-size="20" font-family="SegoeUI, Segoe UI"><tspan x="0" y="22">Private Sale</tspan></text>
+      <text id="_1_" data-name="1% " transform="translate(727.646 3102.732)" fill="#f48a5b" font-size="28" font-family="SegoeUI, Segoe UI"><tspan x="0" y="30">1% </tspan></text>
+    </g>
+    <g id="Group_2625" data-name="Group 2625">
+      <text id="Developer_Fund" data-name="Developer Fund" transform="translate(765, 3072)" fill="#cecece" font-size="20" font-family="SegoeUI, Segoe UI"><tspan x="0" y="22">Developer Fund</tspan></text>
+      <text id="_1_2" data-name="1% " transform="translate(712.033 3067.678)" fill="#feeca8" font-size="28" font-family="SegoeUI, Segoe UI"><tspan x="0" y="30">1% </tspan></text>
+    </g>
+    <g id="Group_2631" data-name="Group 2631" transform="translate(-9 -25)">
+      <text id="_4_Phases_each_with_10_stages" data-name="4 Phases, each with 10 stages" transform="translate(877.293 3702.135)" fill="#fff" font-size="20" font-family="SegoeUI, Segoe UI"><tspan x="0" y="22">4 Phases, each with </tspan><tspan x="0" y="46">10 stages</tspan></text>
+      <text id="Public_Sale" data-name="Public Sale" transform="translate(941.404 3671.326)" fill="#cecece" font-size="20" font-family="SegoeUI, Segoe UI"><tspan x="0" y="22">Public Sale</tspan></text>
+      <text id="_78_" data-name="78% " transform="translate(877.293 3664.457)" fill="#f54b00" font-size="28" font-family="SegoeUI, Segoe UI"><tspan x="0" y="30">78% </tspan></text>
+    </g>
+    <g id="Group_2626" data-name="Group 2626">
+      <text id="starts_at_1.00_USD" data-name="starts at $1.00 USD" transform="translate(925.923 3202.99)" fill="#fff" font-size="20" font-family="SegoeUI, Segoe UI"><tspan x="0" y="22">starts at $1.00 USD</tspan></text>
+      <text id="increases_by_0.20_USD_each_stage" data-name="increases by $0.20 USD each stage" transform="translate(925.923 3227.188)" fill="#cecece" font-size="18" font-family="SegoeUI, Segoe UI"><tspan x="0" y="19">increases by $0.20 USD each </tspan><tspan x="0" y="39">stage</tspan></text>
+      <text id="Phase_1" data-name="Phase 1" transform="translate(988 3178)" fill="#cecece" font-size="16" font-family="SegoeUI, Segoe UI"><tspan x="0" y="17">Phase 1</tspan></text>
+      <text id="_19.5_" data-name="19.5% " transform="translate(922.15 3169.975)" fill="#f46a2d" font-size="28" font-family="SegoeUI, Segoe UI"><tspan x="0" y="30">19.5</tspan></text>
+    </g>
+    <g id="Group_2627" data-name="Group 2627">
+      <text id="starts_at_1.65_USD" data-name="starts at $1.65 USD" transform="translate(977.786 3498.702)" fill="#fff" font-size="20" font-family="SegoeUI, Segoe UI"><tspan x="0" y="22">starts at $1.65 USD</tspan></text>
+      <text id="increases_by_0.15_USD_each_stage" data-name="increases by $0.15 USD each stage" transform="translate(977.786 3522.898)" fill="#cecece" font-size="18" font-family="SegoeUI, Segoe UI"><tspan x="0" y="19">increases by $0.15 USD </tspan><tspan x="0" y="39">each stage</tspan></text>
+      <text id="Phase_2" data-name="Phase 2" transform="translate(1040 3476)" fill="#cecece" font-size="16" font-family="SegoeUI, Segoe UI"><tspan x="0" y="17">Phase 2</tspan></text>
+      <text id="_19.5_2" data-name="19.5% " transform="translate(974.012 3465.687)" fill="#0acdd6" font-size="28" font-family="SegoeUI, Segoe UI"><tspan x="0" y="30">19.5</tspan></text>
+    </g>
+    <g id="Group_2628" data-name="Group 2628">
+      <text id="starts_at_2.75_USD" data-name="starts at $2.75 USD" transform="translate(367.283 3691.682)" fill="#fff" font-size="20" font-family="SegoeUI, Segoe UI"><tspan x="0" y="22">starts at $2.75 USD</tspan></text>
+      <text id="increases_by_0.20_USD_each_stage-2" data-name="increases by $0.20 USD each stage" transform="translate(367.283 3715.857)" fill="#cecece" font-size="18" font-family="SegoeUI, Segoe UI"><tspan x="0" y="19">increases by $0.20 USD each </tspan><tspan x="0" y="39">stage</tspan></text>
+      <text id="Phase_3" data-name="Phase 3" transform="translate(428, 3668)" fill="#cecece" font-size="16" font-family="SegoeUI, Segoe UI"><tspan x="0" y="17">Phase 3</tspan></text>
+      <text id="_19.5_3" data-name="19.5% " transform="translate(363.509 3658.645)" fill="#005b81" font-size="28" font-family="SegoeUI, Segoe UI"><tspan x="0" y="30">19.5</tspan></text>
+    </g>
+    <g id="Group_2629" data-name="Group 2629">
+      <text id="starts_at_4.35_USD" data-name="starts at $4.35 USD" transform="translate(171.643 3459.134)" fill="#fff" font-size="20" font-family="SegoeUI, Segoe UI"><tspan x="0" y="22">starts at $4.35 USD</tspan></text>
+      <text id="increases_by_0.20_USD_each_stage-3" data-name="increases by $0.20 USD each stage" transform="translate(171.643 3483.31)" fill="#cecece" font-size="18" font-family="SegoeUI, Segoe UI"><tspan x="0" y="19">increases by $0.20 USD each </tspan><tspan x="0" y="39">stage</tspan></text>
+      <text id="Phase_4" data-name="Phase 4" transform="translate(234, 3435)" fill="#cecece" font-size="16" font-family="SegoeUI, Segoe UI"><tspan x="0" y="17">Phase 4</tspan></text>
+      <text id="_19.5_4" data-name="19.5% " transform="translate(167.869 3426.098)" fill="#8e78f7" font-size="28" font-family="SegoeUI, Segoe UI"><tspan x="0" y="30">19.5</tspan></text>
+    </g>
+    <text id="Held_by_TG_Labs_Team" data-name="Held by TG Labs Team" transform="translate(279, 3123)" fill="#bdc3d0" font-size="20" font-family="SegoeUI, Segoe UI"><tspan x="21.994" y="22">Held by TG Labs </tspan><tspan x="117.863" y="46">Team</tspan></text>
+    <text id="_20_" data-name="20% " transform="translate(459.047 3128.7)" fill="#6d51f3" font-size="28" font-family="SegoeUI, Segoe UI"><tspan x="0" y="30">20% </tspan></text>
+    <line id="Line_386" data-name="Line 386" x2="151.855" y2="72.319" transform="translate(397.315 3280.299)" fill="none" stroke="#f54b00" stroke-linecap="round" stroke-width="8"/>
+    <path id="Path_7079" data-name="Path 7079" d="M710.835,3254.095q4.625.632,9.165,1.519" fill="none" stroke="#f48a5b" stroke-linecap="round" stroke-linejoin="round" stroke-width="14"/>
+    <path id="Path_7080" data-name="Path 7080" d="M723.8,3256.4a164.521,164.521,0,0,1,126.387,131.749" fill="none" stroke="#f46a2d" stroke-linecap="round" stroke-width="20"/>
+    <path id="Path_7081" data-name="Path 7081" d="M850.191,3388.152a164.622,164.622,0,0,1-77.352,169.75" fill="none" stroke="#0acdd6" stroke-linecap="round" stroke-width="22"/>
+    <path id="Path_7082" data-name="Path 7082" d="M772.839,3557.9a164.421,164.421,0,0,1-191.548-16.314" fill="none" stroke="#005b81" stroke-linecap="round" stroke-width="28"/>
+    <path id="Path_7083" data-name="Path 7083" d="M581.291,3541.588a164.533,164.533,0,0,1-45.947-184.745" fill="none" stroke="#8e78f7" stroke-linecap="round" stroke-width="32"/>
+    <path id="Path_7084" data-name="Path 7084" d="M535.344,3356.843a164.432,164.432,0,0,1,144.113-104.035" fill="none" stroke="#6d51f3" stroke-linecap="round" stroke-width="36"/>
+  </g>
+</svg>

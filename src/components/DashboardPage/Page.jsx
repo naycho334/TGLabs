@@ -2,13 +2,20 @@ import { Container, Grid, Typography } from "@material-ui/core";
 import HelmetExport from "react-helmet";
 import propTypes from "prop-types";
 import { memo } from "react";
+import _ from "lodash";
 
 import useSmallScreen from "hooks/useSmallScreen";
 import SidebarFooter from "./SidebarFooter";
 import useStyles from "./styles";
 
 const Page = (props) => {
-  const { title, children, icon: Icon, header } = props;
+  const {
+    titleComponent: TitleComponent,
+    icon: Icon,
+    children,
+    header,
+    title,
+  } = props;
   const isSmallScreen = useSmallScreen();
   const classes = useStyles();
 
@@ -22,13 +29,17 @@ const Page = (props) => {
           <Grid item xs={12}>
             <Grid container justify="space-between" spacing={2}>
               <Grid item>
-                <Typography
-                  className="bold page-title"
-                  component="h1"
-                  variant="h6"
-                >
-                  {title}
-                </Typography>
+                {_.isObject(TitleComponent) ? (
+                  TitleComponent
+                ) : (
+                  <Typography
+                    className="bold page-title"
+                    component="h1"
+                    variant="h6"
+                  >
+                    {title}
+                  </Typography>
+                )}
 
                 {Icon && <Icon className="fixedIcon" />}
               </Grid>
@@ -51,6 +62,7 @@ const Page = (props) => {
 
 Page.propTypes = {
   title: propTypes.string.isRequired,
+  titleComponent: propTypes.any,
   children: propTypes.any,
   header: propTypes.any,
   icon: propTypes.any,

@@ -45,9 +45,9 @@ const useStyles = makeStyles(theme => {
           display: 'block',
           maxWidth: '100%',
           margin: 'auto',
-          maxHeight: 520,
+          maxHeight: 710,
           height: 'auto',
-          width: 800,
+          width: 890,
         },
         
         [theme.breakpoints.down("xs")]:{
@@ -66,6 +66,7 @@ const useStyles = makeStyles(theme => {
             maxWidth: '100%',
             display: 'block',
             margin: 'auto',
+            width: 365
           },
           "&.info": {
             maxWidth: 270,

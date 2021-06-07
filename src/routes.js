@@ -60,6 +60,9 @@ export const endpoints = {
       users: {
         index: '/dashboard/admin/users'
       },
+      user: {
+        index: '/dashboard/admin/user/:id'
+      },
       products: {
         index: '/dashboard/admin/products'
       },

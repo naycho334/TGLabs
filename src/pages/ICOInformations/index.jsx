@@ -2,8 +2,8 @@ import PerfectScrollbar from "react-perfect-scrollbar";
 import { Container } from "@material-ui/core";
 import { lazy, memo } from "react";
 
-import PublicPage from "components/PublicPage";
 import TokenDistribution from "./TokenDistribution";
+import PublicPage from "components/PublicPage";
 import FundAllocation from "./FundAllocation";
 import TokenSupply from "./TokenSupply";
 import Referrals from "./Referrals";

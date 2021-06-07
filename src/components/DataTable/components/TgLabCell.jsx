@@ -11,7 +11,7 @@ const TgLabCell = (props) => {
   const classes = useStyles();
 
   return (
-    <div className={clsx(classes.date, className)} {...props_}>
+    <div className={clsx(classes.tglab, "tglabValue")} {...props_}>
       <div className={classes.tglab}>
         <Typography variant="caption">{value}</Typography>
         <TGCryptoColorIcon />

@@ -1,5 +1,13 @@
 import _ from "lodash"
 
+import { EthereumCoinGrey } from "components/Icons/CryptoGrey";
+import { BinanceCoinGrey } from "components/Icons/CryptoGrey";
+import { BitcoinCoinGrey } from "components/Icons/CryptoGrey";
+import { BitcoinColorIcon } from "components/Icons/Crypto";
+import { TronColorIcon } from "components/Icons/Crypto";
+import { TronCoinGrey } from "components/Icons/CryptoGrey";
+import { LitecoinCoinGrey } from "components/Icons/CryptoGrey";
+
 export const timelineProgress = (array, current = "currently") => {
 
   const activeItems = (() => {
@@ -47,3 +55,30 @@ export function getComponent(indexes = []) {
 
   return indexes.map(index => data(index)).filter(item => !_.isEmpty(item.Component))
 };
+
+/**
+ * Crypto currencies
+ */
+export const cryptoCurrency = (currency) => {
+  return _.chain([
+    { currency: 'btc', name: "Bitcoin", CryptoColored: BitcoinColorIcon, CryptoGrey: BitcoinCoinGrey },
+    { currency: 'bnb', name: "Binance BNB", CryptoColored: BitcoinColorIcon, CryptoGrey: BinanceCoinGrey },
+    { currency: 'eth', name: "Ethereum", CryptoColored: BitcoinColorIcon, CryptoGrey: EthereumCoinGrey },
+    { currency: 'trx', name: "Tron", CryptoColored: TronColorIcon, CryptoGrey: TronCoinGrey },
+    { currency: 'ltc', name: "Litecoin", CryptoColored: LitecoinCoinGrey, CryptoGrey: LitecoinCoinGrey },
+  ])
+    .map(({ currency, ...props }) => ({
+      [currency]: {
+        currency: String(currency).toUpperCase(),
+        ...props
+      }
+    }))
+    .reduce((p, n) => ({ ...p, ...n }), {})
+    .get(String(currency).toLocaleLowerCase(), {})
+    .value()
+}
+
+/**
+ * Crypto chart colors
+ */
+export const CRYPTO_CHART_COLORS = ["#6233CF", "#FFB993", "#71F3FC", "#FEECA8", "#F48A5B"];

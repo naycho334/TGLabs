@@ -73,7 +73,10 @@ const links = {
       Icon: UserIcon,
       forAdmin: true,
       link: endpoints.dashboard.admin.users.index,
-      matches: [endpoints.dashboard.admin.users.index],
+      matches: [
+        endpoints.dashboard.admin.users.index,
+        endpoints.dashboard.admin.user.index,
+      ],
     },
     {
       title: "Products",

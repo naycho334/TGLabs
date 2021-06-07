@@ -81,30 +81,6 @@ const useStyles = makeStyles(theme => {
           width: 15.5,
         }
       },
-
-      "& .chartContainer":{
-        justifyContent: 'center',
-        position: 'relative',
-        display: 'flex',
-        margin: 'auto',
-        
-        "& .recharts-wrapper":{
-          width: '100%'
-        },
-        
-        "& .chartContent":{
-          justifyContent: 'center',
-          flexDirection:"column",
-          position: 'absolute',
-          alignItems:"center",
-          display: 'flex',
-          height: '100%',
-          width: '100%',
-          left: 0,
-          top: 0,
-        },
-
-      },
     },
     stagesTimeline: {
       backgroundColor: lighten(theme.palette.lightBlue.main, .92),

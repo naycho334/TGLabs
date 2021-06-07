@@ -14,9 +14,11 @@ import AllUsersBar from "./components/AllUsersBar";
 import { adminUsersActions } from "./index.slice";
 import { LockIcon } from "components/Icons/Icons";
 import DataTable from "components/DataTable";
+import { useHistory } from "react-router";
 import Section from "components/Section";
 import useStyles from "./styles";
 import clsx from "clsx";
+import { endpoints } from "routes";
 
 let timer;
 
@@ -25,6 +27,7 @@ const AllUsers = () => {
     (state) => state.adminUsersReducer
   );
   const dispatch = useDispatch();
+  const history = useHistory();
   const classes = useStyles();
 
   const allRowsChecked = _.values(data).every((row) => row.checked);
@@ -75,6 +78,7 @@ const AllUsers = () => {
     5: { value: item.status },
     6: { value: null, className: clsx("lockiIcon", item.status) },
     7: { value: item.checked, id: item.id },
+    id: item.id,
   });
 
   /**
@@ -91,6 +95,12 @@ const AllUsers = () => {
     if (timer) clearTimeout(timer);
     timer = setTimeout(() => dispatch(adminUsersActions.fetchData()), 1000);
   };
+
+  /**
+   * Open user page
+   */
+  const openUserPage = (id) =>
+    history.push(endpoints.dashboard.admin.user.index.replace(":id", id));
 
   return (
     <Grid item xs={12} className={classes.allUsers}>
@@ -120,6 +130,7 @@ const AllUsers = () => {
           cardComponent={AllUsersCard}
           loadMore={loadMoreData}
           cardsCount={cardsCount}
+          onClick={openUserPage}
           components={[
             { component: DateCell },
             { component: HashCell },

@@ -16,10 +16,6 @@ const data = [
   { name: "Group D", value: 64 },
 ];
 
-const data02 = Array(35)
-  .fill(1)
-  .map(() => ({ name: "", value: 1 }));
-
 const COLORS = ["#E78F65", "#138BBD"];
 
 const Totals = () => {
@@ -66,11 +62,11 @@ const Totals = () => {
           </Pie>
 
           <Pie
+            data={Array(35).fill({ name: "", value: 1 })}
             innerRadius={77}
             outerRadius={80}
             paddingAngle={5}
             dataKey="value"
-            data={data02}
             fill="silver"
             cx="50%"
             cy="50%"

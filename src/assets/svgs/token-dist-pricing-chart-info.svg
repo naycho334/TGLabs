@@ -1,38 +1,51 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="350.143" height="446.984" viewBox="0 0 350.143 446.984">
-  <g id="Group_2483" data-name="Group 2483" transform="translate(-15.584 -1156.446)">
-    <text id="_10_1.00_USD" data-name="10% @ $1.00 USD" transform="translate(56.514 1247.095)" fill="#fff" font-size="20" font-family="SegoeUI, Segoe UI"><tspan x="0" y="22">10% @ $1.00 USD</tspan></text>
-    <text id="_16_" data-name="16% " transform="translate(56 1207.666)" fill="#feeca8" font-size="28" font-family="SegoeUI, Segoe UI"><tspan x="0" y="30">16% </tspan></text>
-    <circle id="Ellipse_305" data-name="Ellipse 305" cx="12.689" cy="12.689" r="12.689" transform="translate(15.584 1163.564)" fill="#138bbd"/>
-    <g id="Group_2478" data-name="Group 2478" transform="translate(56 1156.446)">
-      <text id="_20_" data-name="20% " transform="translate(0)" fill="#138bbd" font-size="28" font-family="SegoeUI, Segoe UI"><tspan x="0" y="30">20% </tspan></text>
-      <text id="Held_by_TG_Labs_Team" data-name="Held by TG Labs Team" transform="translate(65.727 9.598)" fill="#bdc3d0" font-size="16" font-family="SegoeUI, Segoe UI"><tspan x="0" y="17">Held by TG Labs Team</tspan></text>
+<svg xmlns="http://www.w3.org/2000/svg" width="344.459" height="582.694" viewBox="0 0 344.459 582.694">
+  <g id="Group_2645" data-name="Group 2645" transform="translate(20594.686 4700.884)">
+    <g id="Group_2637" data-name="Group 2637" transform="translate(-21280.646 -7704.678)">
+      <text id="Private_Sale" data-name="Private Sale" transform="translate(780.143, 3107.59)" fill="#cecece" font-size="20" font-family="SegoeUI, Segoe UI"><tspan x="0" y="22">Private Sale</tspan></text>
+      <text id="_1_" data-name="1% " transform="translate(727.646 3102.732)" fill="#f48a5b" font-size="28" font-family="SegoeUI, Segoe UI"><tspan x="0" y="30">1% </tspan></text>
     </g>
-    <circle id="Ellipse_306" data-name="Ellipse 306" cx="12.689" cy="12.689" r="12.689" transform="translate(15.584 1213.564)" fill="#feeca8"/>
-    <circle id="Ellipse_307" data-name="Ellipse 307" cx="12.689" cy="12.689" r="12.689" transform="translate(15.584 1395.564)" fill="#6b24d6"/>
-    <circle id="Ellipse_308" data-name="Ellipse 308" cx="12.689" cy="12.689" r="12.689" transform="translate(15.584 1472.564)" fill="#6d51f3"/>
-    <circle id="Ellipse_309" data-name="Ellipse 309" cx="12.689" cy="12.689" r="12.689" transform="translate(15.584 1541.521)" fill="#2af6ff"/>
-    <path id="Path_7070" data-name="Path 7070" d="M12.689,0A12.689,12.689,0,1,1,0,12.689,12.689,12.689,0,0,1,12.689,0Z" transform="translate(15.584 1318.564)" fill="#f48a5b"/>
-    <text id="Private_Offering" data-name="Private Offering" transform="translate(121.948 1215.398)" fill="#bdc3d0" font-size="16" font-family="SegoeUI, Segoe UI"><tspan x="0" y="17">Private Offering</tspan></text>
-    <text id="_10_1.40_USD" data-name="10% @ $1.40 USD" transform="translate(56.514 1273.556)" fill="#fff" font-size="20" font-family="SegoeUI, Segoe UI"><tspan x="0" y="22">10% @ $1.40 USD</tspan></text>
-    <g id="Group_2479" data-name="Group 2479" transform="translate(56 1310.875)">
-      <text id="Stage_1_public_ICO_" data-name="Stage 1 public ICO " transform="translate(67.109 7.729)" fill="#bdc3d0" font-size="16" font-family="SegoeUI, Segoe UI"><tspan x="0" y="17">Stage 1 public ICO </tspan></text>
-      <text id="_1.80_USD" data-name="@ $1.80 USD" transform="translate(0 37.6)" fill="#fff" font-size="20" font-family="SegoeUI, Segoe UI"><tspan x="0" y="22">@ $1.80 USD</tspan></text>
-      <text id="_16_2" data-name="16% " fill="#f48a5b" font-size="28" font-family="SegoeUI, Segoe UI"><tspan x="0" y="30">16% </tspan></text>
+    <g id="Group_2638" data-name="Group 2638" transform="translate(-21265.033 -7718.678)">
+      <text id="Developer_Fund" data-name="Developer Fund" transform="translate(765.143, 3073.45)" fill="#cecece" font-size="20" font-family="SegoeUI, Segoe UI"><tspan x="0" y="22">Developer Fund</tspan></text>
+      <text id="_1_2" data-name="1% " transform="translate(712.033 3067.678)" fill="#feeca8" font-size="28" font-family="SegoeUI, Segoe UI"><tspan x="0" y="30">1% </tspan></text>
     </g>
-    <g id="Group_2480" data-name="Group 2480" transform="translate(56 1388.942)">
-      <text id="Stage_2_public_ICO_" data-name="Stage 2 public ICO " transform="translate(66.111 7.73)" fill="#bdc3d0" font-size="16" font-family="SegoeUI, Segoe UI"><tspan x="0" y="17">Stage 2 public ICO </tspan></text>
-      <text id="_2.50_USD" data-name="@ $2.50 USD" transform="translate(0 34.427)" fill="#fff" font-size="20" font-family="SegoeUI, Segoe UI"><tspan x="0" y="22">@ $2.50 USD</tspan></text>
-      <text id="_16_3" data-name="16% " transform="translate(0)" fill="#6b24d6" font-size="28" font-family="SegoeUI, Segoe UI"><tspan x="0" y="30">16% </tspan></text>
+    <g id="Group_2639" data-name="Group 2639" transform="translate(-21430.293 -8215.201)">
+      <text id="_4_Phases_each_with_10_stages" data-name="4 Phases, each with 10 stages" transform="translate(877.293 3702.135)" fill="#fff" font-size="20" font-family="SegoeUI, Segoe UI"><tspan x="0" y="22">4 Phases, each with 10 stages</tspan></text>
+      <text id="Public_Sale" data-name="Public Sale" transform="translate(948.404 3671.326)" fill="#cecece" font-size="20" font-family="SegoeUI, Segoe UI"><tspan x="0" y="22">Public Sale</tspan></text>
+      <text id="_78_" data-name="78% " transform="translate(877.293 3664.457)" fill="#f54b00" font-size="28" font-family="SegoeUI, Segoe UI"><tspan x="0" y="30">78% </tspan></text>
     </g>
-    <g id="Group_2477" data-name="Group 2477" transform="translate(56.137 1463.602)">
-      <text id="Stage_3_public_ICO_" data-name="Stage 3 public ICO " transform="translate(63.137 7.628)" fill="#bdc3d0" font-size="16" font-family="SegoeUI, Segoe UI"><tspan x="0" y="17">Stage 3 public ICO </tspan></text>
-      <text id="_3.45_USD" data-name="@ $3.45 USD" transform="translate(0 33.591)" fill="#fff" font-size="20" font-family="SegoeUI, Segoe UI"><tspan x="0" y="22">@ $3.45 USD</tspan></text>
-      <text id="_16_4" data-name="16% " fill="#6d51f3" font-size="28" font-family="SegoeUI, Segoe UI"><tspan x="0" y="30">16% </tspan></text>
+    <g id="Group_2640" data-name="Group 2640" transform="translate(-21475.15 -7649.678)">
+      <text id="starts_at_1.00_USD" data-name="starts at $1.00 USD" transform="translate(925.923 3202.99)" fill="#fff" font-size="20" font-family="SegoeUI, Segoe UI"><tspan x="0" y="22">starts at $1.00 USD</tspan></text>
+      <text id="increases_by_0.20_USD_each_stage" data-name="increases by $0.20 USD each stage" transform="translate(925.923 3227.188)" fill="#cecece" font-size="18" font-family="SegoeUI, Segoe UI"><tspan x="0" y="19">increases by $0.20 USD each stage</tspan></text>
+      <text id="Phase_1" data-name="Phase 1" transform="translate(1003.26 3177.705)" fill="#cecece" font-size="16" font-family="SegoeUI, Segoe UI"><tspan x="0" y="17">Phase 1</tspan></text>
+      <text id="_19.5_" data-name="19.5% " transform="translate(922.15 3169.975)" fill="#f46a2d" font-size="28" font-family="SegoeUI, Segoe UI"><tspan x="0" y="30">19.5</tspan></text>
     </g>
-    <g id="Group_2481" data-name="Group 2481" transform="translate(56.514 1535.896)">
-      <text id="Stage_4_public_ICO_" data-name="Stage 4 public ICO " transform="translate(61.771 9.839)" fill="#bdc3d0" font-size="16" font-family="SegoeUI, Segoe UI"><tspan x="0" y="17">Stage 4 public ICO </tspan></text>
-      <text id="_5.00_USD" data-name="@ $5.00 USD" transform="translate(0 32.535)" fill="#fff" font-size="20" font-family="SegoeUI, Segoe UI"><tspan x="0" y="22">@ $5.00 USD</tspan></text>
-      <text id="_16_5" data-name="16% " fill="#2af6ff" font-size="28" font-family="SegoeUI, Segoe UI"><tspan x="0" y="30">16% </tspan></text>
+    <g id="Group_2641" data-name="Group 2641" transform="translate(-21527.012 -7852.454)">
+      <text id="starts_at_1.65_USD" data-name="starts at $1.65 USD" transform="translate(977.786 3498.702)" fill="#fff" font-size="20" font-family="SegoeUI, Segoe UI"><tspan x="0" y="22">starts at $1.65 USD</tspan></text>
+      <text id="increases_by_0.15_USD_each_stage" data-name="increases by $0.15 USD each stage" transform="translate(977.786 3522.898)" fill="#cecece" font-size="18" font-family="SegoeUI, Segoe UI"><tspan x="0" y="19">increases by $0.15 USD each stage</tspan></text>
+      <text id="Phase_2" data-name="Phase 2" transform="translate(1055.123 3473.417)" fill="#cecece" font-size="16" font-family="SegoeUI, Segoe UI"><tspan x="0" y="17">Phase 2</tspan></text>
+      <text id="_19.5_2" data-name="19.5% " transform="translate(974.012 3465.687)" fill="#0acdd6" font-size="28" font-family="SegoeUI, Segoe UI"><tspan x="0" y="30">19.5</tspan></text>
     </g>
+    <g id="Group_2642" data-name="Group 2642" transform="translate(-20916.51 -7952.229)">
+      <text id="starts_at_2.75_USD" data-name="starts at $2.75 USD" transform="translate(367.283 3691.682)" fill="#fff" font-size="20" font-family="SegoeUI, Segoe UI"><tspan x="0" y="22">starts at $2.75 USD</tspan></text>
+      <text id="increases_by_0.20_USD_each_stage-2" data-name="increases by $0.20 USD each stage" transform="translate(367.283 3715.857)" fill="#cecece" font-size="18" font-family="SegoeUI, Segoe UI"><tspan x="0" y="19">increases by $0.20 USD each stage</tspan></text>
+      <text id="Phase_3" data-name="Phase 3" transform="translate(444.62 3666.375)" fill="#cecece" font-size="16" font-family="SegoeUI, Segoe UI"><tspan x="0" y="17">Phase 3</tspan></text>
+      <text id="_19.5_3" data-name="19.5% " transform="translate(363.509 3658.645)" fill="#005b81" font-size="28" font-family="SegoeUI, Segoe UI"><tspan x="0" y="30">19.5</tspan></text>
+    </g>
+    <g id="Group_2643" data-name="Group 2643" transform="translate(-20719.34 -7627.5)">
+      <text id="starts_at_4.35_USD" data-name="starts at $4.35 USD" transform="translate(171.643 3459.134)" fill="#fff" font-size="20" font-family="SegoeUI, Segoe UI"><tspan x="0" y="22">starts at $4.35 USD</tspan></text>
+      <text id="increases_by_0.20_USD_each_stage-3" data-name="increases by $0.20 USD each stage" transform="translate(171.643 3483.31)" fill="#cecece" font-size="18" font-family="SegoeUI, Segoe UI"><tspan x="0" y="19">increases by $0.20 USD each stage</tspan></text>
+      <text id="Phase_4" data-name="Phase 4" transform="translate(248.98 3433.827)" fill="#cecece" font-size="16" font-family="SegoeUI, Segoe UI"><tspan x="0" y="17">Phase 4</tspan></text>
+      <text id="_19.5_4" data-name="19.5% " transform="translate(167.869 3426.098)" fill="#8e78f7" font-size="28" font-family="SegoeUI, Segoe UI"><tspan x="0" y="30">19.5</tspan></text>
+    </g>
+    <text id="Held_by_TG_Labs_Team" data-name="Held by TG Labs Team" transform="translate(-20482.359 -4693.436)" fill="#bdc3d0" font-size="20" font-family="SegoeUI, Segoe UI"><tspan x="0" y="22">Held by TG Labs Team</tspan></text>
+    <text id="_20_" data-name="20% " transform="translate(-20553 -4700.884)" fill="#6d51f3" font-size="28" font-family="SegoeUI, Segoe UI"><tspan x="0" y="30">20% </tspan></text>
+    <circle id="Ellipse_305" data-name="Ellipse 305" cx="12.689" cy="12.689" r="12.689" transform="translate(-20594.686 -4693.436)" fill="#6d51f3"/>
+    <circle id="Ellipse_306" data-name="Ellipse 306" cx="12.689" cy="12.689" r="12.689" transform="translate(-20594.686 -4644.436)" fill="#feeca8"/>
+    <circle id="Ellipse_307" data-name="Ellipse 307" cx="8.689" cy="8.689" r="8.689" transform="translate(-20590.686 -4467.436)" fill="#f46a2d"/>
+    <path id="Path_7070" data-name="Path 7070" d="M12.689,0A12.689,12.689,0,1,1,0,12.689,12.689,12.689,0,0,1,12.689,0Z" transform="translate(-20594.686 -4547.436)" fill="#f54b00"/>
+    <circle id="Ellipse_312" data-name="Ellipse 312" cx="8.689" cy="8.689" r="8.689" transform="translate(-20590.686 -4375.436)" fill="#0acdd6"/>
+    <circle id="Ellipse_313" data-name="Ellipse 313" cx="8.689" cy="8.689" r="8.689" transform="translate(-20590.686 -4282.436)" fill="#005b81"/>
+    <circle id="Ellipse_314" data-name="Ellipse 314" cx="8.689" cy="8.689" r="8.689" transform="translate(-20590.686 -4191.436)" fill="#8e78f7"/>
+    <circle id="Ellipse_315" data-name="Ellipse 315" cx="12.689" cy="12.689" r="12.689" transform="translate(-20594.686 -4594.436)" fill="#f48a5b"/>
   </g>
 </svg>

@@ -37,7 +37,7 @@ const LivePlatformPools = () => {
   /**
    * Format table data
    */
-  const mapData = (item, index) => ({
+  const mapData = (item) => ({
     0: { value: item.image },
     1: { value: moment(item.time).format("HH:mm") },
     2: {

@@ -27,6 +27,7 @@ const AdminSettings = lazy(() => import("./pages/Admin/Settings"));
 const AdminProducts = lazy(() => import("./pages/Admin/Products"));
 const AdminSupport = lazy(() => import("./pages/Admin/Support"));
 const Users = lazy(() => import("./pages/Admin/Users"));
+const User = lazy(() => import("./pages/Admin/User"));
 
 // User dashboard pages
 const UserRewardsInformation = lazy(() =>
@@ -215,6 +216,14 @@ const App = () => {
                   <Route
                     path={endpoints.dashboard.admin.users.index}
                     component={Users}
+                    strict
+                    exact
+                  />
+
+                  {/* User */}
+                  <Route
+                    path={endpoints.dashboard.admin.user.index}
+                    component={User}
                     strict
                     exact
                   />
