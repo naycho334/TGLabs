@@ -92,7 +92,6 @@ const Navbar = (props) => {
                 <IconButton>
                   <Badge
                     anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
-                    color="secondary"
                     badgeContent={4}
                     variant="dot"
                   >

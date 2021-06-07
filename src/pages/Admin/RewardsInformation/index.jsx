@@ -17,7 +17,7 @@ const RewardsInformation = () => {
       <LivePlatformPools />
       <PlatformRewardsReceived />
       <DistributionHistory />
-      {/* <PlatformDialog /> */}
+      <PlatformDialog />
     </Page>
   );
 };

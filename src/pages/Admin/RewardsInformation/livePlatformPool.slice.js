@@ -68,6 +68,7 @@ const slice = createSlice({
     },
 
     togglePlatformDialog: (state, { payload }) => {
+      console.log(payload)
       if (_.isBoolean(payload) && payload)
         state.platformDialog = {
           isNew: true,

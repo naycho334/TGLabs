@@ -148,6 +148,16 @@ const mainTheme = createMuiTheme({
         minWidth: 36
       }
     },
+    MuiBadge: {
+      badge: {
+        backgroundColor: '#138BBD',
+
+        "&.notification": {
+          border: `2px solid #138BBD`,
+          backgroundColor: 'unset',
+        }
+      }
+    },
     MuiTab: {
       root: {
         "&.capitalize": {

@@ -1,12 +1,11 @@
 import {
   CardContent,
   Typography,
+  useTheme,
   Divider,
   Grid,
   Box,
-  useTheme,
 } from "@material-ui/core";
-import PerfectScrollbar from "react-perfect-scrollbar";
 import propTypes from "prop-types";
 import { memo } from "react";
 import _ from "lodash";
@@ -19,8 +18,6 @@ const Section = (props) => {
     props;
   const classes = useStyles();
   const theme = useTheme();
-
-  console.log({ maxHeight });
 
   return (
     <CustomCard

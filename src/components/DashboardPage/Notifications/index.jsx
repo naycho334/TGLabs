@@ -44,6 +44,7 @@ const Notifications = (props) => {
         <Badge
           anchorOrigin={{ horizontal: "right", vertical: "top" }}
           badgeContent={notifications.length}
+          classes={{ badge: "notification" }}
           color="secondary"
           variant="dot"
         >
