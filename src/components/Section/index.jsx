@@ -63,11 +63,7 @@ const Section = (props) => {
             {/* <PerfectScrollbar>
               
             </PerfectScrollbar> */}
-            <Box
-              height={`calc(100% - ${theme.spacing(2)}px)`}
-              overflow="hidden"
-              maxHeight="100%"
-            >
+            <Box height={`calc(100% - ${theme.spacing(2)}px)`} maxHeight="100%">
               {children}
             </Box>
           </Box>

@@ -12,6 +12,7 @@ import Table from "./Table";
 const DataTable = (props) => {
   const {
     cardComponent,
+    noDivider,
     cardsCount,
     components,
     className,
@@ -45,7 +46,7 @@ const DataTable = (props) => {
         />
       ) : (
         <>
-          <Divider className={classes.separator} />
+          {!noDivider && <Divider className={classes.separator} />}
           <Table
             onClick={_.isFunction(onClick) ? handleClick : null}
             components={components}
@@ -76,11 +77,13 @@ DataTable.propTypes = {
   loadMore: propTypes.func.isRequired,
   data: propTypes.any.isRequired,
   className: propTypes.string,
+  noDivider: propTypes.bool,
   keepTable: propTypes.bool,
   onClick: propTypes.func,
 };
 
 DataTable.defaultProps = {
+  noDivider: false,
   cardsCount: 3,
 };
 

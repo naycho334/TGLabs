@@ -1,6 +1,8 @@
-import { Grid } from "@material-ui/core";
 import { lazy, memo } from "react";
 
+import DistributionHistory from "./DistributionHistory";
+import RewardBalances from "./RewardBalances";
+import TotalEarnings from "./TotalEarnings";
 import useStyles from "./styles";
 
 const Page = lazy(() => import("components/DashboardPage/Page"));
@@ -10,9 +12,9 @@ const Rewards = () => {
 
   return (
     <Page title="Rewards">
-      <Grid item xs={12}>
-        CONTENT HERE
-      </Grid>
+      <TotalEarnings />
+      <RewardBalances />
+      <DistributionHistory />
     </Page>
   );
 };

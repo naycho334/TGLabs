@@ -1,5 +1,5 @@
-import { Typography, Container, Grid, Tabs, Tab } from "@material-ui/core";
-import { memo, useState } from "react";
+import { Typography, Container, Grid } from "@material-ui/core";
+import { lazy, memo, useState } from "react";
 
 import AmountCell from "components/DataTable/components/AmountCell";
 import StatusCell from "components/DataTable/components/StatusCell";
@@ -10,13 +10,14 @@ import UserCell from "components/DataTable/components/UserCell";
 import { BitcoinColorIcon } from "components/Icons/Crypto";
 import StatisticsCard from "./statistics/StatisticsCard";
 import DataTable from "components/DataTable";
-import TabPanel from "./statistics/TabPanel";
 import useStyles from "./styles";
 
 import { ReactComponent as Calendar } from "assets/svgs/icon_calendar-purple.svg";
 import { ReactComponent as Withdraw } from "assets/svgs/icon_withdraw-purple.svg";
 import { ReactComponent as Invest } from "assets/svgs/icon_invest-purple.svg";
 import { ReactComponent as Users } from "assets/svgs/icon_users-purple.svg";
+
+const TabContainer = lazy(() => import("components/TabContainer"));
 
 const data = [
   {
@@ -57,8 +58,6 @@ const Statistics = () => {
   const [value, setValue] = useState(0);
   const classes = useStyles();
 
-  const tables = [{ label: "Purchases" }, { label: "Withdrawals" }];
-
   /**
    * Change table type
    */
@@ -77,49 +76,42 @@ const Statistics = () => {
     <div id="statistics">
       {/* Table */}
       <Container>
-        <div className={classes.tabTable}>
-          <div className="tabBar">
-            <Typography className="normal latest" variant="caption">
-              Latest
-            </Typography>
-            <Tabs
-              TabIndicatorProps={{ className: "tabIndicator" }}
-              onChange={changeTableType}
-              value={value}
-            >
-              {tables.map(({ label }) => (
-                <Tab
-                  className="capitalize statistics"
-                  label={label}
-                  key={label}
+        <TabContainer
+          onChange={changeTableType}
+          value={value}
+          beforeTabs={
+            <Grid item>
+              <Typography className="normal latest" variant="caption">
+                Latest
+              </Typography>
+            </Grid>
+          }
+          data={[{ label: "Purchases" }, { label: "Withdrawals" }].map(
+            (item) => ({
+              ...item,
+              Component: () => (
+                <DataTable
+                  tableHead={tableHead}
+                  mapData={mapData}
+                  data={tableData}
+                  cardComponent={StatisticsCard}
+                  noDivider
+                  components={[
+                    { component: DateCell },
+                    { component: UserCell },
+                    { component: AmountCell },
+                    { component: TgLabCell },
+                    { component: HashCell },
+                    {
+                      component: StatusCell,
+                      tableCellProps: { align: "right" },
+                    },
+                  ]}
                 />
-              ))}
-            </Tabs>
-          </div>
-          {tables.map((_, index) => (
-            <TabPanel
-              id={`tabTable-${index}`}
-              value={value}
-              index={index}
-              key={index}
-            >
-              <DataTable
-                tableHead={tableHead}
-                mapData={mapData}
-                data={tableData}
-                cardComponent={StatisticsCard}
-                components={[
-                  { component: DateCell },
-                  { component: UserCell },
-                  { component: AmountCell },
-                  { component: TgLabCell },
-                  { component: HashCell },
-                  { component: StatusCell, tableCellProps: { align: "right" } },
-                ]}
-              />
-            </TabPanel>
-          ))}
-        </div>
+              ),
+            })
+          )}
+        />
       </Container>
 
       <div className={classes.statistics}>
